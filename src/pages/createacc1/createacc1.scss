@@ -1,0 +1,112 @@
+page-createacc1 {
+
+  .container {
+    text-align: center;
+    background-color: #329EF9;
+  }
+
+  .top-margin {
+    height: 10px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 85px;
+  }
+
+  .da-ctn {
+    margin-top: -30px;
+  }
+
+  .da {
+    font-size: 150%;
+
+    .bold {
+      font-weight: bolder;
+    }
+
+    .fine {
+      font-weight: 100;
+    }
+  }
+
+  .wc-ctn {
+    margin-top: -15px;
+  }
+
+  .wc {
+    font-size: 130%;
+    font-weight: bolder;
+  }
+
+  .color-white {
+    color: white;
+  }
+
+  .form-ctn {
+    background-color: rgba(250, 250, 250, 0.7);
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 20px;
+  }
+
+  .vertdc {
+    width: 17px;
+    height: 17px;
+    background-color: color($colors, vertdc);
+    border-radius: 50%;
+  }
+
+  .greydc {
+    width: 17px;
+    height: 17px;
+    background-color: color($colors, gris);
+    border-radius: 50%;
+  }
+
+  .cacc-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: color($colors, gris);
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  .margin-a {
+    padding-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  .label-ctn {
+    text-align: left;
+    padding: 10px;
+    color: rgba($color: #555555, $alpha: 0.5);
+
+    .bottom-label {
+      margin-bottom: -20px;
+    }
+  }
+
+  .bb-input {
+    border-bottom: 1px solid #555555;
+    margin-bottom: 40px;
+  }
+
+  .btn-blue-gradient {
+    width: 80%;
+    height: 50px;
+    text-transform: none;
+    font-size: 120%;
+    margin-left: 10%;
+    background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
+    background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
+    background: linear-gradient(to right, #329FF9, #50E3C2);
+  }
+
+  .btn-no-bg {
+    color: color($colors, bleu);
+    font-size: 120%;
+  }
+
+}

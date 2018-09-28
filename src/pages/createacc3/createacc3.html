@@ -1,0 +1,74 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="container">
+
+  <ion-row class="top-margin"></ion-row>
+
+  <ion-row>
+    <img class="logo" src="assets/imgs/logo/logo.png">
+  </ion-row>
+
+  <ion-row class="da-ctn">
+    <ion-label class="color-white da">
+      <span class="bold">Dent</span><span class="fine">Art</span>
+    </ion-label>
+  </ion-row>
+
+  <ion-row class="wc-ctn">
+    <ion-label class="color-white wc">Indiquez la localisation de votre cabinet</ion-label>
+  </ion-row>
+
+  <ion-grid class="form-ctn">
+    <ion-row>
+      <ion-label class="margin-a">
+        <img class="vertdc">
+        <img class="vertdc">
+        <img class="vertdc">
+        <img class="greydc">
+      </ion-label>
+    </ion-row>
+
+    <ion-row>
+      <ion-avatar class="cacc-avatar">
+        <img src="assets/imgs/avatar/createacc3/avatar.png">
+      </ion-avatar>
+    </ion-row>
+
+    <ion-row class="label-ctn">
+      <ion-label class="bottom-label">Localisation</ion-label>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-input type="text" class="bb-input" [(ngModel)]="autocomplete.input" (input)="updateSearchResults()"></ion-input>
+
+      <img class="map-marker" src="assets/imgs/avatar/createacc3/map_marker.png">
+
+      <ion-list [hidden]="autocompleteItems.length == 0">
+        <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+          {{ item.description }}
+        </ion-item>
+      </ion-list>
+
+    </ion-row>
+
+
+
+    <ion-row>
+      <button ion-button round class="btn-blue-gradient-round">Continuer</button>
+    </ion-row>
+
+    <ion-row>
+      <ion-label class="btn-no-bg">Pr&#233;c&#233;dent</ion-label>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-row class="map-ctn">
+    <div id='map'></div>
+  </ion-row> -->
+
+</ion-content>
