@@ -15,34 +15,33 @@
   </ion-row>
 
   <ion-row class="wc-ctn">
-    <ion-label class="color-white wc">Me connecter</ion-label>
+    <ion-label class="color-white wc">Mot de passe oubli&#233;</ion-label>
   </ion-row>
+
 
   <ion-row class="separator"></ion-row>
 
-  <form #form>
-    <ion-item>
-      <ion-label stacked>E-mail</ion-label>
-      <ion-input type="email" [(ngModel)]="email" 
-      name="email" (input)="changeMail($event);" 
-      maxlength="254"></ion-input>
-    </ion-item>
+  <ion-row class="info-ctn">
+    <ion-label class="info">Saisissez votre e-mail et recevez votre mot de passe par mail</ion-label>
+  </ion-row>
+
+  <form #form class="form">
 
     <ion-item>
-      <ion-label stacked>Mot de passe</ion-label>
-      <ion-input type="password" [(ngModel)]="passwd" name="passwd"></ion-input>
+      <ion-label stacked>Votre e-mail</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email" (input)="changeMail($event);" maxlength="254"></ion-input>
     </ion-item>
 
     <ion-row>
-      <button ion-button round class="btn-blue-gradient" (click)="connect();">
-        Connexion
+      <button ion-button round class="btn-blue-gradient" (click)="recover();">
+        Continuer
       </button>
     </ion-row>
   </form>
 
-  <ion-row (click)="forgetPasswd();">
+  <ion-row (click)="recover();">
     <ion-label class="btn-light">
-      Mot de passe oubli&#233;
+      Pr&#233;c&#233;dent
     </ion-label>
   </ion-row>
 

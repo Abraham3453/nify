@@ -1,3 +1,72 @@
 page-connexion {
 
+  .container {
+    text-align: center;
+    background-image: url('../../assets/imgs/background/bgConnexion.png');
+    background-size: 100% 100%;
+  }
+
+  .top-margin {
+    height: 50px;
+  }
+
+  .logo {
+    width: 200px;
+    height: 170px;
+  }
+
+  .da-ctn {
+    margin-top: -35px;
+  }
+
+  .da {
+    font-size: 230%;
+
+    .bold {
+      font-weight: bolder;
+    }
+
+    .fine {
+      font-weight: 100;
+    }
+  }
+
+  .wc-ctn {
+    margin-top: -15px;
+  }
+
+  .wc {
+    font-size: 100%;
+    font-weight: bolder;
+  }
+
+  .color-white {
+    color: white;
+  }
+
+  .separator {
+    height: 70px;
+  }
+
+  .btn-blue-gradient {
+    width: 60%;
+    height: 50px;
+    margin-left: 20%;
+    margin-top: 20px;
+    text-transform: none;
+    font-size: 120%;
+    background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
+    background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
+    background: linear-gradient(to right, #329FF9, #50E3C2);
+  }
+
+  .btn-light {
+    height: 50px;
+    margin-top: 20px;
+    text-transform: none;
+    background-color: rgba($color: #000000, $alpha: 0.0);
+    font-size: 120%;
+    color: color($colors, bleu);
+  }
+
 }

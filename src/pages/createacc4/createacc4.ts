@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GeneralcndPage } from '../generalcnd/generalcnd';
 
 /**
  * Generated class for the Createacc4Page page.
@@ -20,6 +21,15 @@ export class Createacc4Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Createacc4Page');
+  }
+
+  public precedent(){
+    this.navCtrl.pop();
+  }
+
+  public displayGC(){
+    let gc = GeneralcndPage;
+    this.navCtrl.push(gc);
   }
 
 }

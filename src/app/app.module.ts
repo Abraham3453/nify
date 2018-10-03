@@ -14,6 +14,9 @@ import { Createacc3Page } from '../pages/createacc3/createacc3';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Createacc4Page } from '../pages/createacc4/createacc4';
 import { GeneralcndPage } from '../pages/generalcnd/generalcnd';
+import { ConnexionPage } from '../pages/connexion/connexion';
+import { RecoverpasswdPage } from '../pages/recoverpasswd/recoverpasswd';
+import { PopupcertPage } from '../pages/popupcert/popupcert';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { GeneralcndPage } from '../pages/generalcnd/generalcnd';
     Createacc2Page,
     Createacc3Page,
     Createacc4Page,
-    GeneralcndPage
+    GeneralcndPage,
+    ConnexionPage,
+    RecoverpasswdPage,
+    PopupcertPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,10 @@ import { GeneralcndPage } from '../pages/generalcnd/generalcnd';
     Createacc2Page,
     Createacc3Page,
     Createacc4Page,
-    GeneralcndPage
+    GeneralcndPage,
+    ConnexionPage,
+    RecoverpasswdPage,
+    PopupcertPage
   ],
   providers: [
     StatusBar,

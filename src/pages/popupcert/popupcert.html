@@ -1,0 +1,41 @@
+<ion-content class="container">
+
+  <ion-row class="top-margin"></ion-row>
+
+  <ion-row class="gc-ctn">
+
+    <ion-col>
+      <ion-row>
+        <img class="cert" src="assets/imgs/da_image/Group-certificat-02.png">
+      </ion-row>
+      <ion-row>
+        <ion-label class="gc-label">
+          Professionel ou étudiant, faites vérifier et certifier votre profil afin de rassurer les autres utilisateurs
+          sur la fiabilité de vos interventions.
+          Scannez votre carte étudiante ou un document attestant de votre profession.
+
+
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <button ion-button round class="btn-blue-gradient" (click)="goToHome();">
+          Prendre une photo 
+          <span style="color: rgba(0,0,0,0.0);">CC</span>
+          <ion-icon>
+            <img src="../../assets/imgs/da_image/camera.png">
+          </ion-icon>
+        </button>
+      </ion-row>
+      <ion-row (click)="dismiss();">
+        <ion-label>
+          Non merci
+        </ion-label>
+      </ion-row>
+    </ion-col>
+
+
+
+
+  </ion-row>
+
+</ion-content>

@@ -1,6 +1,194 @@
 page-home {
-    .container {
-        background-size: 100%;
-        background-image: url('../../assets/imgs/background/daConnexion.png');
+  .container {
+    background-size: 100%;
+    background-image: url('../../assets/imgs/background/bgConnexion.png');
+    color: color($colors, white);
+  }
+
+  .header {
+    position: fixed;
+    top: 20px;
+    left: 1%;
+    width: 94%;
+    
+    height: 70px;
+    padding: 0px;
+  }
+
+  .da {
+    font-size: 130%;
+    margin-left: 5px;
+
+    .bold {
+      font-weight: bolder;
     }
+
+    .fine {
+      font-weight: 100;
+    }
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-menu {
+    width: 18px;
+    height: 16px;
+    margin-top: 14px;
+    margin-left: 20px;
+  }
+
+  .card-ctn {
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin: 1%;
+    margin-top: 90px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    background-image: url('../../assets/imgs/da_image/Rectangle\ 3.jpg');
+    background-size: 100% 100%;
+    width: 98%;
+
+    ion-col {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+
+  .card-ctn-2 {
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin: 1%;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    background-image: url('../../assets/imgs/da_image/Rectangle-05.jpg');
+    background-size: 100% 100%;
+    width: 98%;
+
+    ion-col {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+
+  .card-ctn-3 {
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin: 1%;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    background-image: url('../../assets/imgs/da_image/Rectangle-03.jpg');
+    background-size: 100% 100%;
+    width: 98%;
+
+    ion-col {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+
+  .card-title {
+    white-space: normal;
+    text-align: justify;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .card-ttl-ctn {
+    margin-top: -20px;
+  }
+
+  .ttl-bold {
+    font-weight: bold;
+    font-size: 130%;
+  }
+
+  .ttl-fine {
+    font-weight: 100;
+    font-size: 110%;
+  }
+
+  .name-bold {
+    font-weight: bold;
+    font-size: 110%;
+  }
+
+  .lieu-fine {
+    font-weight: 100;
+    font-size: 100%;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .about-user {
+    margin-left: 10px;
+  }
+
+  .card-footer {
+    width: 100%;
+    border-radius: 14px;
+    background-color: rgba(43, 43, 248, 0.6);
+    height: 30px;
+  }
+
+  .photo-lab {
+    padding-right: 20px;
+    padding-top: 15px;
+    margin-top: -5px;
+    width: 100%;
+  }
+
+  .photo-lab-1 {
+    padding-right: 20px;
+    padding-top: 15px;
+    margin-top: -10px;
+  }
+
+  .photo-btn {
+    position: relative;
+    zoom: 1.0;
+    float: right;
+  }
+
+  .photo-btn-left {
+    position: relative;
+    zoom: 1.0;
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -15px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+  }
+
+  .text-inner {
+    margin-left: 10px;
+  }
+
+  .col-3 {
+    width: 33%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .certfied {
+    float: right;
+    width: 40px;
+    height: 40px;
+  }
+
 }

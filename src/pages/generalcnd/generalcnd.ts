@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the GeneralcndPage page.
@@ -20,6 +21,15 @@ export class GeneralcndPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GeneralcndPage');
+  }
+
+  public precedent(){
+    this.navCtrl.pop();
+  }
+
+  public goToHome(){
+    let home = HomePage;
+    this.navCtrl.push(home);
   }
 
 }

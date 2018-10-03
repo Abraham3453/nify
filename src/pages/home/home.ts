@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
+import { PopupcertPage } from '../popupcert/popupcert';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,27 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private modalCtrl: ModalController
+  ) {
 
+    setTimeout(() => {
+      this.presentCert();
+    }, 2000);
+
+  }
+
+  public presentCert() {
+    let cert = this.modalCtrl.create(PopupcertPage,
+      {
+        user: '1'
+      });
+    cert.onDidDismiss(data => {
+      console.log(data);
+    });
+    cert.present();
   }
 
 }

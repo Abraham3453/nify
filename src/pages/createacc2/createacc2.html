@@ -75,10 +75,10 @@
     </ion-row>
 
     <ion-row>
-      <button ion-button round class="btn-blue-gradient-round">Continuer</button>
+      <button ion-button round class="btn-blue-gradient-round" (click)="nextStep();">Continuer</button>
     </ion-row>
 
-    <ion-row>
+    <ion-row (click)="precedent();">
       <ion-label class="btn-no-bg">Pr&#233;c&#233;dent</ion-label>
     </ion-row>
   </ion-grid>

@@ -10,6 +10,9 @@ import { Createacc2Page } from '../pages/createacc2/createacc2';
 import { Createacc3Page } from '../pages/createacc3/createacc3';
 import { Createacc4Page } from '../pages/createacc4/createacc4';
 import { GeneralcndPage } from '../pages/generalcnd/generalcnd';
+import { ConnexionPage } from '../pages/connexion/connexion';
+import { RecoverpasswdPage } from '../pages/recoverpasswd/recoverpasswd';
+import { PopupcertPage } from '../pages/popupcert/popupcert';
 @Component({
   templateUrl: 'app.html'
 })
@@ -17,7 +20,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = GeneralcndPage;
+  rootPage:any = DentartPage;
 
   pages: Array<{title: string, component: any}>;
 

@@ -1,6 +1,7 @@
 import { Component, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Createacc4Page } from '../createacc4/createacc4';
 
 declare var google;
 
@@ -94,6 +95,15 @@ export class Createacc3Page {
     this.address = item;
     this.autocomplete.input = item.description;
     this.autocompleteItems = [];
+  }
+
+  public precedent(){
+    this.navCtrl.pop();
+  }
+
+  public nextStep(){
+    let caccn = Createacc4Page;
+    this.navCtrl.push(caccn);
   }
 
 }
