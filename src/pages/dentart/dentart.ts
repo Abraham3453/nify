@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Createacc1Page } from '../createacc1/createacc1';
 import { ConnexionPage } from '../connexion/connexion';
+import { GlobalsProvider } from '../../providers/globals/globals';
 
 /**
  * Generated class for the DentartPage page.
@@ -17,19 +18,25 @@ import { ConnexionPage } from '../connexion/connexion';
 })
 export class DentartPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  langage: string = 'fr';
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private globals: GlobalsProvider
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DentartPage');
   }
 
-  public creerCompte(){
+  public creerCompte() {
     let cacc = Createacc1Page;
     this.navCtrl.push(cacc);
   }
 
-  public connexion(){
+  public connexion() {
     let conn = ConnexionPage;
     this.navCtrl.push(conn);
   }

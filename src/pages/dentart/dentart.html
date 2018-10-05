@@ -15,20 +15,37 @@
   </ion-row>
 
   <ion-row class="wc-ctn">
-    <ion-label class="color-white wc">Bienvenue chez DentArt</ion-label>
+    <ion-label class="color-white wc" *ngIf="langage == 'fr'">
+      {{globals.variables.langage.fr.marhaba}}
+    </ion-label>
+    <ion-label class="color-white wc" *ngIf="langage == 'en'">
+        {{globals.variables.langage.en.marhaba}}
+      </ion-label>
   </ion-row>
 
   <ion-row class="separator"></ion-row>
 
   <ion-row>
-    <button ion-button round class="btn-blue-gradient" (click)="creerCompte();">
-      Cr&#233;er un compte
+    <button *ngIf="langage == 'fr'" ion-button round 
+    class="btn-blue-gradient" 
+    (click)="creerCompte();">
+    {{globals.variables.langage.fr.caccbtn}}
+    </button>
+    <button *ngIf="langage == 'en'" ion-button round 
+    class="btn-blue-gradient" 
+    (click)="creerCompte();">
+    {{globals.variables.langage.en.caccbtn}}
     </button>
   </ion-row>
 
   <ion-row>
-    <button ion-button round class="btn-light" (click)="connexion();">
-      Connexion
+    <button *ngIf="langage == 'fr'" ion-button round 
+    class="btn-light" (click)="connexion();">
+    {{globals.variables.langage.fr.login}}
+    </button>
+    <button *ngIf="langage == 'en'" ion-button round 
+    class="btn-light" (click)="connexion();">
+    {{globals.variables.langage.en.login}}
     </button>
   </ion-row>
 

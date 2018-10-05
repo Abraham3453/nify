@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { PopupcertPage } from '../popupcert/popupcert';
+import { FaqcomPage } from '../faqcom/faqcom';
+import { FaqdetailPage } from '../faqdetail/faqdetail';
 
 @Component({
   selector: 'page-home',
@@ -29,6 +31,16 @@ export class HomePage {
       console.log(data);
     });
     cert.present();
+  }
+
+  public comment(){
+    let fcom = FaqcomPage;
+    this.navCtrl.push(fcom);
+  }
+
+  public faqDetails(){
+    let fdet = FaqdetailPage;
+    this.navCtrl.push(fdet);
   }
 
 }

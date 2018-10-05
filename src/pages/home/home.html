@@ -24,7 +24,7 @@
           </ion-icon>
         </ion-label>
       </ion-row>
-      <ion-row class="card-ttl-ctn">
+      <ion-row class="card-ttl-ctn" (click)="faqDetails();">
         <ion-label class="card-title">
           <span class="ttl-bold">
             Lorem ipsum 1<br>
@@ -60,13 +60,13 @@
           </ion-label>
         </ion-col>
 
-        <ion-col class="col-3">
+        <ion-col class="col-3" (click)="comment();">
           <ion-label class="photo-lab-1">
             <ion-icon class="photo-btn-left">
               <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
               <img src="assets/imgs/da_image/Combined Shape.png">
             </ion-icon>
-            <span class="text-inner">
+            <span class="text-inner txt-com">
               Commentaire
             </span>
           </ion-label>

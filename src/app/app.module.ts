@@ -17,6 +17,9 @@ import { GeneralcndPage } from '../pages/generalcnd/generalcnd';
 import { ConnexionPage } from '../pages/connexion/connexion';
 import { RecoverpasswdPage } from '../pages/recoverpasswd/recoverpasswd';
 import { PopupcertPage } from '../pages/popupcert/popupcert';
+import { HttpClient, HttpHandler } from '@angular/common/http';
+import { FaqcomPage } from '../pages/faqcom/faqcom';
+import { FaqdetailPage } from '../pages/faqdetail/faqdetail';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { PopupcertPage } from '../pages/popupcert/popupcert';
     GeneralcndPage,
     ConnexionPage,
     RecoverpasswdPage,
-    PopupcertPage
+    PopupcertPage,
+    FaqcomPage,
+    FaqdetailPage
   ],
   imports: [
     BrowserModule,
@@ -48,14 +53,17 @@ import { PopupcertPage } from '../pages/popupcert/popupcert';
     GeneralcndPage,
     ConnexionPage,
     RecoverpasswdPage,
-    PopupcertPage
+    PopupcertPage,
+    FaqcomPage,
+    FaqdetailPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GlobalsProvider,
-    Geolocation
+    Geolocation,
+    HttpClient
   ]
 })
 export class AppModule {}

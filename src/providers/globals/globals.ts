@@ -10,11 +10,28 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GlobalsProvider {
 
-  variable: object = {};
+  variables: object = {};
 
   constructor(
-    public http: HttpClient
+    
   ) {
+
+    this.variables = {
+      langage: {
+        fr: {
+          marhaba: "Bienvenue chez DentArt",
+          caccbtn: "Créer un compte",
+          login: "Connexion"
+        },
+        en: {
+          marhaba: "Welcome to DentArt",
+          caccbtn: "Create an account",
+          caccsup: "Sing up",
+          login: "Log in",
+          singin: "Sing in"
+        }
+      }
+    }
     console.log('Hello GlobalsProvider Provider');
   }
 

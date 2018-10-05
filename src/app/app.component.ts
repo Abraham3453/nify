@@ -13,6 +13,8 @@ import { GeneralcndPage } from '../pages/generalcnd/generalcnd';
 import { ConnexionPage } from '../pages/connexion/connexion';
 import { RecoverpasswdPage } from '../pages/recoverpasswd/recoverpasswd';
 import { PopupcertPage } from '../pages/popupcert/popupcert';
+import { FaqcomPage } from '../pages/faqcom/faqcom';
+import { FaqdetailPage } from '../pages/faqdetail/faqdetail';
 @Component({
   templateUrl: 'app.html'
 })
@@ -20,20 +22,24 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = DentartPage;
+  rootPage: any = DentartPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(
-    public platform: Platform, 
-    public statusBar: StatusBar, 
+    public platform: Platform,
+    public statusBar: StatusBar,
     public splashScreen: SplashScreen
   ) {
-    
+
     this.initializeApp();
 
     this.pages = [
-      {title: 'Home', component: HomePage}
+      { title: 'FaQ', component: HomePage },
+      { title: 'Annones', component: HomePage },
+      { title: 'Formations', component: HomePage },
+      { title: 'A savoir', component: HomePage },
+      { title: 'Mes alert', component: HomePage }
     ]
   }
 
