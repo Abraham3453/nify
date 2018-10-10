@@ -1,4 +1,5 @@
 page-home {
+  
   .container {
     background-size: 100%;
     background-image: url('../../assets/imgs/background/bgConnexion.png');
@@ -7,12 +8,18 @@ page-home {
 
   .header {
     position: fixed;
-    top: 20px;
-    left: 1%;
-    width: 94%;
-    
-    height: 70px;
+    top: 0px;
+    left: 0;
+    width: 100%;
     padding: 0px;
+    margin: 0;
+    height: 80px;
+    background-color: color($colors, bgheader);
+    z-index: 9999;
+    h4 {
+      padding: 0px;
+      margin: 0px;
+    }
   }
 
   .da {
@@ -20,24 +27,46 @@ page-home {
     margin-left: 5px;
 
     .bold {
+      position: relative;
+      top: -15px;
       font-weight: bolder;
     }
 
     .fine {
+      position: relative;
+      top: -15px;
       font-weight: 100;
     }
   }
 
   .logo {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+    margin-top: 0px;
+    margin-left: 0px;
   }
 
   .btn-menu {
     width: 18px;
     height: 16px;
-    margin-top: 14px;
-    margin-left: 20px;
+    margin-top: 25px;
+    margin-right: 10px;
+    float: right;
+  }
+
+  .filter-row {
+    width: 100%;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    margin-top: -10px;
+    background: -moz-linear-gradient(to bottom, #329FF9, #50E3C2);
+    background: -webkit-linear-gradient(to bottom, #329FF9, #50E3C2);
+    background: linear-gradient(to bottom, #329FF9, #50E3C2);
+    h4 {
+      padding: 5px;
+      margin: 0px;
+    }
   }
 
   .card-ctn {
@@ -45,7 +74,7 @@ page-home {
     padding-top: 0px;
     padding-bottom: 10px;
     margin: 1%;
-    margin-top: 90px;
+    margin-top: 10px;
     margin-bottom: 0px;
     border-radius: 10px;
     background-image: url('../../assets/imgs/da_image/Rectangle\ 3.jpg');
@@ -170,8 +199,7 @@ page-home {
     position: absolute;
     top: -5px;
     right: -15px;
-    width: 18px;
-    height: 18px;
+    height: 20px;
     border-radius: 50%;
   }
 

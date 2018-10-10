@@ -20,6 +20,15 @@ import { PopupcertPage } from '../pages/popupcert/popupcert';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { FaqcomPage } from '../pages/faqcom/faqcom';
 import { FaqdetailPage } from '../pages/faqdetail/faqdetail';
+import { FaqfilterPage } from '../pages/faqfilter/faqfilter';
+import { Faqadd1Page } from '../pages/faqadd1/faqadd1';
+import { File } from '@ionic-native/file';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { Faqadd2Page } from '../pages/faqadd2/faqadd2';
+import { Faqadd3Page } from '../pages/faqadd3/faqadd3';
+import { Faqadd4annulerPage } from '../pages/faqadd4annuler/faqadd4annuler';
+import { AnnoncesPage } from '../pages/annonces/annonces';
+import { AnnoncesFilterPage } from '../pages/annonces-filter/annonces-filter';
 
 @NgModule({
   declarations: [
@@ -35,7 +44,14 @@ import { FaqdetailPage } from '../pages/faqdetail/faqdetail';
     RecoverpasswdPage,
     PopupcertPage,
     FaqcomPage,
-    FaqdetailPage
+    FaqdetailPage,
+    FaqfilterPage,
+    Faqadd1Page,
+    Faqadd2Page,
+    Faqadd3Page,
+    Faqadd4annulerPage,
+    AnnoncesPage,
+    AnnoncesFilterPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +71,14 @@ import { FaqdetailPage } from '../pages/faqdetail/faqdetail';
     RecoverpasswdPage,
     PopupcertPage,
     FaqcomPage,
-    FaqdetailPage
+    FaqdetailPage,
+    FaqfilterPage,
+    Faqadd1Page,
+    Faqadd2Page,
+    Faqadd3Page,
+    Faqadd4annulerPage,
+    AnnoncesPage,
+    AnnoncesFilterPage
   ],
   providers: [
     StatusBar,
@@ -63,7 +86,9 @@ import { FaqdetailPage } from '../pages/faqdetail/faqdetail';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GlobalsProvider,
     Geolocation,
-    HttpClient
+    HttpClient,
+    File,
+    FileTransfer
   ]
 })
 export class AppModule {}

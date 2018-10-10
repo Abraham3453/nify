@@ -1,0 +1,78 @@
+page-faqadd1 {
+
+  .container {
+    text-align: center;
+    background-image: url('../../assets/imgs/background/bgConnexion.png');
+    background-size: 100% 100%;
+  }
+
+  .top-margin {
+    height: 1px;
+  }
+
+  .header {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .gc {
+    color: color($colors, bleu);
+    text-align: right;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  .fw-faq {
+    position: relative;
+    top: -10px;
+  }
+
+  .back-gc {
+    margin-top: 9px;
+  }
+
+  .back-gc,
+  .forward {
+    zoom: 2;
+  }
+
+  .img-ctn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: white;
+  }
+
+  .img-to {
+      width: 24%;
+      height: 80px;
+      margin: auto;
+  }
+
+  .ctn-selected-img {
+    height: 50%;
+  }
+
+  .img-sd {
+    width: 98%;
+    height: 100%;
+    margin: auto;
+  }
+
+  .tab-faq {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: color($colors, bleu);
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+}

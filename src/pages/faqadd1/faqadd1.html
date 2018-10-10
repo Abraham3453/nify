@@ -1,0 +1,42 @@
+<ion-content class="container">
+
+  <ion-row class="top-margin"></ion-row>
+
+  <ion-row class="header">
+    <ion-icon *ngIf="source == 1" class="ion-md-close back-gc" color="bleu" (click)="fermer();"></ion-icon>
+    <ion-icon *ngIf="source == 2" class="ion-md-close back-gc" color="bleu" (click)="onClick()"></ion-icon>
+
+    <ion-label *ngIf="source == 1" class="gc" (click)="nextStep();">
+      <span class="fw-faq">Continuer</span>
+      <ion-icon class="ion-ios-arrow-forward forward" color="bleu"></ion-icon>
+    </ion-label>
+
+    <ion-label *ngIf="source == 2" class="gc" (click)="dismiss();">
+      <span class="fw-faq">Continuer</span>
+      <ion-icon class="ion-ios-arrow-forward forward" color="bleu"></ion-icon>
+    </ion-label>
+
+  </ion-row>
+
+  <ion-row *ngIf="selectedImg != null" class="ctn-selected-img">
+    <img src="{{selectedImg.url}}" class="img-sd" />
+  </ion-row>
+
+  <!-- <ion-row *ngIf="selectedImg != null && selectedImg.length > 0">
+        <img *ngFor="let img of selectedImg" src="{{img.url}}" class="img-sd" />
+    </ion-row>
+ -->
+  <ion-row class="img-ctn">
+    <img *ngFor="let img of listImage" src="{{img.url}}" class="img-to" (click)="selectImage(img);" />
+  </ion-row>
+
+  <ion-row class="tab-faq">
+    <ion-col>
+      <ion-label>Galerie</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-label>Photo</ion-label>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

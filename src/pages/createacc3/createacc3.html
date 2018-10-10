@@ -1,15 +1,9 @@
-<!-- <ion-header>
-  <ion-toolbar color="primary">
-    <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
-  </ion-toolbar>
-</ion-header> -->
-
 <ion-content class="container">
 
   <ion-row class="top-margin"></ion-row>
 
   <ion-row>
-    <img class="logo" src="assets/imgs/logo/logo.png">
+    <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
   </ion-row>
 
   <ion-row class="da-ctn">
@@ -34,7 +28,7 @@
 
     <ion-row>
       <ion-avatar class="cacc-avatar">
-        <img src="assets/imgs/avatar/createacc3/avatar.png">
+        <img src="assets/imgs/da_image/avatar-message.png">
       </ion-avatar>
     </ion-row>
 
@@ -48,15 +42,13 @@
 
       <img class="map-marker" src="assets/imgs/avatar/createacc3/map_marker.png">
 
-      <ion-list [hidden]="autocompleteItems.length == 0">
-        <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
-          {{ item.description }}
-        </ion-item>
-      </ion-list>
-
     </ion-row>
 
-
+    <ion-list [hidden]="autocompleteItems.length == 0">
+      <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+        {{ item.description }}
+      </ion-item>
+    </ion-list>
 
     <ion-row>
       <button ion-button round class="btn-blue-gradient-round" (click)="nextStep();">Continuer</button>

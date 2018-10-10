@@ -1,0 +1,146 @@
+page-annonces {
+
+  .container {
+    background-size: 100%;
+    background-image: url('../../assets/imgs/background/bgConnexion.png');
+    background: -moz-linear-gradient(to bottom, #329FF9, #50E3C2);
+    background: -webkit-linear-gradient(to bottom, #329FF9, #50E3C2);
+    background: linear-gradient(to bottom, #329FF9, #50E3C2);
+    color: color($colors, white);
+  }
+
+  .header {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+    height: 80px;
+    background-color: color($colors, bgheader);
+    z-index: 9999;
+
+    h4 {
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+
+  .map-ctn {
+    width: 100%;
+    height: 40%;
+    background-color: white;
+
+    #map {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .da {
+    font-size: 130%;
+    margin-left: 5px;
+
+    .bold {
+      position: relative;
+      top: -15px;
+      font-weight: bolder;
+    }
+
+    .fine {
+      position: relative;
+      top: -15px;
+      font-weight: 100;
+    }
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .btn-menu {
+    width: 18px;
+    height: 16px;
+    margin-top: 25px;
+    margin-right: 10px;
+    float: right;
+  }
+
+  .card-ctn {
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin: 1%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    background-color: white;
+    background-size: 100% 100%;
+    width: 98%;
+
+    ion-col {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .name-bold {
+    font-weight: bold;
+    font-size: 110%;
+    color: color($colors, bleu);
+  }
+
+  .lieu-fine {
+    font-weight: 100;
+    font-size: 100%;
+    color: color($colors, dark);
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .about-user {
+    margin-left: 10px;
+  }
+
+  .date-annonce {
+    float: right;
+    color: color($colors, bleu);
+  }
+
+  .separator {
+    width: 100%;
+    height: 80px;
+  }
+
+  .tarif {
+    font-size: 100%;
+    font-weight: bold;
+    color: color($colors, bleu);
+  }
+
+  .tabs {
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 70px;
+      text-align: center;
+      font-size: 120%;
+      font-weight: bold;
+      background-color: color($colors, bleu);
+      color: white;
+  }
+
+}

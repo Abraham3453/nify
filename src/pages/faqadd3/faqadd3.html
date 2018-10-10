@@ -1,0 +1,71 @@
+<ion-content class="container">
+
+  <ion-row class="top-margin"></ion-row>
+
+  <ion-row class="header">
+
+    <ion-col class="col-cancel" (click)="annulerClick();">
+      <ion-label class="annuler">
+        <ion-icon class="ion-ios-arrow-back back-gc" color="white"></ion-icon>
+        <span class="back-faq">Annuler</span>
+      </ion-label>
+    </ion-col>
+
+    <ion-col (click)="publier()">
+      <ion-label class="gc">
+        <span class="fw-faq">Publier</span>
+        <ion-icon class="ion-ios-arrow-forward forward" color="white"></ion-icon>
+      </ion-label>
+    </ion-col>
+
+  </ion-row>
+
+  <ion-grid fixed class="faq-photo">
+    <ion-row>
+      <ion-col>
+        <img class="img" src="{{imgs[0].url}}" alt="No image found" />
+      </ion-col>
+      <ion-col (click)="addPhoto();">
+        <img class="img" *ngIf="imgs.length >= 2" src="{{imgs[1].url}}" />
+        <ion-row *ngIf="imgs.length < 2" class="alt-img">
+          <ion-icon name="md-add" class="icon-add" color="bleu"></ion-icon>
+        </ion-row>
+      </ion-col>
+      <ion-col (click)="addPhoto();">
+        <img class="img" *ngIf="imgs.length >= 3" src="{{imgs[2].url}}" />
+        <ion-row *ngIf="imgs.length < 3" class="alt-img">
+          <ion-icon name="md-add" class="icon-add" color="bleu"></ion-icon>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ctn-faq-det">
+    <ion-row class="img-ctn">
+      <ion-col>
+        <ion-item>
+          <ion-label>Theme</ion-label>
+          <ion-select placeholder="Choisir le theme">
+            <ion-option value="1">Soins</ion-option>
+            <ion-option value="2">Endodontie</ion-option>
+            <ion-option value="3">Chirurgie et implants</ion-option>
+            <ion-option value="4">Prothèses</ion-option>
+            <ion-option value="5">Pédodontie</ion-option>
+            <ion-option value="6">Orthodontie</ion-option>
+            <ion-option value="7">Vie du cabinet et contrats</ion-option>
+            <ion-option value="8">News</ion-option>
+          </ion-select>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ctn-faq-desc">
+      <ion-col>
+        <ion-textarea class="desc-faq" placeholder="Description"></ion-textarea>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

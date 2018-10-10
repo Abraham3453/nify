@@ -1,0 +1,33 @@
+<ion-content class="container">
+
+  <ion-grid class="ctn-rec">
+    <ion-row class="flex-row">
+      <ion-col>
+        <ion-row>
+          <ion-col>
+            <ion-label class="ws-norm title-rec">
+              <ion-icon name="md-close-circle" class="close-annuler" color="danger"></ion-icon>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label class="ws-norm">
+              Êtes vous sûr de vouloir quitter la publcation ?
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <button ion-button round class="btn-download" (click)="annuler();">OUI</button>
+          </ion-col>
+          <ion-col size="6">
+            <button ion-button round class="btn-blue-gradient" (click)="dismiss();">NON</button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

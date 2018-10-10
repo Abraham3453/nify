@@ -29,7 +29,7 @@ export class Createacc2Page {
       document.getElementById('icon_btn_'+i).style.display = 'none';
     }
     document.getElementById(idIcon).style.display = 'inline';
-    document.getElementById(idBtn).style.fontWeight = '100';
+    document.getElementById(idBtn).style.fontWeight = 'bold';
   }
 
   public precedent(){
