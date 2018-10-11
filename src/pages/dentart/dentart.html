@@ -19,34 +19,32 @@
       {{globals.variables.langage.fr.marhaba}}
     </ion-label>
     <ion-label class="color-white wc" *ngIf="langage == 'en'">
-        {{globals.variables.langage.en.marhaba}}
-      </ion-label>
+      {{globals.variables.langage.en.marhaba}}
+    </ion-label>
   </ion-row>
 
   <ion-row class="separator"></ion-row>
 
   <ion-row>
-    <button *ngIf="langage == 'fr'" ion-button round 
-    class="btn-blue-gradient" 
-    (click)="creerCompte();">
-    {{globals.variables.langage.fr.caccbtn}}
+    <button *ngIf="langage == 'fr'" ion-button round class="btn-blue-gradient" (click)="creerCompte();">
+      {{globals.variables.langage.fr.caccbtn}}
     </button>
-    <button *ngIf="langage == 'en'" ion-button round 
-    class="btn-blue-gradient" 
-    (click)="creerCompte();">
-    {{globals.variables.langage.en.caccbtn}}
+    <button *ngIf="langage == 'en'" ion-button round class="btn-blue-gradient" (click)="creerCompte();">
+      {{globals.variables.langage.en.caccbtn}}
     </button>
   </ion-row>
 
   <ion-row>
-    <button *ngIf="langage == 'fr'" ion-button round 
-    class="btn-light" (click)="connexion();">
-    {{globals.variables.langage.fr.login}}
+    <button *ngIf="langage == 'fr'" ion-button round class="btn-light" (click)="connexion();">
+      {{globals.variables.langage.fr.login}}
     </button>
-    <button *ngIf="langage == 'en'" ion-button round 
-    class="btn-light" (click)="connexion();">
-    {{globals.variables.langage.en.login}}
+    <button *ngIf="langage == 'en'" ion-button round class="btn-light" (click)="connexion();">
+      {{globals.variables.langage.en.login}}
     </button>
+  </ion-row>
+
+  <ion-row class="ligne">
+    <div class="status-value"></div>
   </ion-row>
 
 </ion-content>

@@ -72,6 +72,7 @@ page-faqcom {
   }
 
   .bg-gradient {
+    border-radius: 10px;
     background: -moz-linear-gradient(top right, #50E3C2, #329FF9);
     background: -webkit-linear-gradient(top right, #50E3C2, #329FF9);
     background: linear-gradient(top right, #50E3C2, #329FF9);
@@ -114,6 +115,17 @@ page-faqcom {
     font-size: 100%;
     font-weight: bold;
     color: color($colors, gris);
+  }
+
+  .titre-faq {
+    font-size: 130%;
+    font-weight: bold;
+    color: color($colors, bleu);
+    margin-bottom: 10px;
+  }
+
+  .sep {
+    height: 20px;
   }
 
 }

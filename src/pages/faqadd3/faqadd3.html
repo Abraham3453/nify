@@ -22,17 +22,23 @@
 
   <ion-grid fixed class="faq-photo">
     <ion-row>
-      <ion-col>
-        <img class="img" src="{{imgs[0].url}}" alt="No image found" />
+      <ion-col (click)="addPhoto(0);">
+        <img class="img" *ngIf="imgs.length >= 1" src="{{imgs[0].url}}" alt="No image found" />
+        <img class="sup-icon" *ngIf="imgs.length >= 1" src="assets/imgs/da_image/waste-bin.png" />
+        <ion-row *ngIf="imgs.length < 1" class="alt-img">
+          <ion-icon name="md-add" class="icon-add" color="bleu"></ion-icon>
+        </ion-row>
       </ion-col>
-      <ion-col (click)="addPhoto();">
+      <ion-col (click)="addPhoto(1);">
         <img class="img" *ngIf="imgs.length >= 2" src="{{imgs[1].url}}" />
+        <img class="sup-icon" *ngIf="imgs.length >= 2" src="assets/imgs/da_image/waste-bin.png" />
         <ion-row *ngIf="imgs.length < 2" class="alt-img">
           <ion-icon name="md-add" class="icon-add" color="bleu"></ion-icon>
         </ion-row>
       </ion-col>
-      <ion-col (click)="addPhoto();">
+      <ion-col (click)="addPhoto(2);">
         <img class="img" *ngIf="imgs.length >= 3" src="{{imgs[2].url}}" />
+        <img class="sup-icon" *ngIf="imgs.length >= 3" src="assets/imgs/da_image/waste-bin.png" />
         <ion-row *ngIf="imgs.length < 3" class="alt-img">
           <ion-icon name="md-add" class="icon-add" color="bleu"></ion-icon>
         </ion-row>
@@ -44,7 +50,7 @@
     <ion-row class="img-ctn">
       <ion-col>
         <ion-item>
-          <ion-label>Theme</ion-label>
+          <ion-label>Th&#232;mes</ion-label>
           <ion-select placeholder="Choisir le theme">
             <ion-option value="1">Soins</ion-option>
             <ion-option value="2">Endodontie</ion-option>

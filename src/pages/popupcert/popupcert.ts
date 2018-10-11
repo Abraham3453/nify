@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, ModalController } from 'ionic-angular';
+import { CertphotoPage } from '../certphoto/certphoto';
 
 /**
  * Generated class for the PopupcertPage page.
@@ -18,7 +19,8 @@ export class PopupcertPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public viewCtrl: ViewController
+    public viewCtrl: ViewController,
+    private modalCtrl: ModalController
     ) {
   }
 
@@ -29,6 +31,14 @@ export class PopupcertPage {
   public dismiss() {
     let data = { 'foo': 'bar' };
     this.viewCtrl.dismiss(data);
+  }
+
+  public prendrePhoto(){
+    let takePic = this.modalCtrl.create(CertphotoPage);
+    takePic.onDidDismiss(data => {
+      this.viewCtrl.dismiss();
+    })
+    takePic.present();
   }
 
 }

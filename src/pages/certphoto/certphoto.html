@@ -3,15 +3,9 @@
   <ion-row class="top-margin"></ion-row>
 
   <ion-row class="header">
-    <ion-icon *ngIf="source == 1" class="ion-md-close back-gc" color="bleu" (click)="fermer();"></ion-icon>
-    <ion-icon *ngIf="source == 2" class="ion-md-close back-gc" color="bleu" (click)="fermer()"></ion-icon>
+    <ion-icon class="ion-md-close back-gc" color="bleu" (click)="fermer();"></ion-icon>
 
-    <ion-label *ngIf="source == 1" class="gc" (click)="nextStep();">
-      <span class="fw-faq">Continuer</span>
-      <ion-icon class="ion-ios-arrow-forward forward" color="bleu"></ion-icon>
-    </ion-label>
-
-    <ion-label *ngIf="source == 2" class="gc" (click)="dismiss();">
+    <ion-label class="gc" (click)="dismiss();">
       <span class="fw-faq">Continuer</span>
       <ion-icon class="ion-ios-arrow-forward forward" color="bleu"></ion-icon>
     </ion-label>

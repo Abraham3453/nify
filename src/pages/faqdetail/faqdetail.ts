@@ -16,18 +16,27 @@ import { FaqcomPage } from '../faqcom/faqcom';
 })
 export class FaqdetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  image: any;
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+
+  ) {
+
+    this.image = navParams.get('image');
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FaqdetailPage');
   }
 
-  public precedent(){
+  public precedent() {
     this.navCtrl.pop();
   }
 
-  public comment(){
+  public comment() {
     let fcom = FaqcomPage;
     this.navCtrl.push(fcom);
   }

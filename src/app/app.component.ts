@@ -22,6 +22,7 @@ import { Faqadd3Page } from '../pages/faqadd3/faqadd3';
 import { Faqadd4annulerPage } from '../pages/faqadd4annuler/faqadd4annuler';
 import { AnnoncesPage } from '../pages/annonces/annonces';
 import { AnnoncesFilterPage } from '../pages/annonces-filter/annonces-filter';
+import { SplashPage } from '../pages/splash/splash';
 @Component({
   templateUrl: 'app.html'
 })

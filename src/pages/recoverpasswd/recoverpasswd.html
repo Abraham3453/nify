@@ -22,7 +22,7 @@
   <ion-row class="separator"></ion-row>
 
   <ion-row class="info-ctn">
-    <ion-label class="info">Saisissez votre e-mail et recevez votre mot de passe par mail</ion-label>
+    <ion-label class="info">Saisissez votre e-mail et recevez votre mot de passe par e-mail</ion-label>
   </ion-row>
 
   <form #form class="form">
@@ -39,10 +39,8 @@
     </ion-row>
   </form>
 
-  <ion-row (click)="recover();">
-    <ion-label class="btn-light">
+  <button ion-button round (click)="recover();" class="btn-light">
       Pr&#233;c&#233;dent
-    </ion-label>
-  </ion-row>
+  </button>
 
 </ion-content>

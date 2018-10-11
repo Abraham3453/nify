@@ -20,13 +20,13 @@
     </button>
     <ion-fab-list side="right">
       <button ion-fab (click)="newPub(fab)">
-        <ion-icon name="md-add-circle"></ion-icon>
+        <ion-icon class="add-icon" name="md-add-circle"></ion-icon>
       </button>
     </ion-fab-list>
     <ion-fab-list side="left">
       <button ion-fab (click)="showFilter(fab);">
-        <ion-icon>
-          <img src="assets/imgs/da_image/filter.png" />
+        <ion-icon class="filter-icon">
+          <img class="filter-img" src="assets/imgs/da_image/filter.png" />
         </ion-icon>
       </button>
     </ion-fab-list>
@@ -43,7 +43,7 @@
           </ion-icon>
         </ion-label>
       </ion-row>
-      <ion-row class="card-ttl-ctn" (click)="faqDetails();">
+      <ion-row class="card-ttl-ctn" (click)="faqDetails(image1);">
         <ion-label class="card-title">
           <span class="ttl-bold">
             Lorem ipsum 1<br>
@@ -119,7 +119,7 @@
         </ion-label>
       </ion-row>
 
-      <ion-row class="card-ttl-ctn" (click)="faqDetails();">
+      <ion-row class="card-ttl-ctn" (click)="faqDetails(image2);">
         <ion-label class="card-title">
           <span class="ttl-bold">
             Lorem ipsum 2<br>
@@ -210,7 +210,7 @@
         </ion-label>
       </ion-row>
 
-      <ion-row class="card-ttl-ctn" (click)="faqDetails();">
+      <ion-row class="card-ttl-ctn" (click)="faqDetails(image3);">
         <ion-label class="card-title">
           <span class="ttl-bold">
             Lorem ipsum 3<br>
@@ -276,7 +276,5 @@
     </ion-col>
 
   </ion-row>
-
-
 
 </ion-content>

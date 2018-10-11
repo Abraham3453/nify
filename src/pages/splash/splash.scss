@@ -1,4 +1,4 @@
-page-connexion {
+page-splash {
 
   .container {
     text-align: center;
@@ -6,21 +6,20 @@ page-connexion {
     background-size: 100% 100%;
   }
 
-  .top-margin {
-    height: 10px;
-  }
-
   .logo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .da-ctn {
-    margin-top: -35px;
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .da {
-    font-size: 170%;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+    font-size: 230%;
 
     .bold {
       font-weight: bolder;
@@ -48,16 +47,6 @@ page-connexion {
     height: 30px;
   }
 
-  .form-conn {
-    width: 96%;
-    margin: auto;
-    border-radius: 8px;
-    background-color: rgba(250,250,250,0.6);
-    ion-item{
-      background-color: rgba(0,0,0,0.0);
-    }
-  }
-
   .btn-blue-gradient {
     width: 60%;
     height: 50px;
@@ -71,12 +60,29 @@ page-connexion {
   }
 
   .btn-light {
+    width: 60%;
     height: 50px;
+    margin-left: 20%;
     margin-top: 20px;
     text-transform: none;
     background-color: rgba($color: #000000, $alpha: 0.0);
     font-size: 120%;
-    color: color($colors, bleu);
+    color: color($colors, vert);
+    border: color($colors, vert) 1px solid;
+  }
+
+  .ligne {
+    width: 56%;
+    height: 1px;
+    background-color: color($colors, gris);
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .status-value {
+    width: 80%;
+    height: 1px;
+    background-color: color($colors, bleu);
   }
 
 }

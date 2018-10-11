@@ -12,6 +12,10 @@ import { Faqadd1Page } from '../faqadd1/faqadd1';
 })
 export class HomePage {
 
+  image1: string = 'assets/imgs/da_image/Rectangle\ 3.jpg';
+  image2: string = 'assets/imgs/da_image/Rectangle-05.jpg';
+  image3: string = 'assets/imgs/da_image/Rectangle-03.jpg';
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -40,9 +44,11 @@ export class HomePage {
     this.navCtrl.push(fcom);
   }
 
-  public faqDetails() {
+  public faqDetails(image: string) {
     let fdet = FaqdetailPage;
-    this.navCtrl.push(fdet);
+    this.navCtrl.push(fdet, {
+      image: image
+    });
   }
 
   public showFilter(fab: FabContainer) {

@@ -7,7 +7,7 @@ page-dentart {
   }
 
   .top-margin {
-    height: 50px;
+    height: 30px;
   }
 
   .logo {
@@ -45,7 +45,7 @@ page-dentart {
   }
 
   .separator {
-    height: 70px;
+    height: 30px;
   }
 
   .btn-blue-gradient {
@@ -70,5 +70,19 @@ page-dentart {
     font-size: 120%;
     color: color($colors, vert);
     border: color($colors, vert) 1px solid;
+  }
+
+  .ligne {
+    width: 56%;
+    height: 1px;
+    background-color: color($colors, gris);
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .status-value {
+    width: 80%;
+    height: 1px;
+    background-color: color($colors, bleu);
   }
 }

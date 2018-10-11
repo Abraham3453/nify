@@ -47,8 +47,8 @@ page-home {
   }
 
   .btn-menu {
-    width: 18px;
-    height: 16px;
+    width: 25px;
+    height: 26px;
     margin-top: 25px;
     margin-right: 10px;
     float: right;
@@ -168,7 +168,7 @@ page-home {
     width: 100%;
     border-radius: 14px;
     background-color: rgba(43, 43, 248, 0.6);
-    height: 30px;
+    height: 35px;
   }
 
   .photo-lab {
@@ -181,7 +181,7 @@ page-home {
   .photo-lab-1 {
     padding-right: 20px;
     padding-top: 15px;
-    margin-top: -10px;
+    margin-top: -3px;
   }
 
   .photo-btn {
@@ -197,7 +197,7 @@ page-home {
 
   .cart-badge {
     position: absolute;
-    top: -5px;
+    top: -10px;
     right: -15px;
     height: 20px;
     border-radius: 50%;
@@ -217,6 +217,22 @@ page-home {
     float: right;
     width: 40px;
     height: 40px;
+  }
+
+  .add-icon {
+    zoom: 1.3;
+  }
+
+  .filter-icon {
+    zoom: 0.7;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .filter-img {
+    
   }
 
 }
