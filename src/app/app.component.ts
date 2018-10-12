@@ -22,7 +22,6 @@ import { Faqadd3Page } from '../pages/faqadd3/faqadd3';
 import { Faqadd4annulerPage } from '../pages/faqadd4annuler/faqadd4annuler';
 import { AnnoncesPage } from '../pages/annonces/annonces';
 import { AnnoncesFilterPage } from '../pages/annonces-filter/annonces-filter';
-import { SplashPage } from '../pages/splash/splash';
 @Component({
   templateUrl: 'app.html'
 })
@@ -44,10 +43,10 @@ export class MyApp {
 
     this.pages = [
       { title: 'FaQ', component: HomePage },
-      { title: 'Annones', component: AnnoncesPage },
+      { title: 'Annoces', component: AnnoncesPage },
       { title: 'Formations', component: HomePage },
-      { title: 'A savoir', component: HomePage },
-      { title: 'Mes alert', component: HomePage }
+      { title: 'À savoir', component: HomePage },
+      { title: 'Mes alertes', component: HomePage }
     ]
   }
 

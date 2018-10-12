@@ -30,7 +30,6 @@ import { Faqadd4annulerPage } from '../pages/faqadd4annuler/faqadd4annuler';
 import { AnnoncesPage } from '../pages/annonces/annonces';
 import { AnnoncesFilterPage } from '../pages/annonces-filter/annonces-filter';
 import { CertphotoPage } from '../pages/certphoto/certphoto';
-import { SplashPage } from '../pages/splash/splash';
 
 @NgModule({
   declarations: [
@@ -54,8 +53,7 @@ import { SplashPage } from '../pages/splash/splash';
     Faqadd4annulerPage,
     AnnoncesPage,
     AnnoncesFilterPage,
-    CertphotoPage,
-    SplashPage
+    CertphotoPage
   ],
   imports: [
     BrowserModule,
@@ -83,8 +81,7 @@ import { SplashPage } from '../pages/splash/splash';
     Faqadd4annulerPage,
     AnnoncesPage,
     AnnoncesFilterPage,
-    CertphotoPage,
-    SplashPage
+    CertphotoPage
   ],
   providers: [
     StatusBar,

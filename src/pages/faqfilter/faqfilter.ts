@@ -27,6 +27,7 @@ export class FaqfilterPage {
   }
 
   public selectFilter(idBtn, idIcon){
+    console.log(idBtn+ " == " + idIcon);
     for (let i = 0; i < 9; i++) {
       document.getElementById('btn'+i).style.fontWeight = '100';
       document.getElementById('icon_btn_'+i).style.display = 'none';
