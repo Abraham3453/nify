@@ -43,7 +43,7 @@ export class MyApp {
 
     this.pages = [
       { title: 'FaQ', component: HomePage },
-      { title: 'Annoces', component: AnnoncesPage },
+      { title: 'Annonces', component: AnnoncesPage },
       { title: 'Formations', component: HomePage },
       { title: 'À savoir', component: HomePage },
       { title: 'Mes alertes', component: HomePage }

@@ -27,9 +27,10 @@
 
   <form #form class="form">
 
-    <ion-item>
-      <ion-label stacked>Votre e-mail</ion-label>
-      <ion-input type="email" [(ngModel)]="email" name="email" (input)="changeMail($event);" maxlength="254"></ion-input>
+    <ion-item class="e-mail-ctn">
+      <ion-label stacked class="lab-e-mail">Votre e-mail</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email" 
+      (input)="changeMail($event);" maxlength="254" class="e-mail"></ion-input>
     </ion-item>
 
     <ion-row>
@@ -37,10 +38,12 @@
         Continuer
       </button>
     </ion-row>
+
+    <ion-row (click)="recover();" class="btn-light">
+      <ion-label>Pr&#233;c&#233;dent</ion-label>
+    </ion-row>
   </form>
 
-  <button ion-button round (click)="recover();" class="btn-light">
-      Pr&#233;c&#233;dent
-  </button>
+  
 
 </ion-content>

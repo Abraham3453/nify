@@ -109,4 +109,14 @@ page-createacc1 {
     font-size: 120%;
   }
 
+  .btn-light {
+    height: 50px;
+    margin-top: 10px;
+    text-transform: none;
+    background-color: rgba($color: #ffffff, $alpha: 1);
+    font-size: 120%;
+    color: color($colors, bleu);
+    width: 60%;
+  }
+
 }

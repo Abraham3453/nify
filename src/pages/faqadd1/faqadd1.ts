@@ -206,7 +206,7 @@ export class Faqadd1Page {
     else {
       const alert = this.alertCtrl.create({
         title: 'Informaton !',
-        subTitle: 'Selectionnez une photo !',
+        subTitle: 'Sélectionnez à modifier !',
         buttons: ['OK']
       });
       alert.present();
