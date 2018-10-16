@@ -2,15 +2,9 @@ page-dentart {
 
   .container {
     text-align: center;
-    background-image: url('../../assets/imgs/background/bgConnexion.png');
-    background-size: 100% 97%;
     background-repeat: no-repeat;
-    background: radial-gradient(circle at 45% 20%, 
-    #327AD6 40%, 
-    rgba(0,0,0,0.0) 40%),
-    radial-gradient(circle at 48% 24%, 
-    #C7F6F7 45%, 
-    #FFFFFF 45%);
+    background: radial-gradient(circle at 45% 20%,#327AD6 41%,rgba(0,0,0,0.0) 41%),
+    radial-gradient(circle at 48% 24%,#C7F6F7 47%,#FFFFFF 47%);
     min-height: 100%;
   }
 
@@ -61,6 +55,7 @@ page-dentart {
     background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
     background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
     background: linear-gradient(to right, #329FF9, #50E3C2);
+    box-shadow: none;
   }
 
   .btn-light {
@@ -71,14 +66,15 @@ page-dentart {
     text-transform: none;
     background-color: rgba($color: #000000, $alpha: 0.0);
     font-size: 120%;
-    color: color($colors, vert);
-    border: color($colors, vert) 1px solid;
+    color: color($colors, bleu);
+    border: color($colors, bleu) 1px solid;
+    box-shadow: none;
   }
 
   .ligne {
     width: 60%;
     height: 1px;
-    background-color: color($colors, gris);
+    background-color: #e0e0e0;
     margin: auto;
     margin-top: 20px;
   }

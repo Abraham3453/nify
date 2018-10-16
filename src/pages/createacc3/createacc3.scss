@@ -1,15 +1,15 @@
 page-createacc3 {
 
   .container {
-    text-align: center;
-    background-image: url('../../assets/imgs/background/bgConnexion.png');
-    background-size: 100% 80%;
-    background-repeat: no-repeat;
     padding-top: 15px;
-  }
-
-  .top-margin {
-    height: 50px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background: radial-gradient(circle at 20% -5%,#327AD6 48%,rgba(0,0,0,0.0) 48%),
+    radial-gradient(circle at 30% 10%,#53E0E9 50%,rgba(0,0,0,0.0) 50%),
+    radial-gradient(circle at 40% 16%,#90EFEA 64%,rgba(0,0,0,0.0) 64%),
+    radial-gradient(circle at 45% 22%,#B5F6EE 72%,rgba(0,0,0,0.0) 72%),
+    radial-gradient(circle at 50% 22%,#D7FCF2 80%,rgba(0,0,0,0.0) 80%);
+    min-height: 100%;
   }
 
   .logo {
@@ -51,16 +51,18 @@ page-createacc3 {
 
   .form-ctn {
     background-color: rgba(255, 255, 255, 0.97);
-    width: 90%;
-    margin-left: 5%;
+    width: 96%;
+    margin: auto;
     border-radius: 10px 10px 10px 10px;
     margin-top: 0px;
+    padding: 10px;
+    border: 1px solid #f5f5f5;
   }
 
   .label-ctn {
     text-align: left;
     padding: 7px;
-    color: rgba($color: #555555, $alpha: 0.5);
+    color: rgba($color: #e0e0e0, $alpha: 1);
 
     .bottom-label {
       margin-bottom: -20px;
@@ -69,13 +71,13 @@ page-createacc3 {
   }
 
   .bb-input {
-    border-bottom: 1px solid #555555;
+    border-bottom: 1px solid #e0e0e0;
     margin-bottom: 40px;
   }
 
   .map-marker {
     width: 28px;
-    height: 48px;
+    height: 40px;
     margin-top: -5px;
   }
 
@@ -125,6 +127,7 @@ page-createacc3 {
     background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
     background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
     background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    box-shadow: none;
   }
 
   .btn-no-bg {

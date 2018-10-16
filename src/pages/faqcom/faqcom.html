@@ -1,6 +1,8 @@
-<ion-content>
+<ion-content class="pr">
 
-  <ion-grid class="container">
+  <div class="container">
+
+  <ion-grid >
 
     <ion-row class="top-gc">
       <ion-icon class="ion-ios-arrow-back back-gc" color="white" (click)="retour();"></ion-icon>
@@ -9,12 +11,28 @@
       </ion-label>
     </ion-row>
 
+    <ion-row class="signal">
+
+      <ion-label class="signal-lab">
+        <span class="alert-faq">Signaler </span>
+        <ion-icon class="ion-ios-alert-outline signal-icon" color="white"></ion-icon>
+      </ion-label>
+    </ion-row>
 
 
-    <ion-row>
+
+    <ion-row class="ctn-cmt">
       <ion-col>
         <ion-row class="img-bg">
           <img class="like-bg" src="../../assets/imgs/da_image/Rectangle-05.jpg">
+          <div class="img-slide">
+            <ion-label class="margin-a">
+              <div class="vertdc"></div>
+              <div class="greydc"></div>
+              <div class="greydc"></div>
+              <div class="greydc"></div>
+            </ion-label>
+          </div>
         </ion-row>
 
         <ion-row class="gc-ctn">
@@ -62,8 +80,13 @@
 
         </ion-row>
 
+      </ion-col>
+    </ion-row>
 
-        <ion-row class="bg-gradient">
+  </ion-grid>
+
+  <div class="bg-gradient">
+      <ion-row >
           <ion-col>
             <ion-row class="comment other">
               <ion-avatar>
@@ -153,11 +176,8 @@
 
           </ion-col>
         </ion-row>
-      </ion-col>
-    </ion-row>
+  </div>
 
-  </ion-grid>
-
-
+</div>
 
 </ion-content>

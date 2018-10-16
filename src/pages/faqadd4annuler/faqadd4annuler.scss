@@ -44,6 +44,7 @@ page-faqadd4annuler {
     background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
     background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
     background: linear-gradient(to right, #329FF9, #50E3C2);
+    box-shadow: none;
   }
 
   .btn-download {
@@ -53,9 +54,10 @@ page-faqadd4annuler {
     font-size: 120%;
     margin-left: 10%;
     margin-top: 20px;
-    background: -moz-linear-gradient(to right, #50E3C2, #999999);
-    background: -webkit-linear-gradient(to right, #50E3C2, #999999);
-    background: linear-gradient(to right, #50E3C2, #999999);
+    background: -moz-linear-gradient(to right, #289CB2, #dddddd);
+    background: -webkit-linear-gradient(to right, #289CB2, #dddddd);
+    background: linear-gradient(to right, #289CB2, #dddddd);
+    box-shadow: none;
   }
 
   .close-annuler {

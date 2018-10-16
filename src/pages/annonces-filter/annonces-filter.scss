@@ -3,8 +3,11 @@ page-annonces-filter {
   .container {
     padding-top: 15px;
     text-align: center;
-    background-image: url('../../assets/imgs/background/bgConnexion.png');
+    background-image: url('../../assets/imgs/background/fond-4.png');
     background-size: 100% 100%;
+    min-height: 100%;
+
+    
   }
 
   .top-margin {
@@ -98,6 +101,8 @@ page-annonces-filter {
     background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
     border-radius: 5px;
     font-weight: 100;
+    box-shadow: none;
+    border: 1px solid color($colors, bleurightbtn);
 
     .icon-checked {
       position: absolute;
@@ -133,7 +138,7 @@ page-annonces-filter {
   }
 
   .btn-blue-gradient-round {
-    width: 90%;
+    width: 84%;
     height: 50px;
     text-transform: none;
     font-size: 120%;
@@ -142,6 +147,17 @@ page-annonces-filter {
     background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
     background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
     background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    box-shadow: none;
+    border: 1px solid color($colors, white);
+  }
+
+  .check-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bottom-annuler {
+    height: 100%;
   }
 
 }

@@ -18,6 +18,12 @@
     <div id="map"></div>
   </ion-row>
 
+  <ion-row class="nb-row">
+      <ion-label class="nb-annonces">
+        50 annonces à proximit&#233;s
+      </ion-label>
+    </ion-row>
+
   <ion-row class="card-ctn">
 
     <ion-col>
@@ -25,13 +31,16 @@
       <ion-row>
         <img class="avatar" src="assets/imgs/avatar/dent1.jpg">
         <ion-label class="about-user">
+          <span class="signal-icon">
+            <ion-icon name="ios-alert-outline" color="bleu"></ion-icon>
+          </span>
           <span class="date-annonce">
             19/09/2018
           </span>
           <span class="name-bold"><br>
-            Titre de l'annonce <br>
+            Titre de l'annonce
           </span>
-          <span class="lieu-fine"><br>
+          <span class="cat-bold"><br>
             Emplois
           </span>
           <span class="lieu-fine"><br>
@@ -52,14 +61,17 @@
       <ion-row>
         <img class="avatar" src="assets/imgs/avatar/dent5.jpg">
         <ion-label class="about-user">
+          <span class="signal-icon">
+            <ion-icon name="ios-alert-outline" color="bleu"></ion-icon>
+          </span>
           <span class="date-annonce">
             19/09/2018
           </span>
           <span class="name-bold"><br>
-            Titre de l'annonce<br>
+            Titre de l'annonce
           </span>
-          <span class="lieu-fine"><br>
-            Emplois
+          <span class="cat-bold"><br>
+            Location
           </span>
           <span class="lieu-fine"><br>
             Paris 9ème
@@ -81,14 +93,17 @@
       <ion-row>
         <img class="avatar" src="assets/imgs/avatar/dent2.jpg">
         <ion-label class="about-user">
+          <span class="signal-icon">
+            <ion-icon name="ios-alert-outline" color="bleu"></ion-icon>
+          </span>
           <span class="date-annonce">
             19/09/2018
           </span>
           <span class="name-bold"><br>
-            Titre de l'annonce<br>
+            Titre de l'annonce
           </span>
-          <span class="lieu-fine"><br>
-            Emplois
+          <span class="cat-bold"><br>
+            Vente
           </span>
           <span class="lieu-fine"><br>
             Paris 9ème
@@ -110,13 +125,16 @@
       <ion-row>
         <img class="avatar" src="assets/imgs/avatar/dent3.jpg">
         <ion-label class="about-user">
+          <span class="signal-icon">
+            <ion-icon name="ios-alert-outline" color="bleu"></ion-icon>
+          </span>
           <span class="date-annonce">
             19/09/2018
           </span>
           <span class="name-bold"><br>
-            Titre de l'annonce<br>
+            Titre de l'annonce
           </span>
-          <span class="lieu-fine"><br>
+          <span class="cat-bold"><br>
             Emplois
           </span>
           <span class="lieu-fine"><br>
@@ -136,19 +154,19 @@
   <ion-row class="tabs">
     <ion-col>
       <ion-icon class="faq-icon">
-        <img src="../../assets/imgs/da_image/Star.png">
+        <img src="../../assets/imgs/da_image/Star_blue.png">
         <span><br>Trier</span>
       </ion-icon>
     </ion-col>
     <ion-col (click)="filter()">
       <ion-icon class="faq-icon">
-        <img src="../../assets/imgs/da_image/Star.png">
+        <img src="../../assets/imgs/da_image/filter-bleu.png">
         <span><br>Filtrer</span>
       </ion-icon>
     </ion-col>
     <ion-col>
       <ion-icon class="faq-icon">
-        <img src="../../assets/imgs/da_image/Star.png">
+        <img src="../../assets/imgs/da_image/photo-camera-blue.png">
         <span><br>Ajouter</span>
       </ion-icon>
     </ion-col>

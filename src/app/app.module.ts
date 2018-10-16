@@ -57,7 +57,13 @@ import { CertphotoPage } from '../pages/certphoto/certphoto';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages: true,
+      scrollAssist: false,
+      autoFocusAssist: false,
+      //scrollPadding:true
+    }),
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -215,6 +215,11 @@ export class Faqadd1Page {
       alert.present();
     }
 
+    let faq3 = Faqadd3Page;
+      this.navCtrl.push(faq3, {
+        img: this.selectedImg
+      });
+
   }
 
   public dismiss(){

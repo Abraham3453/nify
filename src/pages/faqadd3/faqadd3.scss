@@ -3,9 +3,10 @@ page-faqadd3 {
   .container {
     padding-top: 15px;
     text-align: center;
-    background-image: url('../../assets/imgs/background/bgConnexion.png');
-    background-size: 100% 100%;
+    background-image: url('../../assets/imgs/background/fond-3.png');
+    background-size: 100% 80%;
     background-repeat: no-repeat;
+    min-height: 100%;
   }
 
   .top-margin {
@@ -63,6 +64,8 @@ page-faqadd3 {
       background-color: rgba(0, 0, 0, 0.0);
       height: 100px;
       border-radius: 10px;
+      margin: 0px;
+      padding: 1px;
     }
   }
 
@@ -85,6 +88,7 @@ page-faqadd3 {
     width: 98%;
     background-color: #FFFFFF;
     border-radius: 10px;
+    margin-left: 1%;
   }
 
   .desc-faq {
@@ -126,13 +130,14 @@ page-faqadd3 {
   }
 
   .theme {
-    width: 100%;
-    margin-left: 0px;
+    width: 98%;
+    margin: auto;
     background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
     background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
     background: linear-gradient(to right, #329FF9, #50E3C2);
     border-radius: 6px;
-    ion-label{
+    margin-top: 10px;
+    .theme-txt {
       color: white;
     }
   }
@@ -144,10 +149,15 @@ page-faqadd3 {
   }
 
   .ctn-faq-desc {
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 10px;
   }
   .sep {
     height: 20px;
+  }
+
+  .theme-txt {
+    color: white;
   }
 
 }

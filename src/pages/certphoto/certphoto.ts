@@ -123,6 +123,7 @@ export class CertphotoPage {
                     };
                     this.listImage.push(img);
                     idImg++;
+                    this.selectedImg=this.listImage[0];
                     //console.log(url);
                   })
                   .catch(error => {

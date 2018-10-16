@@ -1,183 +1,206 @@
-<ion-content>
+<ion-content class="pr">
 
-  <ion-grid class="container">
+  <div class="container">
 
-    <ion-row class="top-gc">
-      <ion-icon class="ion-ios-arrow-back back-gc" color="white" (click)="precedent();"></ion-icon>
-      <ion-label class="gc" (click)="precedent();">
-        Retour
-      </ion-label>
-    </ion-row>
+    <ion-grid>
 
-    <ion-row class="signal">
+      <ion-row class="top-gc">
+        <ion-icon class="ion-ios-arrow-back back-gc" color="white" (click)="precedent();"></ion-icon>
+        <ion-label class="gc" (click)="precedent();">
+          Retour
+        </ion-label>
+      </ion-row>
 
-      <ion-label class="signal-lab">
-        <span class="alert-faq">Signaler </span>
-        <ion-icon class="ion-ios-alert-outline signal-icon" color="white"></ion-icon>
-      </ion-label>
-    </ion-row>
+      <ion-row class="signal">
 
-    <ion-row class="faq-det-grid">
+        <ion-label class="signal-lab">
+          <span class="alert-faq">Signaler </span>
+          <ion-icon class="ion-ios-alert-outline signal-icon" color="white"></ion-icon>
+        </ion-label>
+      </ion-row>
 
-      <ion-col>
+      <ion-row class="faq-det-grid">
 
-        <ion-row class="img-bg">
-          <img class="like-bg" src="{{image}}">
-        </ion-row>
+        <ion-col>
 
-        <ion-row class="gc-ctn">
-          <ion-col>
-            <ion-row>
-              <ion-label class="gc-label">
-                <span class="titre-faq">Lorem ipsum 1<br></span>
-                <div class="sep"></div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis orci sit amet condimentum
-                elementum.
-                Curabitur vitae porttitor felis, condimentum viverra eros. Nunc sed lorem lacus. Sed elementum augue
-                augue, ac
-                congue odio fermentum id. Nam ligula arcu, fermentum sed egestas sed, porta at leo. Aenean tristique
-                ligula nec
-                ex hendrerit, sed pretium nunc vulputate. Nulla facilisis volutpat est, vitae finibus quam tempor nec.
-                Donec
-                sit amet lorem volutpat, pellentesque ante ut, sollicitudin metus. Donec iaculis feugiat magna
-                convallis
-                varius. Morbi nec lorem id mauris tempor ultrices in vel nulla. Aliquam eget sagittis ligula, id dictum
-                velit.
-                Phasellus pretium porttitor felis, a tincidunt nisl facilisis nec. Vivamus tincidunt metus eros, a
-                pretium
-                sapien accumsan et. Maecenas sit amet elit sed augue luctus vulputate. Lorem ipsum dolor sit amet,
-                consectetur
-                adipiscing elit.
+          <ion-row class="img-bg">
+            <img class="like-bg" src="{{image}}">
+            <div class="img-slide">
+              <ion-label class="margin-a">
+                <div class="vertdc"></div>
+                <div class="greydc"></div>
+                <div class="greydc"></div>
+                <div class="greydc"></div>
               </ion-label>
-            </ion-row>
-            <ion-row class="gc-ctn">
-              <ion-avatar>
-                <img class="img-profil" src="assets/imgs/avatar/avatar_h.png">
-              </ion-avatar>
+            </div>
 
-              <ion-label class="text-align-left">
-                <span class="bold-name">
-                  Dr Louise Depuis<br>
-                </span>
-                <span class="fine-lieu">
-                  Dentiste - Lyon
-                </span>
-              </ion-label>
-            </ion-row>
-          </ion-col>
-        </ion-row>
+          </ion-row>
+
+          <ion-row class="gc-ctn">
+            <ion-col>
+              <ion-row>
+                <ion-label class="gc-label">
+                  <span class="titre-faq">Lorem ipsum 1<br></span>
+                  <div class="sep"></div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis orci sit amet condimentum
+                  elementum.
+                  Curabitur vitae porttitor felis, condimentum viverra eros. Nunc sed lorem lacus. Sed elementum augue
+                  augue, ac
+                  congue odio fermentum id. Nam ligula arcu, fermentum sed egestas sed, porta at leo. Aenean tristique
+                  ligula nec
+                  ex hendrerit, sed pretium nunc vulputate. Nulla facilisis volutpat est, vitae finibus quam tempor
+                  nec.
+                  Donec
+                  sit amet lorem volutpat, pellentesque ante ut, sollicitudin metus. Donec iaculis feugiat magna
+                  convallis
+                  varius. Morbi nec lorem id mauris tempor ultrices in vel nulla. Aliquam eget sagittis ligula, id
+                  dictum
+                  velit.
+                  Phasellus pretium porttitor felis, a tincidunt nisl facilisis nec. Vivamus tincidunt metus eros, a
+                  pretium
+                  sapien accumsan et. Maecenas sit amet elit sed augue luctus vulputate. Lorem ipsum dolor sit amet,
+                  consectetur
+                  adipiscing elit.
+                </ion-label>
+              </ion-row>
+              <ion-row class="gc-ctn">
+                <ion-avatar>
+                  <img class="img-profil" src="assets/imgs/avatar/avatar_h.png">
+                </ion-avatar>
+
+                <ion-label class="text-align-left">
+                  <span class="bold-name">
+                    Dr Louise Depuis<br>
+                  </span>
+                  <span class="fine-lieu">
+                    Dentiste - Lyon
+                  </span>
+                </ion-label>
+              </ion-row>
+            </ion-col>
+          </ion-row>
 
 
-        <ion-row class="bg-gradient">
-          <ion-col>
-            <ion-row class="comment other">
-              <ion-avatar>
-                <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_h.png">
-              </ion-avatar>
 
-              <ion-label class="text-align-left">
-                <span class="normal-name">
-                  Dr Louise Depuis<br>
-                </span>
-                <span class="normal-lieu">
-                  Dentiste - Lyon<br>
-                </span>
-                <span class="comment-txt">
-                  <br>
-                  Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                  velit
-                  convallis, at blandit dolor dapibus.
-                </span>
-              </ion-label>
 
-            </ion-row>
-            <ion-row class="comment me">
-              <ion-avatar>
-                <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
-              </ion-avatar>
 
-              <ion-label class="text-align-left">
-                <span class="normal-name">
-                  Dr Louise Depuis<br>
-                </span>
-                <span class="normal-lieu">
-                  Dentiste - Lyon<br>
-                </span>
-                <span class="comment-txt">
-                  <br>
-                  Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                  velit
-                  convallis, at blandit dolor dapibus.
-                </span>
-              </ion-label>
-            </ion-row>
-            <ion-row class="comment other">
-              <ion-avatar>
-                <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_h.png">
-              </ion-avatar>
 
-              <ion-label class="text-align-left">
-                <span class="normal-name">
-                  Dr Louise Depuis<br>
-                </span>
-                <span class="normal-lieu">
-                  Dentiste - Lyon<br>
-                </span>
-                <span class="comment-txt">
-                  <br>
-                  Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                  velit
-                  convallis, at blandit dolor dapibus.
-                </span>
-              </ion-label>
-            </ion-row>
-            <ion-row class="comment other">
-              <ion-avatar>
-                <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
-              </ion-avatar>
+        </ion-col>
+      </ion-row>
 
-              <ion-label class="text-align-left">
-                <span class="normal-name">
-                  Dr Louise Depuis<br>
-                </span>
-                <span class="normal-lieu">
-                  Dentiste - Lyon<br>
-                </span>
-                <span class="comment-txt">
-                  <br>
-                  Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                  velit
-                  convallis, at blandit dolor dapibus.
-                </span>
-              </ion-label>
-            </ion-row>
+    </ion-grid>
 
-            <ion-row class="tab-faq">
-              <ion-col>
-                <ion-icon class="faq-icon">
-                  <img src="../../assets/imgs/da_image/Star.png">
-                  <span><br>Favoris</span>
-                </ion-icon>
-              </ion-col>
-              <ion-col (click)="comment();">
-                <ion-icon class="faq-icon-com">
-                  <img src="../../assets/imgs/da_image/Combined Shape.png">
-                  <span><br>Commentaires</span>
-                </ion-icon>
-              </ion-col>
-              <ion-col>
-                <ion-icon class="faq-icon">
-                  <img src="../../assets/imgs/da_image/partager.png">
-                  <span><br>Partager</span>
-                </ion-icon>
-              </ion-col>
-            </ion-row>
+    <div class="bg-gradient">
+      <ion-row >
+        <ion-col>
+          <ion-row class="comment other">
+            <ion-avatar>
+              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_h.png">
+            </ion-avatar>
 
-          </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
+            <ion-label class="text-align-left">
+              <span class="normal-name">
+                Dr Louise Depuis<br>
+              </span>
+              <span class="normal-lieu">
+                Dentiste - Lyon<br>
+              </span>
+              <span class="comment-txt">
+                <br>
+                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
+                velit
+                convallis, at blandit dolor dapibus.
+              </span>
+            </ion-label>
 
-  </ion-grid>
+          </ion-row>
+          <ion-row class="comment me">
+            <ion-avatar>
+              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
+            </ion-avatar>
+
+            <ion-label class="text-align-left">
+              <span class="normal-name">
+                Dr Louise Depuis<br>
+              </span>
+              <span class="normal-lieu">
+                Dentiste - Lyon<br>
+              </span>
+              <span class="comment-txt">
+                <br>
+                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
+                velit
+                convallis, at blandit dolor dapibus.
+              </span>
+            </ion-label>
+          </ion-row>
+          <ion-row class="comment other">
+            <ion-avatar>
+              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_h.png">
+            </ion-avatar>
+
+            <ion-label class="text-align-left">
+              <span class="normal-name">
+                Dr Louise Depuis<br>
+              </span>
+              <span class="normal-lieu">
+                Dentiste - Lyon<br>
+              </span>
+              <span class="comment-txt">
+                <br>
+                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
+                velit
+                convallis, at blandit dolor dapibus.
+              </span>
+            </ion-label>
+          </ion-row>
+          <ion-row class="comment other">
+            <ion-avatar>
+              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
+            </ion-avatar>
+
+            <ion-label class="text-align-left">
+              <span class="normal-name">
+                Dr Louise Depuis<br>
+              </span>
+              <span class="normal-lieu">
+                Dentiste - Lyon<br>
+              </span>
+              <span class="comment-txt">
+                <br>
+                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
+                velit
+                convallis, at blandit dolor dapibus.
+              </span>
+            </ion-label>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+
+  <ion-row class="btm-marg"></ion-row>
+
+  <ion-row class="tab-faq">
+    <ion-col>
+      <ion-icon class="faq-icon">
+        <img src="../../assets/imgs/da_image/Star_blue.png">
+        <span><br>Favoris</span>
+      </ion-icon>
+    </ion-col>
+    <ion-col (click)="comment();">
+      <ion-icon class="faq-icon-com">
+        <img src="../../assets/imgs/da_image/CombinedShape_blue.png">
+        <span><br>Commentaires</span>
+      </ion-icon>
+    </ion-col>
+    <ion-col>
+      <ion-icon class="faq-icon">
+        <img src="../../assets/imgs/da_image/partager_blue.png">
+        <span><br>Partager</span>
+      </ion-icon>
+    </ion-col>
+  </ion-row>
 
 </ion-content>

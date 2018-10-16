@@ -1,6 +1,6 @@
-<ion-content >
+<ion-content>
 
-    <!-- <ion-fab top center #fab>
+  <!-- <ion-fab top center #fab>
         <button ion-fab mini>
           <ion-icon name="md-help-buoy"></ion-icon>
         </button>
@@ -20,276 +20,290 @@
 
   <div class="container">
 
-  <ion-grid fixed>
-    <ion-row>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          <ion-label class="da">
+            <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
+            <span class="bold">Dent</span><span class="fine">Art</span>
+          </ion-label>
+        </ion-col>
+        <ion-col menuToggle>
+          <img class="btn-menu" src="assets/imgs/da_image/menu-icon.png">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-row class="card-ctn">
+
       <ion-col>
-        <ion-label class="da">
-          <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
-          <span class="bold">Dent</span><span class="fine">Art</span>
-        </ion-label>
-      </ion-col>
-      <ion-col menuToggle>
-        <img class="btn-menu" src="assets/imgs/da_image/menu-icon.png">
+        <ion-row>
+          <ion-label class="photo-lab">
+            <ion-icon class="photo-btn">
+              <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
+              <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
+              <img src="assets/imgs/da_image/photo-camera.png">
+            </ion-icon>
+          </ion-label>
+        </ion-row>
+        <ion-row class="card-ttl-ctn" (click)="faqDetails(image1);">
+          <ion-label class="card-title">
+            <span class="ttl-bold">
+              Lorem ipsum 1<br>
+            </span>
+            <span class="ttl-fine">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis orci sit amet.
+            </span>
+          </ion-label>
+        </ion-row>
+        <ion-row>
+          <img class="avatar" src="assets/imgs/avatar/avatar_f.png">
+          <ion-label class="about-user">
+            <span class="name-bold">
+              Dr Louise Dupuis<br>
+            </span>
+            <span class="lieu-fine">
+              Dentiste - Lyon
+            </span>
+          </ion-label>
+        </ion-row>
+        <ion-row class="card-footer">
+
+          <ion-col class="col-3">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
+                <img src="assets/imgs/da_image/Star.png">
+              </ion-icon>
+              <span class="text-inner">
+                Favoris
+              </span>
+
+            </ion-label>
+          </ion-col>
+
+          <ion-col class="col-3" (click)="comment();">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
+                <img src="assets/imgs/da_image/Combined Shape.png">
+              </ion-icon>
+              <span class="text-inner txt-com">
+                Commentaire
+              </span>
+            </ion-label>
+          </ion-col>
+
+          <ion-col class="col-3">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">10</ion-badge>
+                <img src="assets/imgs/da_image/partager.png">
+              </ion-icon>
+              <span class="text-inner">
+                Partager
+              </span>
+            </ion-label>
+          </ion-col>
+
+        </ion-row>
       </ion-col>
     </ion-row>
-  </ion-grid>
 
-  <ion-row class="card-ctn">
+    <ion-row class="card-ctn-2">
 
-    <ion-col>
-      <ion-row>
-        <ion-label class="photo-lab">
-          <ion-icon class="photo-btn">
-            <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
-            <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
-            <img src="assets/imgs/da_image/photo-camera.png">
-          </ion-icon>
-        </ion-label>
-      </ion-row>
-      <ion-row class="card-ttl-ctn" (click)="faqDetails(image1);">
-        <ion-label class="card-title">
-          <span class="ttl-bold">
-            Lorem ipsum 1<br>
-          </span>
-          <span class="ttl-fine">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis orci sit amet.
-          </span>
-        </ion-label>
-      </ion-row>
-      <ion-row>
-        <img class="avatar" src="assets/imgs/avatar/avatar_f.png">
-        <ion-label class="about-user">
-          <span class="name-bold">
-            Dr Louise Dupuis<br>
-          </span>
-          <span class="lieu-fine">
-            Dentiste - Lyon
-          </span>
-        </ion-label>
-      </ion-row>
-      <ion-row class="card-footer">
-
-        <ion-col class="col-3">
-          <ion-label class="photo-lab-1">
-            <ion-icon class="photo-btn-left">
-              <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
-              <img src="assets/imgs/da_image/Star.png">
+      <ion-col>
+        <ion-row>
+          <ion-label class="photo-lab">
+            <ion-icon class="photo-btn">
+              <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
+              <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
+              <img src="assets/imgs/da_image/photo-camera.png">
             </ion-icon>
-            <span class="text-inner">
-              Favoris
-            </span>
-
           </ion-label>
-        </ion-col>
+        </ion-row>
 
-        <ion-col class="col-3" (click)="comment();">
-          <ion-label class="photo-lab-1">
-            <ion-icon class="photo-btn-left">
-              <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
-              <img src="assets/imgs/da_image/Combined Shape.png">
-            </ion-icon>
-            <span class="text-inner txt-com">
-              Commentaire
+        <ion-row class="card-ttl-ctn" (click)="faqDetails(image2);">
+          <ion-label class="card-title">
+            <span class="ttl-bold">
+              Lorem ipsum 2<br>
+            </span>
+            <span class="ttl-fine">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis orci sit amet.
             </span>
           </ion-label>
-        </ion-col>
+        </ion-row>
 
-        <ion-col class="col-3">
-          <ion-label class="photo-lab-1">
-            <ion-icon class="photo-btn-left">
-              <ion-badge class="cart-badge" color="bleurightbtn">10</ion-badge>
-              <img src="assets/imgs/da_image/partager.png">
+        <ion-row>
+          <img class="avatar" src="assets/imgs/avatar/avatar_f.png">
+          <ion-label class="about-user">
+            <span class="name-bold">
+              Dr Pauline Michel<br>
+            </span>
+            <span class="lieu-fine">
+              Dentiste - Lyon
+            </span>
+
+
+
+          </ion-label>
+
+          <span class="certfied">
+            <ion-icon>
+              <img src="../../assets/imgs/da_image/Group-04.png">
             </ion-icon>
-            <span class="text-inner">
-              Partager
+          </span>
+
+        </ion-row>
+
+        <ion-row class="card-footer">
+
+          <ion-col class="col-3">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
+                <img src="assets/imgs/da_image/Star.png">
+              </ion-icon>
+              <span class="text-inner">
+                Favoris
+              </span>
+
+            </ion-label>
+          </ion-col>
+
+          <ion-col class="col-3" (click)="comment();">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
+                <img src="assets/imgs/da_image/Combined Shape.png">
+              </ion-icon>
+              <span class="text-inner">
+                Commentaire
+              </span>
+            </ion-label>
+          </ion-col>
+
+          <ion-col class="col-3">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">10</ion-badge>
+                <img src="assets/imgs/da_image/partager.png">
+              </ion-icon>
+              <span class="text-inner">
+                Partager
+              </span>
+            </ion-label>
+          </ion-col>
+
+        </ion-row>
+      </ion-col>
+
+
+
+    </ion-row>
+
+    <ion-row class="card-ctn-3">
+
+      <ion-col>
+        <ion-row>
+          <ion-label class="photo-lab">
+            <ion-icon class="photo-btn">
+              <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
+              <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
+              <img src="assets/imgs/da_image/photo-camera.png">
+            </ion-icon>
+          </ion-label>
+        </ion-row>
+
+        <ion-row class="card-ttl-ctn" (click)="faqDetails(image3);">
+          <ion-label class="card-title">
+            <span class="ttl-bold">
+              Lorem ipsum 3<br>
+            </span>
+            <span class="ttl-fine">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis orci sit amet.
             </span>
           </ion-label>
-        </ion-col>
+        </ion-row>
 
-      </ion-row>
-    </ion-col>
-  </ion-row>
+        <ion-row>
+          <img class="avatar" src="assets/imgs/avatar/avatar_h.png">
+          <ion-label class="about-user">
+            <span class="name-bold">
+              Dr Vantar Pades<br>
+            </span>
+            <span class="lieu-fine">
+              Dentiste - Lyon
+            </span>
+          </ion-label>
+        </ion-row>
 
-  <ion-row class="card-ctn-2">
+        <ion-row class="card-footer">
 
-    <ion-col>
-      <ion-row>
-        <ion-label class="photo-lab">
-          <ion-icon class="photo-btn">
-            <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
-            <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
-            <img src="assets/imgs/da_image/photo-camera.png">
-          </ion-icon>
-        </ion-label>
-      </ion-row>
+          <ion-col class="col-3">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
+                <img src="assets/imgs/da_image/Star.png">
+              </ion-icon>
+              <span class="text-inner">
+                Favoris
+              </span>
 
-      <ion-row class="card-ttl-ctn" (click)="faqDetails(image2);">
-        <ion-label class="card-title">
-          <span class="ttl-bold">
-            Lorem ipsum 2<br>
-          </span>
-          <span class="ttl-fine">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis orci sit amet.
-          </span>
-        </ion-label>
-      </ion-row>
+            </ion-label>
+          </ion-col>
 
-      <ion-row>
-        <img class="avatar" src="assets/imgs/avatar/avatar_f.png">
-        <ion-label class="about-user">
-          <span class="name-bold">
-            Dr Pauline Michel<br>
-          </span>
-          <span class="lieu-fine">
-            Dentiste - Lyon
-          </span>
+          <ion-col class="col-3" (click)="comment();">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
+                <img src="assets/imgs/da_image/Combined Shape.png">
+              </ion-icon>
+              <span class="text-inner">
+                Commentaire
+              </span>
+            </ion-label>
+          </ion-col>
 
+          <ion-col class="col-3">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">10</ion-badge>
+                <img src="assets/imgs/da_image/partager.png">
+              </ion-icon>
+              <span class="text-inner">
+                Partager
+              </span>
+            </ion-label>
+          </ion-col>
 
+        </ion-row>
+      </ion-col>
 
-        </ion-label>
+    </ion-row>
 
-        <span class="certfied">
+  </div>
+
+  <ion-row class="tab-faq">
+    <ion-col (click)="showFilter();">
+      <ion-label>
+        <span>
           <ion-icon>
-            <img src="../../assets/imgs/da_image/Group-04.png">
+            <img class="fltr-icon" src="../../assets/imgs/da_image/filter-bleu.png" />
           </ion-icon>
         </span>
-
-      </ion-row>
-
-      <ion-row class="card-footer">
-
-        <ion-col class="col-3">
-          <ion-label class="photo-lab-1">
-            <ion-icon class="photo-btn-left">
-              <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
-              <img src="assets/imgs/da_image/Star.png">
-            </ion-icon>
-            <span class="text-inner">
-              Favoris
-            </span>
-
-          </ion-label>
-        </ion-col>
-
-        <ion-col class="col-3" (click)="comment();">
-          <ion-label class="photo-lab-1">
-            <ion-icon class="photo-btn-left">
-              <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
-              <img src="assets/imgs/da_image/Combined Shape.png">
-            </ion-icon>
-            <span class="text-inner">
-              Commentaire
-            </span>
-          </ion-label>
-        </ion-col>
-
-        <ion-col class="col-3">
-          <ion-label class="photo-lab-1">
-            <ion-icon class="photo-btn-left">
-              <ion-badge class="cart-badge" color="bleurightbtn">10</ion-badge>
-              <img src="assets/imgs/da_image/partager.png">
-            </ion-icon>
-            <span class="text-inner">
-              Partager
-            </span>
-          </ion-label>
-        </ion-col>
-
-      </ion-row>
-    </ion-col>
-
-
-
-  </ion-row>
-
-  <ion-row class="card-ctn-3">
-
-    <ion-col>
-      <ion-row>
-        <ion-label class="photo-lab">
-          <ion-icon class="photo-btn">
-            <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
-            <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
-            <img src="assets/imgs/da_image/photo-camera.png">
-          </ion-icon>
-        </ion-label>
-      </ion-row>
-
-      <ion-row class="card-ttl-ctn" (click)="faqDetails(image3);">
-        <ion-label class="card-title">
-          <span class="ttl-bold">
-            Lorem ipsum 3<br>
-          </span>
-          <span class="ttl-fine">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis orci sit amet.
-          </span>
-        </ion-label>
-      </ion-row>
-
-      <ion-row>
-        <img class="avatar" src="assets/imgs/avatar/avatar_h.png">
-        <ion-label class="about-user">
-          <span class="name-bold">
-            Dr Vantar Pades<br>
-          </span>
-          <span class="lieu-fine">
-            Dentiste - Lyon
-          </span>
-        </ion-label>
-      </ion-row>
-
-      <ion-row class="card-footer">
-
-        <ion-col class="col-3">
-          <ion-label class="photo-lab-1">
-            <ion-icon class="photo-btn-left">
-              <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
-              <img src="assets/imgs/da_image/Star.png">
-            </ion-icon>
-            <span class="text-inner">
-              Favoris
-            </span>
-
-          </ion-label>
-        </ion-col>
-
-        <ion-col class="col-3" (click)="comment();">
-          <ion-label class="photo-lab-1">
-            <ion-icon class="photo-btn-left">
-              <ion-badge class="cart-badge" color="bleurightbtn">3</ion-badge>
-              <img src="assets/imgs/da_image/Combined Shape.png">
-            </ion-icon>
-            <span class="text-inner">
-              Commentaire
-            </span>
-          </ion-label>
-        </ion-col>
-
-        <ion-col class="col-3">
-          <ion-label class="photo-lab-1">
-            <ion-icon class="photo-btn-left">
-              <ion-badge class="cart-badge" color="bleurightbtn">10</ion-badge>
-              <img src="assets/imgs/da_image/partager.png">
-            </ion-icon>
-            <span class="text-inner">
-              Partager
-            </span>
-          </ion-label>
-        </ion-col>
-
-      </ion-row>
-    </ion-col>
-
-  </ion-row>
-
-</div>
-
-<ion-row class="tab-faq">
-    <ion-col (click)="showFilter();">
-      <ion-label>Filter</ion-label>
+        <span><br>Filtrer</span>
+      </ion-label>
     </ion-col>
     <ion-col (click)="newPub()">
-      <ion-label>Ajouter</ion-label>
+      <ion-label>
+        <span>
+          <ion-icon>
+            <img class="fltr-icon-cam" src="../../assets/imgs/da_image/photo-camera-blue.png" />
+          </ion-icon>
+        </span>
+        <span><br>Ajouter</span>
+      </ion-label>
     </ion-col>
   </ion-row>
 

@@ -3,13 +3,13 @@ page-createacc2 {
   .container {
     padding-top: 15px;
     text-align: center;
-    background-image: url('../../assets/imgs/background/bgConnexion.png');
-    background-size: 100% 65%;
     background-repeat: no-repeat;
-  }
-
-  .top-margin {
-    height: 10px;
+    background: radial-gradient(circle at 20% -5%,#327AD6 40%,rgba(0,0,0,0.0) 40%),
+    radial-gradient(circle at 30% 10%,#53E0E9 41%,rgba(0,0,0,0.0) 41%),
+    radial-gradient(circle at 40% 16%,#90EFEA 50%,rgba(0,0,0,0.0) 50%),
+    radial-gradient(circle at 45% 22%,#B5F6EE 53%,rgba(0,0,0,0.0) 53%),
+    radial-gradient(circle at 50% 22%,#D7FCF2 60%,rgba(0,0,0,0.0) 60%);
+    min-height: 100%;
   }
 
   .logo {
@@ -18,11 +18,11 @@ page-createacc2 {
   }
 
   .da-ctn {
-    margin-top: -30px;
+    margin-top: -20px;
   }
 
   .da {
-    font-size: 150%;
+    font-size: 180%;
 
     .bold {
       font-weight: bolder;
@@ -48,10 +48,12 @@ page-createacc2 {
 
   .form-ctn {
     background-color: rgba(255, 255, 255, 0.97);
-    width: 90%;
-    margin-left: 5%;
+    width: 96%;
+    margin: auto;
     border-radius: 10px 10px 10px 10px;
     margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #f5f5f5;
   }
 
   .vertdc {
@@ -72,8 +74,6 @@ page-createacc2 {
   }
 
   .cacc-avatar {
-    width: 80px;
-    height: 80px;
     border-radius: 5px;
     margin: auto;
     margin-bottom: 20px;
@@ -97,17 +97,24 @@ page-createacc2 {
     font-size: 120%;
     margin: auto;
     margin-top: 10px;
-    background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-    background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-    background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    background: -moz-linear-gradient(to right, #1F9DF3, #07E4DA);
+    background: -webkit-linear-gradient(to right, #1F9DF3, #07E4DA);
+    background: linear-gradient(to right, #1F9DF3, #07E4DA);
     border-radius: 5px;
     font-weight: 100;
+    box-shadow: none;
+    padding: 7px;
 
     .icon-checked {
       position: absolute;
       right: 5px;
       display: none;
     }
+  }
+
+  .check-icon {
+    width: 30px;
+    height: 30px;
   }
 
   .btn-blue-gradient .button-inner {
@@ -124,6 +131,7 @@ page-createacc2 {
     background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
     background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
     background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    box-shadow: none;
   }
 
   .btn-no-bg {

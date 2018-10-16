@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Keyboard } from 'ionic-angular';
 
 /**
  * Generated class for the FaqcomPage page.
@@ -15,14 +15,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FaqcomPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private keyboard: Keyboard
+  ) {
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FaqcomPage');
   }
 
-  public retour(){
+  public retour() {
     this.navCtrl.pop();
   }
 

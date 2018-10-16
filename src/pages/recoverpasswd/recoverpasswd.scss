@@ -1,10 +1,10 @@
 page-recoverpasswd {
 
   .container {
-    padding-top: 15px;
+    padding-top: 50px;
     text-align: center;
-    background-image: url('../../assets/imgs/background/bgConnexion.png');
-    background-size: 100% 70%;
+    background-image: url('../../assets/imgs/background/fond-1.png');
+    background-size: 100% 80%;
     background-repeat: no-repeat;
   }
 
@@ -57,7 +57,7 @@ page-recoverpasswd {
   }
 
   .separator {
-    height: 30px;
+    height: 50px;
     background-color: rgba(0, 0, 0, 0.0);
   }
 
@@ -71,6 +71,7 @@ page-recoverpasswd {
     background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
     background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
     background: linear-gradient(to right, #329FF9, #50E3C2);
+    box-shadow: none;
   }
 
   .btn-light {
@@ -94,12 +95,12 @@ page-recoverpasswd {
 
     .lab-e-mail {
       font-size: 130%;
-      color: #AAAAAA;
+      color: #e0e0e0;
       margin-bottom: -10px;
     }
 
     .e-mail-ctn {
-      border-bottom: 1px solid #AAAAAA;
+      border-bottom: 1px solid #e0e0e0;
       font-size: 120%; 
     }
   }

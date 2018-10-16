@@ -1,7 +1,7 @@
 page-faqadd2 {
 
   .container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(80, 162, 239, 0.5);
 
     ion-grid {
 
@@ -23,10 +23,11 @@ page-faqadd2 {
 
   .ws-norm {
     white-space: normal;
+    color: #9f9f9f;
   }
 
   .title-rec {
-    color: color($colors, bleu);
+    color: #117BCF;
     font-size: 120%;
     font-weight: bold;
   }
@@ -36,10 +37,11 @@ page-faqadd2 {
     text-transform: none;
     font-size: 100%;
     margin: auto;
-    background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
-    background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
-    background: linear-gradient(to right, #329FF9, #50E3C2);
+    background: -moz-linear-gradient(to right, #2195F6, #50E3C2);
+    background: -webkit-linear-gradient(to right, #2195F6, #50E3C2);
+    background: linear-gradient(to right, #2195F6, #50E3C2);
     box-shadow: none;
+
   }
 
   .btn-download {
@@ -47,9 +49,9 @@ page-faqadd2 {
     text-transform: none;
     font-size: 100%;
     margin: auto;
-    background: -moz-linear-gradient(to right, #50E3C2, #999999);
-    background: -webkit-linear-gradient(to right, #50E3C2, #999999);
-    background: linear-gradient(to right, #50E3C2, #999999);
+    background: -moz-linear-gradient(to right, #249AB1, #DDDDDD);
+    background: -webkit-linear-gradient(to right, #249AB1, #DDDDDD);
+    background: linear-gradient(to right, #249AB1, #DDDDDD);
     box-shadow: none;
   }
 

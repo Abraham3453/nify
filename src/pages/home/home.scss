@@ -2,10 +2,11 @@ page-home {
   
   .container {
     background-size: 100%;
-    background-image: url('../../assets/imgs/background/bgConnexion.png');
+    background-image: url('../../assets/imgs/background/fond-3.png');
     color: color($colors, white);
-    margin-bottom: 50px;
+    margin-bottom: 85px;
     padding-bottom: 10px;
+    background-repeat: no-repeat;
   }
 
   .header {
@@ -236,10 +237,6 @@ page-home {
     transform: translate(-50%, -50%);
   }
 
-  .filter-img {
-    
-  }
-
   .info-icon {
     zoom: 1.4;
   }
@@ -253,8 +250,18 @@ page-home {
     color: color($colors, bleu);
     font-size: 120%;
     font-weight: bold;
-    background-color: white;
-    height: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 80px;
+  }
+
+  .fltr-icon {
+    width: 30px;
+    height: 28px;
+  }
+
+  .fltr-icon-cam {
+    width: 32px;
+    height: 30px;
   }
 
 }

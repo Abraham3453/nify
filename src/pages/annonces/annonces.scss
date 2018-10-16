@@ -104,10 +104,22 @@ page-annonces {
     color: color($colors, dark);
   }
 
+  .cat-bold {
+    color: #aaaaaa;
+    font-weight: bold;
+  }
+
   .avatar {
     width: 70px;
-    height: 50px;
-    margin-top: 35px;
+    height: 70px;
+    margin-top: 15px;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .ava {
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
     border-radius: 10px 10px 10px 10px;
   }
 
@@ -115,8 +127,12 @@ page-annonces {
     margin-left: 10px;
   }
 
-  .date-annonce {
+  .signal-icon {
     float: right;
+    zoom: 1.4;
+  }
+
+  .date-annonce {
     color: color($colors, bleu);
   }
 
@@ -140,8 +156,8 @@ page-annonces {
       text-align: center;
       font-size: 120%;
       font-weight: bold;
-      background-color: color($colors, bleu);
-      color: white;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #117BCF;
   }
 
   .faq-icon {
@@ -149,6 +165,17 @@ page-annonces {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .nb-row {
+    text-align: center;
+    color: #ffffff;
+    font-size: 130%;
+    font-weight: bold;
   }
 
 }

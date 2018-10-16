@@ -105,6 +105,7 @@ page-popupcert {
     background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
     background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
     background: linear-gradient(to right, #329FF9, #50E3C2);
+    box-shadow: none;
   }
 
   .btn-no-bg {
@@ -130,8 +131,18 @@ page-popupcert {
   }
 
   .camera {
-    zoom: 6;
-    margin-top: -12px;
+    zoom: 1;
+    margin-top: -2px;
+    margin-left: -6px;
+  }
+
+  .img-cam {
+    width: 50px;
+    height: 35px;
+  }
+
+  .just-fine {
+    color: #327AD6;
   }
 
 }
