@@ -1,4 +1,24 @@
-<ion-content class="container">
+<ion-content >
+
+    <!-- <ion-fab top center #fab>
+        <button ion-fab mini>
+          <ion-icon name="md-help-buoy"></ion-icon>
+        </button>
+        <ion-fab-list side="right">
+          <button ion-fab (click)="newPub(fab)">
+            <ion-icon class="add-icon" name="md-add-circle"></ion-icon>
+          </button>
+        </ion-fab-list>
+        <ion-fab-list side="left">
+          <button ion-fab (click)="showFilter(fab);">
+            <ion-icon class="filter-icon">
+              <img class="filter-img" src="assets/imgs/da_image/filter.png" />
+            </ion-icon>
+          </button>
+        </ion-fab-list>
+      </ion-fab> -->
+
+  <div class="container">
 
   <ion-grid fixed>
     <ion-row>
@@ -8,29 +28,11 @@
           <span class="bold">Dent</span><span class="fine">Art</span>
         </ion-label>
       </ion-col>
-      <ion-col>
-        <img menuToggle class="btn-menu" src="assets/imgs/da_image/menu-icon.png">
+      <ion-col menuToggle>
+        <img class="btn-menu" src="assets/imgs/da_image/menu-icon.png">
       </ion-col>
     </ion-row>
   </ion-grid>
-
-  <ion-fab top center #fab>
-    <button ion-fab mini>
-      <ion-icon name="md-help-buoy"></ion-icon>
-    </button>
-    <ion-fab-list side="right">
-      <button ion-fab (click)="newPub(fab)">
-        <ion-icon class="add-icon" name="md-add-circle"></ion-icon>
-      </button>
-    </ion-fab-list>
-    <ion-fab-list side="left">
-      <button ion-fab (click)="showFilter(fab);">
-        <ion-icon class="filter-icon">
-          <img class="filter-img" src="assets/imgs/da_image/filter.png" />
-        </ion-icon>
-      </button>
-    </ion-fab-list>
-  </ion-fab>
 
   <ion-row class="card-ctn">
 
@@ -39,6 +41,7 @@
         <ion-label class="photo-lab">
           <ion-icon class="photo-btn">
             <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
+            <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
             <img src="assets/imgs/da_image/photo-camera.png">
           </ion-icon>
         </ion-label>
@@ -114,6 +117,7 @@
         <ion-label class="photo-lab">
           <ion-icon class="photo-btn">
             <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
+            <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
             <img src="assets/imgs/da_image/photo-camera.png">
           </ion-icon>
         </ion-label>
@@ -205,6 +209,7 @@
         <ion-label class="photo-lab">
           <ion-icon class="photo-btn">
             <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
+            <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
             <img src="assets/imgs/da_image/photo-camera.png">
           </ion-icon>
         </ion-label>
@@ -275,6 +280,17 @@
       </ion-row>
     </ion-col>
 
+  </ion-row>
+
+</div>
+
+<ion-row class="tab-faq">
+    <ion-col (click)="showFilter();">
+      <ion-label>Filter</ion-label>
+    </ion-col>
+    <ion-col (click)="newPub()">
+      <ion-label>Ajouter</ion-label>
+    </ion-col>
   </ion-row>
 
 </ion-content>

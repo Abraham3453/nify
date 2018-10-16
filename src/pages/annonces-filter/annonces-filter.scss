@@ -1,6 +1,7 @@
 page-annonces-filter {
 
   .container {
+    padding-top: 15px;
     text-align: center;
     background-image: url('../../assets/imgs/background/bgConnexion.png');
     background-size: 100% 100%;
@@ -109,18 +110,6 @@ page-annonces-filter {
     justify-content: flex-start;
   }
 
-  .btn-blue-gradient-round {
-    width: 60%;
-    height: 50px;
-    text-transform: none;
-    font-size: 120%;
-    margin: auto;
-    margin-top: 15px;
-    background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-    background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-    background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-  }
-
   .btn-no-bg {
     color: color($colors, bleu);
     font-size: 120%;
@@ -144,7 +133,7 @@ page-annonces-filter {
   }
 
   .btn-blue-gradient-round {
-    width: 60%;
+    width: 90%;
     height: 50px;
     text-transform: none;
     font-size: 120%;

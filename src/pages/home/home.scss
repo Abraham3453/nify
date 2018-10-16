@@ -4,6 +4,8 @@ page-home {
     background-size: 100%;
     background-image: url('../../assets/imgs/background/bgConnexion.png');
     color: color($colors, white);
+    margin-bottom: 50px;
+    padding-bottom: 10px;
   }
 
   .header {
@@ -167,8 +169,10 @@ page-home {
   .card-footer {
     width: 100%;
     border-radius: 14px;
-    background-color: rgba(43, 43, 248, 0.6);
-    height: 35px;
+    background-color: rgba(68, 85, 105, 0.6);
+    height: 40px;
+    padding: 3px;
+    margin: 0px;
   }
 
   .photo-lab {
@@ -179,9 +183,10 @@ page-home {
   }
 
   .photo-lab-1 {
-    padding-right: 20px;
+    padding-right: -5px;
     padding-top: 15px;
     margin-top: -3px;
+    font-size: 65%;
   }
 
   .photo-btn {
@@ -233,6 +238,23 @@ page-home {
 
   .filter-img {
     
+  }
+
+  .info-icon {
+    zoom: 1.4;
+  }
+
+  .tab-faq {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: color($colors, bleu);
+    font-size: 120%;
+    font-weight: bold;
+    background-color: white;
+    height: 50px;
   }
 
 }

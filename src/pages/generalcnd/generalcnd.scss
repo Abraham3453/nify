@@ -3,7 +3,9 @@ page-generalcnd {
   .container {
     text-align: center;
     background-image: url('../../assets/imgs/background/bgConnexion.png');
-    background-size: 100% 100%;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+    padding-top: 15px;
   }
 
   .top-margin {
@@ -112,11 +114,11 @@ page-generalcnd {
   }
 
   .btn-blue-gradient {
-    width: 80%;
+    width: 90%;
     height: 50px;
     text-transform: none;
     font-size: 120%;
-    margin-left: 10%;
+    margin: auto;
     margin-top: 20px;
     background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
     background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);

@@ -1,42 +1,43 @@
-<ion-content class="container">
+<ion-content>
 
-    <ion-row class="top-margin"></ion-row>
-  
+  <ion-grid class="container">
+
     <ion-row class="top-gc">
-        <ion-icon class="ion-ios-arrow-back back-gc" color="white" (click)="dismiss();"></ion-icon>
-        <ion-label class="gc">
-          Filtres
-        </ion-label>
-      </ion-row>
-  
-    <ion-grid class="form-ctn">
-  
-      <ion-row class="btn-ctn-left">
-        <button id="btn0" ion-button class="btn-blue-gradient" (click)="selectFilter('btn0','icon_btn_0');">
-          Emplois
-          <ion-icon id="icon_btn_0" class="ion-ios-checkmark-circle icon-checked" color="gris"></ion-icon>
-        </button>
-      </ion-row>
-  
-      <ion-row>
-        <button id="btn1" ion-button class="btn-blue-gradient" (click)="selectFilter('btn1','icon_btn_1');">
-          Vente
-          <ion-icon id="icon_btn_1" class="ion-ios-checkmark-circle icon-checked" color="gris"></ion-icon>
-        </button>
-      </ion-row>
-  
-      <ion-row>
-        <button id="btn2" ion-button class="btn-blue-gradient" (click)="selectFilter('btn2','icon_btn_2');">
-          Location
-          <ion-icon id="icon_btn_2" class="ion-ios-checkmark-circle icon-checked" color="gris"></ion-icon>
-        </button>
-      </ion-row>
-  
-    </ion-grid>
+      <ion-icon class="ion-ios-arrow-back back-gc" color="white" (click)="dismiss();"></ion-icon>
+      <ion-label class="gc">
+        Filtres
+      </ion-label>
+    </ion-row>
+
+
+
+    <ion-row class="btn-ctn-left">
+      <button id="btn0" ion-button class="btn-blue-gradient" (click)="selectFilter('btn0','icon_btn_0');">
+        Emplois
+        <ion-icon id="icon_btn_0" class="ion-ios-checkmark-circle icon-checked" color="gris"></ion-icon>
+      </button>
+    </ion-row>
 
     <ion-row>
-        <button ion-button round class="btn-blue-gradient-round" (click)="dismiss();">Annuler</button>
-      </ion-row>
-  
-  </ion-content>
-  
+      <button id="btn1" ion-button class="btn-blue-gradient" (click)="selectFilter('btn1','icon_btn_1');">
+        Vente
+        <ion-icon id="icon_btn_1" class="ion-ios-checkmark-circle icon-checked" color="gris"></ion-icon>
+      </button>
+    </ion-row>
+
+    <ion-row>
+      <button id="btn2" ion-button class="btn-blue-gradient" (click)="selectFilter('btn2','icon_btn_2');">
+        Location
+        <ion-icon id="icon_btn_2" class="ion-ios-checkmark-circle icon-checked" color="gris"></ion-icon>
+      </button>
+    </ion-row>
+
+
+
+    <ion-row>
+      <button ion-button round class="btn-blue-gradient-round" (click)="dismiss();">Annuler</button>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

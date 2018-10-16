@@ -1,9 +1,12 @@
 page-connexion {
 
   .container {
+    padding-top: 15px;
     text-align: center;
     background-image: url('../../assets/imgs/background/bgConnexion.png');
-    background-size: 100% 100%;
+    background-size: 100% 74%;
+    background-repeat: no-repeat;
+    padding-top: 20px;
   }
 
   .top-margin {
@@ -53,16 +56,15 @@ page-connexion {
     width: 96%;
     margin: auto;
     border-radius: 8px;
-    background-color: rgba(250,250,250,0.6);
-    ion-item{
-      background-color: rgba(0,0,0,0.0);
-    }
+    background-color: rgba(250,250,250,0.0);
+    margin-top: 40px;
+    text-align: left;
   }
 
   .btn-blue-gradient {
-    width: 60%;
+    width: 90%;
     height: 50px;
-    margin-left: 20%;
+    margin:auto;
     margin-top: 20px;
     text-transform: none;
     font-size: 120%;
@@ -78,6 +80,20 @@ page-connexion {
     background-color: rgba($color: #000000, $alpha: 0.0);
     font-size: 120%;
     color: color($colors, bleu);
+  }
+
+  .lab {
+    font-size: 130%;
+    color: #AAAAAA;
+    margin-left: 8px;
+    margin-bottom: -15px;
+  }
+
+  .input-ctn {
+    border-bottom: 1px solid #AAAAAA;
+    margin-bottom: 10px;
+    color: color($colors, bleu);
+    font-size: 120%;
   }
 
 }

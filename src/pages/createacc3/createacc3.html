@@ -1,63 +1,69 @@
-<ion-content class="container">
+<ion-content>
 
-  <ion-row class="top-margin"></ion-row>
+  <ion-grid class="container">
 
-  <ion-row>
-    <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
-  </ion-row>
-
-  <ion-row class="da-ctn">
-    <ion-label class="color-white da">
-      <span class="bold">Dent</span><span class="fine">Art</span>
-    </ion-label>
-  </ion-row>
-
-  <ion-row class="wc-ctn">
-    <ion-label class="color-white wc">
-      Indiquez la localisation <span><br>de votre cabinet</span>
-    </ion-label>
-  </ion-row>
-
-  <ion-grid class="form-ctn">
     <ion-row>
-      <ion-label class="margin-a">
-        <img class="vertdc">
-        <img class="vertdc">
-        <img class="vertdc">
-        <img class="greydc">
+      <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
+    </ion-row>
+
+    <ion-row class="da-ctn">
+      <ion-label class="color-white da">
+        <span class="bold">Dent</span><span class="fine">Art</span>
       </ion-label>
     </ion-row>
 
-    <ion-row>
-      <ion-avatar class="cacc-avatar">
-        <img src="assets/imgs/da_image/avatar-03.png">
-      </ion-avatar>
+    <ion-row class="wc-ctn">
+      <ion-label class="color-white wc">
+        Indiquez la localisation <span><br>de votre cabinet</span>
+      </ion-label>
     </ion-row>
 
-    <ion-row class="label-ctn">
-      <ion-label class="bottom-label">Localisation</ion-label>
-    </ion-row>
+    <ion-row class="form-ctn">
+      <ion-col>
 
-    <ion-row>
 
-      <ion-input type="text" class="bb-input" [(ngModel)]="autocomplete.input" (input)="updateSearchResults()"></ion-input>
+        <ion-row>
+          <ion-label class="margin-a">
+            <div class="vertdc"></div>
+            <div class="vertdc"></div>
+            <div class="vertdc"></div>
+            <div class="greydc"></div>
+          </ion-label>
+        </ion-row>
 
-      <img class="map-marker" src="assets/imgs/avatar/createacc3/map_marker.png">
+        <ion-row>
+          <ion-avatar class="cacc-avatar">
+            <img src="assets/imgs/da_image/avatar-03.png">
+          </ion-avatar>
+        </ion-row>
 
-    </ion-row>
+        <ion-row class="label-ctn">
+          <ion-label class="bottom-label">Localisation</ion-label>
+        </ion-row>
 
-    <ion-list [hidden]="autocompleteItems.length == 0">
-      <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
-        {{ item.description }}
-      </ion-item>
-    </ion-list>
+        <ion-row>
 
-    <ion-row>
-      <button ion-button round class="btn-blue-gradient-round" (click)="nextStep();">Continuer</button>
-    </ion-row>
+          <ion-input type="text" class="bb-input" [(ngModel)]="autocomplete.input" (input)="updateSearchResults()"></ion-input>
 
-    <ion-row (click)="precedent();">
-      <ion-label class="btn-no-bg">Pr&#233;c&#233;dent</ion-label>
+          <img class="map-marker" src="assets/imgs/avatar/createacc3/map_marker.png">
+
+        </ion-row>
+
+        <ion-list [hidden]="autocompleteItems.length == 0">
+          <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+            {{ item.description }}
+          </ion-item>
+        </ion-list>
+
+        <ion-row>
+          <button ion-button round class="btn-blue-gradient-round" (click)="nextStep();">Continuer</button>
+        </ion-row>
+
+        <ion-row (click)="precedent();">
+          <ion-label class="btn-no-bg">Pr&#233;c&#233;dent</ion-label>
+        </ion-row>
+
+      </ion-col>
     </ion-row>
   </ion-grid>
 

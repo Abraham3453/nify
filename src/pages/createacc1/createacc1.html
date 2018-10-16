@@ -1,53 +1,57 @@
-<ion-content class="container">
+<ion-content>
 
-  <ion-row class="top-margin"></ion-row>
+  <ion-grid class=" container">
 
-  <ion-row>
-    <ion-label>
-      <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
-    </ion-label>
-  </ion-row>
-
-  <ion-row class="da-ctn">
-    <ion-label class="color-white da">
-      <span class="bold">Dent</span><span class="fine">Art</span>
-    </ion-label>
-  </ion-row>
-
-  <ion-row class="wc-ctn">
-    <ion-label class="color-white wc">Cr&#233;er un compte</ion-label>
-  </ion-row>
-
-  <ion-grid class="form-ctn">
     <ion-row>
-      <ion-label class="margin-a">
-        <img class="vertdc">
-        <img class="greydc">
-        <img class="greydc">
-        <img class="greydc">
+      <ion-label>
+        <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
       </ion-label>
     </ion-row>
 
-    <ion-row>
-      <ion-avatar class="cacc-avatar">
-        <img src="assets/imgs/da_image/avatar.png">
-      </ion-avatar>
+    <ion-row class="da-ctn">
+      <ion-label class="color-white da">
+        <span class="bold">Dent</span><span class="fine">Art</span>
+      </ion-label>
     </ion-row>
 
-    <ion-row class="label-ctn">
-      <ion-label class="bottom-label">Choisir votre pseudo</ion-label>
+    <ion-row class="wc-ctn">
+      <ion-label class="color-white wc">Cr&#233;er un compte</ion-label>
     </ion-row>
 
-    <ion-row class="bb-input">
-      <ion-input type="text"></ion-input>
-    </ion-row>
+    <ion-row class="form-ctn">
 
-    <ion-row>
-      <button ion-button round class="btn-blue-gradient" (click)="nextStep();">Continuer</button>
-    </ion-row>
+      <ion-col >
+        <ion-row>
+          <ion-label class="margin-a">
+            <div class="vertdc"></div>
+            <div class="greydc"></div>
+            <div class="greydc"></div>
+            <div class="greydc"></div>
+          </ion-label>
+        </ion-row>
 
-    <ion-row (click)="precedent();">
-      <ion-label class="btn-no-bg">Pr&#233;c&#233;dent</ion-label>
+        <ion-row>
+          <ion-avatar class="cacc-avatar">
+            <img src="assets/imgs/da_image/avatar.png">
+          </ion-avatar>
+        </ion-row>
+
+        <ion-row class="label-ctn">
+          <ion-label class="bottom-label">Choisir votre pseudo</ion-label>
+        </ion-row>
+
+        <ion-row class="bb-input">
+          <ion-input type="text"></ion-input>
+        </ion-row>
+
+        <ion-row>
+          <button ion-button round class="btn-blue-gradient" (click)="nextStep();">Continuer</button>
+        </ion-row>
+
+        <ion-row (click)="precedent();">
+          <ion-label class="btn-no-bg">Pr&#233;c&#233;dent</ion-label>
+        </ion-row>
+      </ion-col>
     </ion-row>
   </ion-grid>
 

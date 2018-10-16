@@ -1,13 +1,11 @@
 page-recoverpasswd {
 
   .container {
+    padding-top: 15px;
     text-align: center;
     background-image: url('../../assets/imgs/background/bgConnexion.png');
-    background-size: 100% 100%;
-  }
-
-  .top-margin {
-    height: 40px;
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
   }
 
   .logo {
@@ -16,7 +14,7 @@ page-recoverpasswd {
   }
 
   .da-ctn {
-    margin-top: -35px;
+    margin-top: -20px;
   }
 
   .da {
@@ -36,7 +34,7 @@ page-recoverpasswd {
   }
 
   .info-ctn {
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 10px;
   }
 
@@ -51,8 +49,7 @@ page-recoverpasswd {
     font-size: 110%;
     white-space: normal;
     text-align: center;
-    color: black;
-    font-weight: bold;
+    color: color($colors, gris);
   }
 
   .color-white {
@@ -65,10 +62,10 @@ page-recoverpasswd {
   }
 
   .btn-blue-gradient {
-    width: 60%;
+    width: 90%;
     height: 50px;
-    margin-left: 20%;
-    margin-top: 10px;
+    margin: auto;
+    margin-top: 20px;
     text-transform: none;
     font-size: 120%;
     background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
@@ -84,30 +81,26 @@ page-recoverpasswd {
     font-size: 120%;
     color: color($colors, bleu);
     width: 100%;
-  }
-
-  .form {
-    margin: 0px;
-    background-color: rgba(0, 0, 0, 0.0);
-
-    ion-item {
-      background-color: rgba(0, 0, 0, 0.0);
-    }
-  }
-
-  .e-mail-ctn>input[type=email]:focus {
-    color: color($colors, white);
+    text-align: center;
   }
 
   .form {
     width: 96%;
     margin: auto;
     border-radius: 8px;
-    background-color: rgba(250, 250, 250, 0.6);
+    background-color: rgba(250, 250, 250, 0.0);
     padding-bottom: 10px;
+    text-align: left;
 
-    ion-item {
-      background-color: rgba(0, 0, 0, 0.0);
+    .lab-e-mail {
+      font-size: 130%;
+      color: #AAAAAA;
+      margin-bottom: -10px;
+    }
+
+    .e-mail-ctn {
+      border-bottom: 1px solid #AAAAAA;
+      font-size: 120%; 
     }
   }
 

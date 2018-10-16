@@ -1,49 +1,54 @@
-<ion-content class="container">
+<ion-content>
 
-  <ion-row class="top-margin"></ion-row>
-
-  <ion-row>
-    <ion-label>
-      <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
-    </ion-label>
-  </ion-row>
-
-  <ion-row class="da-ctn">
-    <ion-label class="color-white da">
-      <span class="bold">Dent</span><span class="fine">Art</span>
-    </ion-label>
-  </ion-row>
-
-  <ion-row class="wc-ctn">
-    <ion-label class="color-white wc">Me connecter</ion-label>
-  </ion-row>
-
-  <ion-row class="separator"></ion-row>
-
-  <form #form class="form-conn">
-    <ion-item>
-      <ion-label stacked>E-mail</ion-label>
-      <ion-input type="email" [(ngModel)]="email" 
-      name="email" (input)="changeMail($event);" 
-      maxlength="254"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label stacked>Mot de passe</ion-label>
-      <ion-input type="password" [(ngModel)]="passwd" name="passwd"></ion-input>
-    </ion-item>
+  <ion-grid class="container">
 
     <ion-row>
-      <button ion-button round class="btn-blue-gradient" (click)="connect();">
-        Connexion
-      </button>
+      <ion-label>
+        <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
+      </ion-label>
     </ion-row>
-  </form>
 
-  <ion-row (click)="forgetPasswd();">
-    <ion-label class="btn-light">
-      Mot de passe oubli&#233;
-    </ion-label>
-  </ion-row>
+    <ion-row class="da-ctn">
+      <ion-label class="color-white da">
+        <span class="bold">Dent</span><span class="fine">Art</span>
+      </ion-label>
+    </ion-row>
+
+    <ion-row class="wc-ctn">
+      <ion-label class="color-white wc">Me connecter</ion-label>
+    </ion-row>
+
+    <ion-row class="separator"></ion-row>
+
+    <form #form class="form-conn">
+
+      <ion-row>
+        <ion-label class="lab">E-mail</ion-label>
+      </ion-row>
+      <ion-row class="input-ctn">
+        <ion-input type="email" [(ngModel)]="email" name="email" (input)="changeMail($event);" maxlength="254"></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <ion-label class="lab">Mot de passe</ion-label>
+      </ion-row>
+      <ion-row class="input-ctn">
+        <ion-input type="password" [(ngModel)]="passwd" name="passwd"></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <button ion-button round class="btn-blue-gradient" (click)="connect();">
+          Connexion
+        </button>
+      </ion-row>
+    </form>
+
+    <ion-row (click)="forgetPasswd();">
+      <ion-label class="btn-light">
+        Mot de passe oubli&#233;
+      </ion-label>
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>

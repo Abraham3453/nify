@@ -96,11 +96,11 @@ page-popupcert {
   }
 
   .btn-blue-gradient {
-    width: 80%;
+    width: 90%;
     height: 50px;
     text-transform: none;
     font-size: 120%;
-    margin-left: 10%;
+    margin: auto;
     margin-top: 20px;
     background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
     background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
@@ -127,6 +127,11 @@ page-popupcert {
   .gc-label {
     white-space: normal;
     width: 100%;
+  }
+
+  .camera {
+    zoom: 6;
+    margin-top: -12px;
   }
 
 }

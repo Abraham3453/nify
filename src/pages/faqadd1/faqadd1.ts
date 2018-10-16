@@ -147,6 +147,7 @@ export class Faqadd1Page {
                     };
                     this.listImage.push(img);
                     idImg++;
+                    this.selectedImg = this.listImage[0];
                     //console.log(url);
                   })
                   .catch(error => {
@@ -180,6 +181,8 @@ export class Faqadd1Page {
           }
 
         });
+
+        
 
       })
       .catch(ex => {

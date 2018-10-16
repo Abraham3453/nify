@@ -51,8 +51,7 @@ export class HomePage {
     });
   }
 
-  public showFilter(fab: FabContainer) {
-    fab.close();
+  public showFilter() {
     let filter = this.modalCtrl.create(FaqfilterPage,
       {
         user: '1'
@@ -63,8 +62,7 @@ export class HomePage {
     filter.present();
   }
 
-  public newPub(fab: FabContainer){
-    fab.close();
+  public newPub(){
     let faq1 = Faqadd1Page;
     this.navCtrl.push(faq1);
   }

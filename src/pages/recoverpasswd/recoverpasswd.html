@@ -1,49 +1,60 @@
-<ion-content class="container">
+<ion-content>
 
-  <ion-row class="top-margin"></ion-row>
-
-  <ion-row>
-    <ion-label>
-      <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
-    </ion-label>
-  </ion-row>
-
-  <ion-row class="da-ctn">
-    <ion-label class="color-white da">
-      <span class="bold">Dent</span><span class="fine">Art</span>
-    </ion-label>
-  </ion-row>
-
-  <ion-row class="wc-ctn">
-    <ion-label class="color-white wc">Mot de passe oubli&#233;</ion-label>
-  </ion-row>
-
-
-  <ion-row class="separator"></ion-row>
-
-  <ion-row class="info-ctn">
-    <ion-label class="info">Saisissez votre e-mail et recevez votre mot de passe par e-mail</ion-label>
-  </ion-row>
-
-  <form #form class="form">
-
-    <ion-item class="e-mail-ctn">
-      <ion-label stacked class="lab-e-mail">Votre e-mail</ion-label>
-      <ion-input type="email" [(ngModel)]="email" name="email" 
-      (input)="changeMail($event);" maxlength="254" class="e-mail"></ion-input>
-    </ion-item>
+  <ion-grid class="container">
 
     <ion-row>
-      <button ion-button round class="btn-blue-gradient" (click)="recover();">
-        Continuer
-      </button>
+      <ion-label>
+        <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
+      </ion-label>
     </ion-row>
 
-    <ion-row (click)="recover();" class="btn-light">
-      <ion-label>Pr&#233;c&#233;dent</ion-label>
+    <ion-row class="da-ctn">
+      <ion-label class="color-white da">
+        <span class="bold">Dent</span><span class="fine">Art</span>
+      </ion-label>
     </ion-row>
-  </form>
 
-  
+    <ion-row class="wc-ctn">
+      <ion-label class="color-white wc">Mot de passe oubli&#233;</ion-label>
+    </ion-row>
+
+
+    <ion-row class="separator"></ion-row>
+
+    <ion-row class="info-ctn">
+      <ion-label class="info">Saisissez votre e-mail et recevez votre mot de passe par e-mail</ion-label>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <form #form class="form">
+
+          <ion-row >
+            <ion-label class="lab-e-mail">Votre e-mail</ion-label>
+          </ion-row>
+          <ion-row class="e-mail-ctn">
+            <ion-input type="email" [(ngModel)]="email" name="email" (input)="changeMail($event);" maxlength="254"
+              class="e-mail"></ion-input>
+          </ion-row>
+
+
+          <ion-row>
+            <button ion-button round class="btn-blue-gradient" (click)="recover();">
+              Continuer
+            </button>
+          </ion-row>
+
+          <ion-row (click)="recover();" class="btn-light">
+            <ion-label>Pr&#233;c&#233;dent</ion-label>
+          </ion-row>
+        </form>
+
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+
 
 </ion-content>

@@ -1,64 +1,74 @@
-<ion-content class="container">
+<ion-content>
 
-  <ion-row class="top-margin"></ion-row>
+  <ion-grid class="container">
 
-  <ion-row>
-    <ion-label>
-      <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
-    </ion-label>
-  </ion-row>
-
-  <ion-row class="da-ctn">
-    <ion-label class="color-white da">
-      <span class="bold">Dent</span><span class="fine">Art</span>
-    </ion-label>
-  </ion-row>
-
-  <ion-row class="wc-ctn">
-    <ion-label class="color-white wc">Saisissez votre e-mail et mot de passe</ion-label>
-  </ion-row>
-
-  <ion-grid class="form-ctn">
     <ion-row>
-      <ion-label class="margin-a">
-        <img class="vertdc">
-        <img class="vertdc">
-        <img class="vertdc">
-        <img class="vertdc">
+      <ion-label>
+        <img class="logo" src="assets/imgs/da_image/logo-dentart.png">
       </ion-label>
     </ion-row>
 
-    <ion-row>
-      <ion-avatar class="cacc-avatar">
-        <img src="assets/imgs/da_image/avatar-message.png">
-      </ion-avatar>
+    <ion-row class="da-ctn">
+      <ion-label class="color-white da">
+        <span class="bold">Dent</span><span class="fine">Art</span>
+      </ion-label>
     </ion-row>
 
-    <ion-row class="label-ctn">
-      <ion-label class="bottom-label">E-mail</ion-label>
+    <ion-row class="wc-ctn">
+      <ion-label class="color-white wc">
+        <span>Saisissez votre e-mail</span>
+        <span><br>et votre mot de passe</span>
+      </ion-label>
     </ion-row>
 
-    <ion-row class="bb-input">
-      <ion-input type="text"></ion-input>
-      <ion-icon id="icon_btn_2" class="ion-md-checkmark icon-checked" color="vertchecked"></ion-icon>
+    <ion-row class="form-ctn">
+      <ion-col>
+
+
+        <ion-row>
+          <ion-label class="margin-a">
+            <div class="vertdc"></div>
+            <div class="vertdc"></div>
+            <div class="vertdc"></div>
+            <div class="vertdc"></div>
+          </ion-label>
+        </ion-row>
+
+        <ion-row>
+          <ion-avatar class="cacc-avatar">
+            <img src="assets/imgs/da_image/avatar-message.png">
+          </ion-avatar>
+        </ion-row>
+
+        <ion-row class="label-ctn">
+          <ion-label class="bottom-label">E-mail</ion-label>
+        </ion-row>
+
+        <ion-row class="bb-input">
+          <ion-input type="text"></ion-input>
+          <ion-icon id="icon_btn_2" class="ion-md-checkmark icon-checked" color="vertchecked"></ion-icon>
+        </ion-row>
+
+        <ion-row class="label-ctn-bottom">
+          <ion-label class="bottom-label">Mot de passe</ion-label>
+        </ion-row>
+
+        <ion-row class="bb-input-bottom">
+          <ion-input type="text"></ion-input>
+          <ion-icon id="icon_btn_2" class="ion-md-checkmark icon-checked" color="vertchecked"></ion-icon>
+        </ion-row>
+
+        <ion-row class="btn-ctn">
+          <button ion-button round class="btn-blue-gradient" (click)="displayGC();">Continuer</button>
+        </ion-row>
+
+        <ion-row (click)="precedent();">
+          <ion-label class="btn-no-bg">Pr&#233;c&#233;dent</ion-label>
+        </ion-row>
+
+      </ion-col>
     </ion-row>
 
-    <ion-row class="label-ctn-bottom">
-      <ion-label class="bottom-label">Mot de passe</ion-label>
-    </ion-row>
-
-    <ion-row class="bb-input-bottom">
-      <ion-input type="text"></ion-input>
-      <ion-icon id="icon_btn_2" class="ion-md-checkmark icon-checked" color="vertchecked"></ion-icon>
-    </ion-row>
-
-    <ion-row>
-      <button ion-button round class="btn-blue-gradient" (click)="displayGC();">Continuer</button>
-    </ion-row>
-
-    <ion-row (click)="precedent();">
-      <ion-label class="btn-no-bg">Pr&#233;c&#233;dent</ion-label>
-    </ion-row>
   </ion-grid>
 
 </ion-content>

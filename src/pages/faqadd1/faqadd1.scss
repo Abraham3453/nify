@@ -4,10 +4,11 @@ page-faqadd1 {
     text-align: center;
     background-image: url('../../assets/imgs/background/bgConnexion.png');
     background-size: 100% 100%;
-  }
-
-  .top-margin {
-    height: 1px;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
   }
 
   .header {
@@ -54,6 +55,8 @@ page-faqadd1 {
       width: 24%;
       height: 80px;
       float: left;
+      margin-top: 1px;
+      margin-left: 1px;
   }
 
   .ctn-selected-img {
@@ -75,6 +78,8 @@ page-faqadd1 {
     color: color($colors, bleu);
     font-size: 120%;
     font-weight: bold;
+    background-color: white;
+    height: 50px;
   }
 
 }

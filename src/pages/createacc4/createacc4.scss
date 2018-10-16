@@ -1,13 +1,11 @@
 page-createacc4 {
 
   .container {
+    padding-top: 15px;
     text-align: center;
     background-image: url('../../assets/imgs/background/bgConnexion.png');
-    background-size: 100% 100%;
-  }
-
-  .top-margin {
-    height: 10px;
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
   }
 
   .logo {
@@ -46,11 +44,11 @@ page-createacc4 {
   }
 
   .form-ctn {
-    background-color: rgba(250, 250, 250, 0.7);
+    background-color: rgba(255, 255, 255, 0.97);
     width: 90%;
     margin-left: 5%;
     border-radius: 10px 10px 10px 10px;
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
   .vertdc {
@@ -58,13 +56,16 @@ page-createacc4 {
     height: 17px;
     background-color: color($colors, vertdc);
     border-radius: 50%;
+    margin: 5px;
   }
 
   .greydc {
     width: 17px;
     height: 17px;
-    background-color: color($colors, gris);
+    background-color: #D3EDff;
     border-radius: 50%;
+    opacity: 1;
+    margin: 5px;
   }
 
   .cacc-avatar {
@@ -77,25 +78,30 @@ page-createacc4 {
   .margin-a {
     padding-top: 20px;
     margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
   }
 
   .label-ctn {
     text-align: left;
-    padding: 10px;
+    padding-left: 9px;
     color: rgba($color: #555555, $alpha: 0.5);
 
     .bottom-label {
-      margin-bottom: -20px;
+      margin-bottom: -13px;
+      font-size: 130%;
     }
   }
 
   .label-ctn-bottom {
     text-align: left;
-    padding: 10px;
+    padding-left: 9px;
     color: rgba($color: #555555, $alpha: 0.5);
 
     .bottom-label {
-      margin-top: -38px;
+      margin-top: 0px;
+      margin-bottom: 26px;
+      font-size: 130%;
     }
   }
 
@@ -110,11 +116,11 @@ page-createacc4 {
   }
 
   .btn-blue-gradient {
-    width: 80%;
+    width: 90%;
     height: 50px;
     text-transform: none;
     font-size: 120%;
-    margin-left: 10%;
+    margin: auto;
     background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
     background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
     background: linear-gradient(to right, #329FF9, #50E3C2);
@@ -138,6 +144,10 @@ page-createacc4 {
     font-size: 120%;
     color: color($colors, bleu);
     width: 60%;
+  }
+
+  .btn-ctn {
+    padding-top: 50px;
   }
 
 }

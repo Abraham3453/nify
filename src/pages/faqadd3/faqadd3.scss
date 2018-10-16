@@ -1,9 +1,11 @@
 page-faqadd3 {
 
   .container {
+    padding-top: 15px;
     text-align: center;
     background-image: url('../../assets/imgs/background/bgConnexion.png');
     background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 
   .top-margin {
@@ -93,13 +95,18 @@ page-faqadd3 {
 
   .img-ctn {
     width: 100%;
+    text-align: left;
 
     ion-col {
       width: 100%;
+      padding: 0px;
+      margin: 0px;
     }
 
     ion-select {
       width: 100%;
+      color: white;
+      font-weight: bold;
     }
   }
 
@@ -116,6 +123,31 @@ page-faqadd3 {
     transform: translate(-50%, -50%);
     width: 50%;
     height: 50%;
+  }
+
+  .theme {
+    width: 100%;
+    margin-left: 0px;
+    background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
+    background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
+    background: linear-gradient(to right, #329FF9, #50E3C2);
+    border-radius: 6px;
+    ion-label{
+      color: white;
+    }
+  }
+
+  .icon-group {
+    width: 40px;
+    height: 40px;
+    float: right;
+  }
+
+  .ctn-faq-desc {
+    margin-top: 20px;
+  }
+  .sep {
+    height: 20px;
   }
 
 }
