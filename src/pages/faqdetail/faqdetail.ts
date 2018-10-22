@@ -17,6 +17,8 @@ import { FaqcomPage } from '../faqcom/faqcom';
 export class FaqdetailPage {
 
   image: any;
+  faq: any;
+  user: any;
 
   constructor(
     public navCtrl: NavController,
@@ -25,6 +27,8 @@ export class FaqdetailPage {
   ) {
 
     this.image = navParams.get('image');
+    this.faq = navParams.get('faq');
+    this.user = navParams.get('user');
     
   }
 
@@ -38,7 +42,11 @@ export class FaqdetailPage {
 
   public comment() {
     let fcom = FaqcomPage;
-    this.navCtrl.push(fcom);
+    this.navCtrl.push(fcom,
+      {
+        faq: this.faq,
+        user: this.user
+      });
   }
 
 }

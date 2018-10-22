@@ -45,7 +45,8 @@
         </ion-row>
 
         <ion-row class="bb-input">
-          <ion-input type="text"></ion-input>
+          <ion-input type="email" (input)="emailTyping();" 
+          [(ngModel)]="mail" name="mail"></ion-input>
           <ion-icon id="icon_btn_2" class="ion-md-checkmark icon-checked" color="vertchecked"></ion-icon>
         </ion-row>
 
@@ -54,7 +55,7 @@
         </ion-row>
 
         <ion-row class="bb-input-bottom">
-          <ion-input type="text"></ion-input>
+          <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
           <ion-icon id="icon_btn_2" class="ion-md-checkmark icon-checked" color="vertchecked"></ion-icon>
         </ion-row>
 

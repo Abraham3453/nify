@@ -1,5 +1,5 @@
 page-home {
-  
+
   .container {
     background-size: 100%;
     background-image: url('../../assets/imgs/background/fond-3.png');
@@ -19,6 +19,7 @@ page-home {
     height: 80px;
     background-color: color($colors, bgheader);
     z-index: 9999;
+
     h4 {
       padding: 0px;
       margin: 0px;
@@ -66,6 +67,7 @@ page-home {
     background: -moz-linear-gradient(to bottom, #329FF9, #50E3C2);
     background: -webkit-linear-gradient(to bottom, #329FF9, #50E3C2);
     background: linear-gradient(to bottom, #329FF9, #50E3C2);
+
     h4 {
       padding: 5px;
       margin: 0px;
@@ -80,7 +82,7 @@ page-home {
     margin-top: 10px;
     margin-bottom: 0px;
     border-radius: 10px;
-    background-image: url('../../assets/imgs/da_image/Rectangle\ 3.jpg');
+    /* background-image: url('../../assets/imgs/da_image/Rectangle\ 3.jpg'); */
     background-size: 100% 100%;
     width: 98%;
 
@@ -88,40 +90,7 @@ page-home {
       margin: 0px;
       padding: 0px;
     }
-  }
 
-  .card-ctn-2 {
-    padding: 10px;
-    padding-top: 0px;
-    padding-bottom: 10px;
-    margin: 1%;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    background-image: url('../../assets/imgs/da_image/Rectangle-05.jpg');
-    background-size: 100% 100%;
-    width: 98%;
-
-    ion-col {
-      margin: 0px;
-      padding: 0px;
-    }
-  }
-
-  .card-ctn-3 {
-    padding: 10px;
-    padding-top: 0px;
-    padding-bottom: 10px;
-    margin: 1%;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    background-image: url('../../assets/imgs/da_image/Rectangle-03.jpg');
-    background-size: 100% 100%;
-    width: 98%;
-
-    ion-col {
-      margin: 0px;
-      padding: 0px;
-    }
   }
 
   .card-title {
@@ -145,6 +114,7 @@ page-home {
   .ttl-fine {
     font-weight: 100;
     font-size: 110%;
+    white-space: nowrap;
   }
 
   .name-bold {
@@ -155,6 +125,7 @@ page-home {
   .lieu-fine {
     font-weight: 100;
     font-size: 100%;
+    white-space: nowrap;
   }
 
   .avatar {
@@ -252,6 +223,7 @@ page-home {
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.9);
     height: 80px;
+    z-index: 1000;
   }
 
   .fltr-icon {
@@ -262,6 +234,25 @@ page-home {
   .fltr-icon-cam {
     width: 32px;
     height: 30px;
+  }
+
+  .load-ctn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 7000;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .load-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
   }
 
 }

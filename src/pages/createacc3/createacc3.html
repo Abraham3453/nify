@@ -49,7 +49,7 @@
 
         </ion-row>
 
-        <ion-list [hidden]="autocompleteItems.length == 0">
+        <ion-list [hidden]="autocompleteItems.length == 0" class="places">
           <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
             {{ item.description }}
           </ion-item>

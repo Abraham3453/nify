@@ -21,6 +21,7 @@ import { Faqadd3Page } from '../faqadd3/faqadd3';
 export class Faqadd1Page {
 
   source: any = 1;
+  user: any;
 
   listImage: any = [];
   selectedImg: any;
@@ -41,6 +42,7 @@ export class Faqadd1Page {
     console.log(ptf.is('android'));
     console.log(ptf.is('core'));
     console.log(ptf.is('mobileweb'));
+    this.user = navParams.get('user');
 
     this.source = navParams.get('source') != null ? navParams.get('source') : 1;
 
@@ -203,7 +205,8 @@ export class Faqadd1Page {
     if (this.selectedImg != null) {
       let faq3 = Faqadd3Page;
       this.navCtrl.push(faq3, {
-        img: this.selectedImg
+        img: this.selectedImg,
+        user: this.user
       });
     }
     else {
@@ -215,10 +218,10 @@ export class Faqadd1Page {
       alert.present();
     }
 
-    let faq3 = Faqadd3Page;
+    /* let faq3 = Faqadd3Page;
       this.navCtrl.push(faq3, {
         img: this.selectedImg
-      });
+      }); */
 
   }
 

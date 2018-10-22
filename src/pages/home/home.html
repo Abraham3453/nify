@@ -1,5 +1,9 @@
 <ion-content>
 
+  <div class="load-ctn" id="load" *ngIf="load == 1">
+    <img class="load-img" src="../../assets/imgs/load/load2.gif" />
+  </div>
+
   <!-- <ion-fab top center #fab>
         <button ion-fab mini>
           <ion-icon name="md-help-buoy"></ion-icon>
@@ -34,7 +38,85 @@
       </ion-row>
     </ion-grid>
 
-    <ion-row class="card-ctn">
+    <ion-row class="card-ctn" *ngFor="let faq of listFaQ" id="{{faq.faq.id}}" 
+      [style.background-image]="'url('+(faq.faq.faq_image_1 != null ? faq.faq.faq_image_1 : '../../assets/imgs/da_image/Rectangle-05.jpg')+')'" >
+
+      <ion-col>
+
+        <ion-row>
+          <ion-label class="photo-lab">
+            <ion-icon class="photo-btn">
+              <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
+              <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
+              <img src="assets/imgs/da_image/photo-camera.png">
+            </ion-icon>
+          </ion-label>
+        </ion-row>
+        <ion-row class="card-ttl-ctn" (click)="faqDetails(faq);">
+          <ion-label class="card-title">
+            <span class="ttl-bold">
+              {{faq.theme.name}}<br>
+            </span>
+            <span class="ttl-fine">
+              {{faq.faq.description}}
+            </span>
+          </ion-label>
+        </ion-row>
+        <ion-row>
+          <img class="avatar" src="{{faq.author.avatar != '' ? faq.author.avatar : 'assets/imgs/avatar/avatar_f.png'}}" />
+          <ion-label class="about-user">
+            <span class="name-bold">
+              {{faq.author.pseudo}}<br>
+            </span>
+            <span class="lieu-fine">
+              {{faq.author.job}} - {{faq.author.address}}
+            </span>
+          </ion-label>
+        </ion-row>
+        <ion-row class="card-footer">
+
+          <ion-col class="col-3" (click)="addToFavorite(faq);">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">{{faq.faq.favorite_count}}</ion-badge>
+                <img src="assets/imgs/da_image/Star.png">
+              </ion-icon>
+              <span class="text-inner">
+                Favoris
+              </span>
+
+            </ion-label>
+          </ion-col>
+
+          <ion-col class="col-3" (click)="comment(faq);">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">{{faq.faq.comments_count}}</ion-badge>
+                <img src="assets/imgs/da_image/Combined Shape.png">
+              </ion-icon>
+              <span class="text-inner txt-com">
+                Commentaire
+              </span>
+            </ion-label>
+          </ion-col>
+
+          <ion-col class="col-3">
+            <ion-label class="photo-lab-1">
+              <ion-icon class="photo-btn-left">
+                <ion-badge class="cart-badge" color="bleurightbtn">10</ion-badge>
+                <img src="assets/imgs/da_image/partager.png">
+              </ion-icon>
+              <span class="text-inner">
+                Partager
+              </span>
+            </ion-label>
+          </ion-col>
+
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <!-- <ion-row class="card-ctn">
 
       <ion-col>
         <ion-row>
@@ -280,7 +362,7 @@
         </ion-row>
       </ion-col>
 
-    </ion-row>
+    </ion-row> -->
 
   </div>
 

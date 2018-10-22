@@ -24,7 +24,7 @@
         <ion-col>
 
           <ion-row class="img-bg">
-            <img class="like-bg" src="{{image}}">
+            <img class="like-bg" src="{{faq.faq.faq_image_1 != null ? faq.faq.faq_image_1 : '../../assets/imgs/da_image/Rectangle-05.jpg'}}">
             <div class="img-slide">
               <ion-label class="margin-a">
                 <div class="vertdc"></div>
@@ -40,50 +40,27 @@
             <ion-col>
               <ion-row>
                 <ion-label class="gc-label">
-                  <span class="titre-faq">Lorem ipsum 1<br></span>
+                  <span class="titre-faq">{{faq.theme.name}}<br></span>
                   <div class="sep"></div>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis orci sit amet condimentum
-                  elementum.
-                  Curabitur vitae porttitor felis, condimentum viverra eros. Nunc sed lorem lacus. Sed elementum augue
-                  augue, ac
-                  congue odio fermentum id. Nam ligula arcu, fermentum sed egestas sed, porta at leo. Aenean tristique
-                  ligula nec
-                  ex hendrerit, sed pretium nunc vulputate. Nulla facilisis volutpat est, vitae finibus quam tempor
-                  nec.
-                  Donec
-                  sit amet lorem volutpat, pellentesque ante ut, sollicitudin metus. Donec iaculis feugiat magna
-                  convallis
-                  varius. Morbi nec lorem id mauris tempor ultrices in vel nulla. Aliquam eget sagittis ligula, id
-                  dictum
-                  velit.
-                  Phasellus pretium porttitor felis, a tincidunt nisl facilisis nec. Vivamus tincidunt metus eros, a
-                  pretium
-                  sapien accumsan et. Maecenas sit amet elit sed augue luctus vulputate. Lorem ipsum dolor sit amet,
-                  consectetur
-                  adipiscing elit.
+                  {{faq.faq.description}}
                 </ion-label>
               </ion-row>
               <ion-row class="gc-ctn">
                 <ion-avatar>
-                  <img class="img-profil" src="assets/imgs/avatar/avatar_h.png">
+                  <img class="img-profil" src="{{faq.author.avatar != '' ? faq.author.avatar : 'assets/imgs/avatar/avatar_h.png'}}">
                 </ion-avatar>
 
                 <ion-label class="text-align-left">
                   <span class="bold-name">
-                    Dr Louise Depuis<br>
+                    {{faq.author.pseudo}}<br>
                   </span>
                   <span class="fine-lieu">
-                    Dentiste - Lyon
+                    {{faq.theme.name}} - {{faq.author.address}}
                   </span>
                 </ion-label>
               </ion-row>
             </ion-col>
           </ion-row>
-
-
-
-
-
 
         </ion-col>
       </ion-row>
@@ -91,7 +68,7 @@
     </ion-grid>
 
     <div class="bg-gradient">
-      <ion-row >
+      <ion-row *ngFor="let com of faq.faq.comments" >
         <ion-col>
           <ion-row class="comment other">
             <ion-avatar>
@@ -100,7 +77,7 @@
 
             <ion-label class="text-align-left">
               <span class="normal-name">
-                Dr Louise Depuis<br>
+                {{com.comment_author}}<br>
               </span>
               <span class="normal-lieu">
                 Dentiste - Lyon<br>
@@ -114,7 +91,8 @@
             </ion-label>
 
           </ion-row>
-          <ion-row class="comment me">
+
+          <!-- <ion-row class="comment me">
             <ion-avatar>
               <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
             </ion-avatar>
@@ -173,7 +151,7 @@
                 convallis, at blandit dolor dapibus.
               </span>
             </ion-label>
-          </ion-row>
+          </ion-row> -->
         </ion-col>
       </ion-row>
     </div>

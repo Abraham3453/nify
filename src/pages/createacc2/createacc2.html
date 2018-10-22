@@ -35,49 +35,19 @@
           </ion-avatar>
         </ion-row>
 
-        <ion-row class="btn-ctn-left">
-          <button id="btn0" ion-button class="btn-blue-gradient" (click)="selectProfession('btn0','icon_btn_0');">
-            Professionel de la dentisterie
-            <ion-icon id="icon_btn_0" class="icon-checked" color="gris">
+        <ion-row *ngFor="let job of jobs; let i = index" class="btn-ctn-left">
+          <button id="btn{{i}}" ion-button 
+          class="btn-blue-gradient" 
+          (click)="selectProfession('btn'+i,'icon_btn_'+i);">
+            {{job}}
+            <ion-icon id="icon_btn_{{i}}" class="icon-checked" color="gris">
               <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
             </ion-icon>
           </button>
-        </ion-row>
-
-        <ion-row>
-          <button id="btn1" ion-button class="btn-blue-gradient" (click)="selectProfession('btn1','icon_btn_1');">
-            Etudiant en dentisterie
-            <ion-icon id="icon_btn_1" class="icon-checked" color="gris">
-              <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
-            </ion-icon>
-          </button>
-        </ion-row>
-
-        <ion-row>
-          <button id="btn2" ion-button class="btn-blue-gradient" (click)="selectProfession('btn2','icon_btn_2');">
-            Formateur dentisterie
-            <ion-icon id="icon_btn_2" class="icon-checked" color="gris">
-              <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
-            </ion-icon>
-          </button>
-        </ion-row>
-
-        <ion-row>
-          <button id="btn3" ion-button class="btn-blue-gradient" (click)="selectProfession('btn3','icon_btn_3');">
-            Autres professions m&#233;dicales
-            <ion-icon id="icon_btn_3" class="icon-checked" color="gris">
-              <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
-            </ion-icon>
-          </button>
-        </ion-row>
-
-        <ion-row>
-          <button id="btn4" ion-button class="btn-blue-gradient" (click)="selectProfession('btn4','icon_btn_4');">
-            Autres (Pr&#233;cisez)
-            <ion-icon id="icon_btn_4" class="icon-checked" color="gris">
-              <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
-            </ion-icon>
-          </button>
+          <ion-input *ngIf="i == 4" type="text" 
+          class="{{classJob}}" id="job" 
+          placeholder="Votre profession" 
+          [(ngModel)]="otherJob" name="otherJob" (input)="otherJobText();"></ion-input>
         </ion-row>
 
         <ion-row>

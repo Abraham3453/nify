@@ -48,6 +48,7 @@ page-faqdetail {
   .img-profil {
     width: 60px;
     height: 60px;
+    border-radius: 50%;
   }
 
   .img-profil-small {
@@ -193,13 +194,14 @@ page-faqdetail {
   }
 
   .img-slide {
-    position: absolute;
-    top: 11%;
-    left: 50%;
+    position: relative;
+    bottom: 20%;
+    left: 25%;
+    transform: translate(-25%, 0);
   }
 
   .margin-a {
-    transform: translate(-50%, 0);
+    transform: translate(50%, 0);
     display: flex;
     justify-content: center;
     margin-bottom: -150px;

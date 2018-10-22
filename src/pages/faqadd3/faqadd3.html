@@ -1,5 +1,9 @@
 <ion-content >
 
+  <div class="load-ctn" id="load" *ngIf="imgs.length > 0">
+    <img class="load-img" src="../../assets/imgs/load/load2.gif" />
+  </div>
+
   <ion-grid class="container">
 
     <ion-row class="header">
@@ -57,15 +61,16 @@
 
             <ion-item no-lines class="theme">
               <ion-label class="theme-txt">Th&#232;mes</ion-label>
-              <ion-select placeholder="Choisir le theme" okText="Ok" cancelText="Annuler">
-                <ion-option value="1">Soins</ion-option>
-                <ion-option value="2">Endodontie</ion-option>
+              <ion-select [(ngModel)]="faq_theme" name="faq_theme" placeholder="Choisir le theme" 
+              okText="Ok" cancelText="Annuler" interface="popover" (ionChange)="changeTheme();">
+                <ion-option *ngFor="let t of listFaQTheme" value="{{t.id}}">{{t.name}}</ion-option>
+                <!-- <ion-option value="2">Endodontie</ion-option>
                 <ion-option value="3">Chirurgie et implants</ion-option>
                 <ion-option value="4">Prothèses</ion-option>
                 <ion-option value="5">Pédodontie</ion-option>
                 <ion-option value="6">Orthodontie</ion-option>
                 <ion-option value="7">Vie du cabinet et contrats</ion-option>
-                <ion-option value="8">News</ion-option>
+                <ion-option value="8">News</ion-option> -->
               </ion-select>
             </ion-item>
 
@@ -76,7 +81,8 @@
 
         <ion-row class="ctn-faq-desc">
           <ion-col>
-            <ion-textarea class="desc-faq" placeholder="Description"></ion-textarea>
+            <ion-textarea class="desc-faq" placeholder="Description" 
+            [(ngModel)]="faq_description" name="faq_description"></ion-textarea>
           </ion-col>
         </ion-row>
       </ion-col>

@@ -123,7 +123,7 @@ page-faqcom {
   .img-bg {
     border-radius: 10px;
     height: 200px;
-    margin: 10px;
+    margin: 10px; 
   }
 
   .like-bg {
@@ -170,8 +170,8 @@ page-faqcom {
   }
 
   .img-slide {
-    position: absolute;
-    top: 10%;
+    position: relative;
+    bottom: 20%;
     left: 50%;
   }
 
@@ -206,6 +206,21 @@ page-faqcom {
 
   .comment-input {
     margin-bottom: 20px;
+  }
+
+  .icon-camera {
+    width: 40px;
+    height: 36px;
+    margin: auto;
+  }
+
+  .large-col {
+    width: 70%;
+  }
+
+  .col-50-px {
+    width: 30%;
+    float: right;
   }
 
 }

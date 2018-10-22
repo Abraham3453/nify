@@ -30,6 +30,7 @@ import { Faqadd4annulerPage } from '../pages/faqadd4annuler/faqadd4annuler';
 import { AnnoncesPage } from '../pages/annonces/annonces';
 import { AnnoncesFilterPage } from '../pages/annonces-filter/annonces-filter';
 import { CertphotoPage } from '../pages/certphoto/certphoto';
+import { HTTP } from '@ionic-native/http';
 
 @NgModule({
   declarations: [
@@ -95,9 +96,9 @@ import { CertphotoPage } from '../pages/certphoto/certphoto';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GlobalsProvider,
     Geolocation,
-    HttpClient,
     File,
-    FileTransfer
+    FileTransfer,
+    HTTP
   ]
 })
 export class AppModule {}
