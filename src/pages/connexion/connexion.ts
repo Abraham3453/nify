@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
 import { RecoverpasswdPage } from '../recoverpasswd/recoverpasswd';
@@ -29,7 +29,8 @@ export class ConnexionPage {
     public navParams: NavParams,
     private http: HTTP,
     private globals: GlobalsProvider,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private events: Events
   ) {
 
   }
@@ -73,6 +74,7 @@ export class ConnexionPage {
           
           if (res.etat_connexion == 'connexion-ok') {
             this.user = res.info_utilisateur;
+            this.events.publish("user:logedIn", this.user);
             let home = HomePage;
             this.navCtrl.setRoot(home, {
               user: this.user

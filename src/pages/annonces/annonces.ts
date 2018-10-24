@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { AnnoncesFilterPage } from '../annonces-filter/annonces-filter';
+import { AnnonceAdd1Page } from '../annonce-add1/annonce-add1';
+import { HTTP } from '@ionic-native/http';
+import { GlobalsProvider } from '../../providers/globals/globals';
 
 /**
  * Generated class for the AnnoncesPage page.
@@ -18,18 +21,35 @@ declare var google;
 })
 export class AnnoncesPage {
 
+  load: number = 1;
+
   map: any;
+  user: any;
+  listCat: any = [];
+  listAds: any = [];
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private http: HTTP,
+    private globals: GlobalsProvider
   ) {
+
+    this.user = navParams.get('user');
+    console.log(JSON.stringify(this.user));
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AnnoncesPage');
     this.loadMap();
+    
+  }
+
+  ionViewWillEnter(){
+    this.getListCat();
+    this.getListAds();
   }
 
   public loadMap() {
@@ -84,5 +104,42 @@ export class AnnoncesPage {
     filter.present();
   }
 
+  public newAnnonce() {
+    let faq1 = AnnonceAdd1Page;
+    this.navCtrl.push(faq1, {
+      user: this.user,
+      listCat: this.listCat
+    });
+  }
+
+  public getListCat() {
+    //document.getElementById('load').style.display = 'inline';
+    this.http.post(this.globals.variables.urls.listAnnonceCat, {}, {})
+      .then(
+        data => {
+          this.listCat = JSON.parse(data.data);
+          console.log(JSON.stringify(this.listCat));
+        },
+        error => {
+          console.log(JSON.stringify(error));
+        }
+      );
+  }
+
+  public getListAds() {
+    //document.getElementById('load').style.display = 'inline';
+    this.http.post(this.globals.variables.urls.listAnnonce, {}, {})
+      .then(
+        data => {
+          this.load = 0;
+          this.listAds = JSON.parse(data.data);
+          console.log(JSON.stringify(this.listAds));
+        },
+        error => {
+          this.load = 0;
+          console.log(JSON.stringify(error));
+        }
+      );
+  }
 
 }

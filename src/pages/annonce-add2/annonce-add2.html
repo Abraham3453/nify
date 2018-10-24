@@ -1,0 +1,117 @@
+<ion-content>
+
+  <div class="load-ctn" id="load" *ngIf="imgs.length > 0">
+    <img class="load-img" src="../../assets/imgs/load/load2.gif" />
+  </div>
+
+  <ion-grid class="container">
+
+    <ion-row class="header">
+
+      <ion-col class="col-cancel" (click)="annulerClick();">
+        <ion-label class="annuler">
+          <ion-icon class="ion-ios-arrow-back back-gc" color="white"></ion-icon>
+          <span class="back-faq">Annuler</span>
+        </ion-label>
+      </ion-col>
+
+      <ion-col (click)="publier()">
+        <ion-label class="gc">
+          <span class="fw-faq">Publier</span>
+          <ion-icon class="ion-ios-arrow-forward forward" color="white"></ion-icon>
+        </ion-label>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="sep"></ion-row>
+
+    <ion-row class="ctn-faq-det">
+      <ion-col>
+        <ion-row class="img-ctn">
+          <ion-col>
+
+            <ion-row no-lines class="input-pub">
+              <ion-input [(ngModel)]="ad_title" name="ad_title" placeholder="Titre"></ion-input>
+            </ion-row>
+
+            <ion-row no-lines class="theme" (click)="changeCat();">
+              <ion-label class="theme-txt">{{selectedCat != null ? selectedCat.name : 'Cat&#233;gories'}}</ion-label>
+              <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
+            </ion-row>
+
+            <!-- <ion-row no-lines class="input-pub">
+              <ion-input placeholder="Lieu"></ion-input>
+            </ion-row> -->
+
+            <ion-row no-lines class="input-pub">
+
+                <ion-input type="text" class="bb-input" [(ngModel)]="autocomplete.input" (input)="updateSearchResults()"></ion-input>
+      
+                <img class="map-marker" src="assets/imgs/avatar/createacc3/map_marker.png">
+      
+              </ion-row>
+      
+              <ion-list [hidden]="autocompleteItems.length == 0" class="places">
+                <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+                  {{ item.description }}
+                </ion-item>
+              </ion-list>
+
+            <ion-row no-lines class="input-pub">
+              <ion-input [(ngModel)]="phone" name="phone" placeholder="Num&#233;ro (facultatif)"></ion-input>
+            </ion-row>
+
+            <ion-row no-lines class="input-pub">
+              <ion-input [(ngModel)]="price" name="price" placeholder="Prix (facultatif)"></ion-input>
+            </ion-row>
+
+          </ion-col>
+        </ion-row>
+
+        <ion-row fixed class="faq-photo">
+          <ion-col>
+            <ion-row>
+              <ion-col (click)="addPhoto(0);">
+                <img class="img" *ngIf="imgs.length >= 1" src="{{imgs[0].url}}" alt="No image found" />
+                <img class="sup-icon" *ngIf="imgs.length >= 1" src="assets/imgs/da_image/waste-bin.png" />
+                <ion-row *ngIf="imgs.length < 1" class="alt-img">
+                  <ion-icon name="md-add" class="icon-add" color="bleu"></ion-icon>
+                </ion-row>
+              </ion-col>
+              <ion-col (click)="addPhoto(1);">
+                <img class="img" *ngIf="imgs.length >= 2" src="{{imgs[1].url}}" />
+                <img class="sup-icon" *ngIf="imgs.length >= 2" src="assets/imgs/da_image/waste-bin.png" />
+                <ion-row *ngIf="imgs.length < 2" class="alt-img">
+                  <ion-icon name="md-add" class="icon-add" color="bleu"></ion-icon>
+                </ion-row>
+              </ion-col>
+              <ion-col (click)="addPhoto(2);">
+                <img class="img" *ngIf="imgs.length >= 3" src="{{imgs[2].url}}" />
+                <img class="sup-icon" *ngIf="imgs.length >= 3" src="assets/imgs/da_image/waste-bin.png" />
+                <ion-row *ngIf="imgs.length < 3" class="alt-img">
+                  <ion-icon name="md-add" class="icon-add" color="bleu"></ion-icon>
+                </ion-row>
+              </ion-col>
+              <ion-col (click)="addPhoto(3);">
+                <img class="img" *ngIf="imgs.length >= 4" src="{{imgs[3].url}}" />
+                <img class="sup-icon" *ngIf="imgs.length >= 4" src="assets/imgs/da_image/waste-bin.png" />
+                <ion-row *ngIf="imgs.length < 4" class="alt-img">
+                  <ion-icon name="md-add" class="icon-add" color="bleu"></ion-icon>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="ctn-faq-desc">
+          <ion-col>
+            <ion-textarea class="desc-faq" placeholder="Description" [(ngModel)]="ad_description" name="ad_description"></ion-textarea>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

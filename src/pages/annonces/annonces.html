@@ -1,5 +1,9 @@
 <ion-content class="container">
 
+  <div class="load-ctn" id="load" *ngIf="load == 1">
+    <img class="load-img" src="../../assets/imgs/load/load2.gif" />
+  </div>
+
   <ion-grid fixed>
     <ion-row>
       <ion-col>
@@ -19,10 +23,10 @@
   </ion-row>
 
   <ion-row class="nb-row">
-      <ion-label class="nb-annonces">
-        50 annonces à proximit&#233;s
-      </ion-label>
-    </ion-row>
+    <ion-label class="nb-annonces">
+      50 annonces à proximit&#233;s
+    </ion-label>
+  </ion-row>
 
   <ion-row class="card-ctn">
 
@@ -164,7 +168,7 @@
         <span><br>Filtrer</span>
       </ion-icon>
     </ion-col>
-    <ion-col>
+    <ion-col (click)="newAnnonce();">
       <ion-icon class="faq-icon">
         <img src="../../assets/imgs/da_image/photo-camera-blue.png">
         <span><br>Ajouter</span>

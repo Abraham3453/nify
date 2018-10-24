@@ -1,0 +1,207 @@
+page-annonce-add2 {
+
+  .container {
+    padding-top: 15px;
+    text-align: center;
+    background-image: url('../../assets/imgs/background/fond-3.png');
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+  }
+
+  .top-margin {
+    height: 1px;
+  }
+
+  .header {
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .col-cancel {
+    text-align: left;
+    color: color($colors, white);
+    text-align: left;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  .annuler {
+    margin-top: 0px;
+  }
+
+  .back-faq {
+    position: relative;
+    top: -10px;
+  }
+
+  .gc {
+    color: color($colors, white);
+    text-align: right;
+    font-size: 120%;
+    font-weight: bold;
+    margin-top: 0px;
+  }
+
+  .fw-faq {
+    position: relative;
+    top: -10px;
+  }
+
+  .back-gc,
+  .forward {
+    zoom: 2;
+  }
+
+  .faq-photo {
+    background-color: rgba(0, 0, 0, 0.0);
+
+    ion-col ion-col {
+      background-color: rgba(0, 0, 0, 0.0);
+      height: 70px;
+      border-radius: 10px;
+      margin: 0px;
+      padding: 1px;
+      border: 1px solid #329FF9;
+      margin: 1px;
+    }
+
+    border: none;
+  }
+
+  .alt-img {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .icon-add {
+    zoom: 2.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ctn-faq-det {
+    width: 98%;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-left: 1%;
+  }
+
+  .desc-faq {
+    border: 1px solid color($colors, bleu);
+    height: 150px;
+    border-radius: 10px;
+  }
+
+  .img-ctn {
+    width: 100%;
+    text-align: left;
+
+    ion-col {
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    ion-select {
+      width: 100%;
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .sup-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+  }
+
+  .theme {
+    margin: 4px;
+    background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
+    background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
+    background: linear-gradient(to right, #329FF9, #50E3C2);
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .check-icon {
+      width: 40px;
+      height: 40px;
+      float: right;
+    }
+
+  }
+
+  .input-pub {
+    margin: 4px;
+    border: 1px solid #329FF9;
+    border-radius: 6px;
+  }
+
+  .icon-group {
+    width: 40px;
+    height: 40px;
+    float: right;
+  }
+
+  .ctn-faq-desc {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .sep {
+    height: 20px;
+  }
+
+  .theme-txt {
+    color: white;
+  }
+
+  .load-ctn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 7000;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .load-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+  }
+
+  #load {
+    display: none;
+  }
+
+  .map-marker {
+    width: 24px;
+    height: 38px;
+    margin-top: 0px;
+  }
+
+}

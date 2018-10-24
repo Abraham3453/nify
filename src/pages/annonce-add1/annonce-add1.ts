@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, AlertController } from 'ionic-angular';
 import { File } from '@ionic-native/file';
-import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
-import { Platform } from 'ionic-angular';
-import { HomePage } from '../home/home';
 import { Faqadd3Page } from '../faqadd3/faqadd3';
+import { AnnonceAdd2Page } from '../annonce-add2/annonce-add2';
+import { HTTP } from '@ionic-native/http';
+import { GlobalsProvider } from '../../providers/globals/globals';
 
 /**
- * Generated class for the Faqadd1Page page.
+ * Generated class for the AnnonceAdd1Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -15,10 +15,10 @@ import { Faqadd3Page } from '../faqadd3/faqadd3';
 
 @IonicPage()
 @Component({
-  selector: 'page-faqadd1',
-  templateUrl: 'faqadd1.html',
+  selector: 'page-annonce-add1',
+  templateUrl: 'annonce-add1.html',
 })
-export class Faqadd1Page {
+export class AnnonceAdd1Page {
 
   source: any = 1;
   user: any;
@@ -26,23 +26,19 @@ export class Faqadd1Page {
   listImage: any = [];
   selectedImg: any;
 
-  //https://ampersandacademy.com/tutorials/ionic-framework-3/upload-image-to-the-php-server-using-ionic-3-file-transfer-and-camera-plugin
+  listCat: any = [];
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private file: File,
-    private ptf: Platform,
-    private transfer: FileTransfer,
+    private viewCtrl: ViewController,
     private alertCtrl: AlertController,
-    private viewCtrl: ViewController
+    
   ) {
 
-    console.log(ptf.is('ios'));
-    console.log(ptf.is('android'));
-    console.log(ptf.is('core'));
-    console.log(ptf.is('mobileweb'));
     this.user = navParams.get('user');
+    this.listCat = navParams.get('listCat');
 
     this.source = navParams.get('source') != null ? navParams.get('source') : 1;
 
@@ -74,7 +70,7 @@ export class Faqadd1Page {
 
   ionViewDidLoad() {
     this.getImagesGalerie();
-    console.log('ionViewDidLoad Faqadd1Page');
+    console.log('ionViewDidLoad AnnonceAdd1Page');
   }
 
   public selectImage(img) {
@@ -138,10 +134,11 @@ export class Faqadd1Page {
 
   public nextStep() {
     if (this.selectedImg != null) {
-      let faq3 = Faqadd3Page;
+      let faq3 = AnnonceAdd2Page;
       this.navCtrl.push(faq3, {
         img: this.selectedImg,
-        user: this.user
+        user: this.user,
+        listCat: this.listCat
       });
     }
     else {
@@ -152,11 +149,6 @@ export class Faqadd1Page {
       });
       alert.present();
     }
-
-    /* let faq3 = Faqadd3Page;
-      this.navCtrl.push(faq3, {
-        img: this.selectedImg
-      }); */
 
   }
 

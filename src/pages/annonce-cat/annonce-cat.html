@@ -1,0 +1,58 @@
+<ion-content>
+
+  <div class="container">
+
+    <ion-grid>
+
+      <ion-row class="top-gc">
+        <ion-icon class="ion-ios-arrow-back back-gc" color="white" (click)="dismiss();"></ion-icon>
+        <ion-label class="gc">
+          Categéries
+        </ion-label>
+      </ion-row>
+
+      <ion-row *ngFor="let cat of listCat" class="btn-ctn-left">
+        <button id="btn{{cat.id}}" ion-button class="btn-blue-gradient" (click)="selectFilter('btn'+cat.id,'icon_btn_'+cat.id,cat);">
+          {{cat.name}}
+          <ion-icon id="icon_btn_{{cat.id}}" class="icon-checked" color="gris">
+            <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
+          </ion-icon>
+        </button>
+      </ion-row>
+
+      <!-- <ion-row class="btn-ctn-left">
+        <button id="btn0" ion-button class="btn-blue-gradient" (click)="selectFilter('btn0','icon_btn_0');">
+          Emplois
+          <ion-icon id="icon_btn_0" class="icon-checked" color="gris">
+            <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
+          </ion-icon>
+        </button>
+      </ion-row>
+
+      <ion-row>
+        <button id="btn1" ion-button class="btn-blue-gradient" (click)="selectFilter('btn1','icon_btn_1');">
+          Vente
+          <ion-icon id="icon_btn_1" class="icon-checked" color="gris">
+            <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
+          </ion-icon>
+        </button>
+      </ion-row>
+
+      <ion-row>
+        <button id="btn2" ion-button class="btn-blue-gradient" (click)="selectFilter('btn2','icon_btn_2');">
+          Location
+          <ion-icon id="icon_btn_2" class="icon-checked" color="gris">
+            <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
+          </ion-icon>
+        </button>
+      </ion-row> -->
+
+    </ion-grid>
+
+    <ion-row class="bottom-annuler">
+      <button ion-button round class="btn-blue-gradient-round" (click)="dismiss();">Annuler</button>
+    </ion-row>
+
+  </div>
+
+</ion-content>

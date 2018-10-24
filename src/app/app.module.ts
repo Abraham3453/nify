@@ -31,6 +31,10 @@ import { AnnoncesPage } from '../pages/annonces/annonces';
 import { AnnoncesFilterPage } from '../pages/annonces-filter/annonces-filter';
 import { CertphotoPage } from '../pages/certphoto/certphoto';
 import { HTTP } from '@ionic-native/http';
+import { AnnonceAdd1Page } from '../pages/annonce-add1/annonce-add1';
+import { AnnonceAdd2Page } from '../pages/annonce-add2/annonce-add2';
+import { AnnonceCatPage } from '../pages/annonce-cat/annonce-cat';
+import { AnnonceAddAnnulerPage } from '../pages/annonce-add-annuler/annonce-add-annuler';
 
 @NgModule({
   declarations: [
@@ -54,7 +58,11 @@ import { HTTP } from '@ionic-native/http';
     Faqadd4annulerPage,
     AnnoncesPage,
     AnnoncesFilterPage,
-    CertphotoPage
+    CertphotoPage,
+    AnnonceAdd1Page,
+    AnnonceAdd2Page,
+    AnnonceCatPage,
+    AnnonceAddAnnulerPage
   ],
   imports: [
     BrowserModule,
@@ -88,7 +96,11 @@ import { HTTP } from '@ionic-native/http';
     Faqadd4annulerPage,
     AnnoncesPage,
     AnnoncesFilterPage,
-    CertphotoPage
+    CertphotoPage,
+    AnnonceAdd1Page,
+    AnnonceAdd2Page,
+    AnnonceCatPage,
+    AnnonceAddAnnulerPage
   ],
   providers: [
     StatusBar,

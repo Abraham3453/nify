@@ -1,0 +1,67 @@
+page-annonce-add-annuler {
+
+  .container {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    ion-grid {
+
+      min-height: 100%;
+
+    }
+
+    .flex-row {
+      margin: auto;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      width: 98%;
+    }
+
+  }
+
+
+
+  .ws-norm {
+    white-space: normal;
+    color: color($colors, bleu);
+    font-size: 130%;
+    font-weight: bold;
+  }
+
+  .title-rec {
+    color: color($colors, bleu);
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  .btn-blue-gradient {
+    width: 80%;
+    height: 50px;
+    text-transform: none;
+    font-size: 120%;
+    margin-left: 10%;
+    margin-top: 20px;
+    background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
+    background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
+    background: linear-gradient(to right, #329FF9, #50E3C2);
+    box-shadow: none;
+  }
+
+  .btn-download {
+    width: 80%;
+    height: 50px;
+    text-transform: none;
+    font-size: 120%;
+    margin-left: 10%;
+    margin-top: 20px;
+    background: -moz-linear-gradient(to right, #289CB2, #dddddd);
+    background: -webkit-linear-gradient(to right, #289CB2, #dddddd);
+    background: linear-gradient(to right, #289CB2, #dddddd);
+    box-shadow: none;
+  }
+
+  .close-annuler {
+    zoom: 3;
+  }
+
+}

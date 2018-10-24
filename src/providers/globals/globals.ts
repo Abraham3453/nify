@@ -39,7 +39,11 @@ export class GlobalsProvider {
       getFavoriteFaq: 'http://dentart.devforge.eu/ws-get-favorite/',
       uploadFaQImg: 'http://dentart.devforge.eu/ws-add-image-faq/',
       getUserInfo: 'http://dentart.devforge.eu/ws-get-profile/',
-      addFavorite: 'http://dentart.devforge.eu/ws-add-favorite/'
+      addFavorite: 'http://dentart.devforge.eu/ws-add-favorite/',
+      listAnnonceCat: 'http://dentart.devforge.eu/ws-list-annonce-categories/',
+      addAnnonce: 'http://dentart.devforge.eu/ws-add-annonce/',
+      uploadAnnonceIMG: 'http://dentart.devforge.eu/ws-add-image-annonce/',
+      listAnnonce: 'http://dentart.devforge.eu/ws-list-annonces/'
     }
   };
 

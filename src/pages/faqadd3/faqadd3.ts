@@ -127,10 +127,10 @@ export class Faqadd3Page {
                         this.navCtrl.setRoot(home, {
                           user: this.user
                         },
-                        {
-                          animate: true,
-                          direction: "forward"
-                        });
+                          {
+                            animate: true,
+                            direction: "forward"
+                          });
                       }
                     },
                     error => {
