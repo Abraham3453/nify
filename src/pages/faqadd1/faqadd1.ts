@@ -25,6 +25,7 @@ export class Faqadd1Page {
 
   listImage: any = [];
   selectedImg: any;
+  theme: any;
 
   //https://ampersandacademy.com/tutorials/ionic-framework-3/upload-image-to-the-php-server-using-ionic-3-file-transfer-and-camera-plugin
 
@@ -43,6 +44,7 @@ export class Faqadd1Page {
     console.log(ptf.is('core'));
     console.log(ptf.is('mobileweb'));
     this.user = navParams.get('user');
+    this.theme = navParams.get('theme');
 
     this.source = navParams.get('source') != null ? navParams.get('source') : 1;
 
@@ -141,7 +143,8 @@ export class Faqadd1Page {
       let faq3 = Faqadd3Page;
       this.navCtrl.push(faq3, {
         img: this.selectedImg,
-        user: this.user
+        user: this.user,
+        theme: this.theme
       });
     }
     else {

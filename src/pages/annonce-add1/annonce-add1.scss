@@ -7,7 +7,7 @@ page-annonce-add1 {
     background-repeat: no-repeat;
     padding: 0px;
     margin: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     padding-bottom: 10px;
   }
 
@@ -70,7 +70,7 @@ page-annonce-add1 {
   }
 
   .tab-faq {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     text-align: center;

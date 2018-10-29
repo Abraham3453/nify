@@ -7,6 +7,7 @@ import { Faqadd4annulerPage } from '../faqadd4annuler/faqadd4annuler';
 import { HomePage } from '../home/home';
 import { HTTP } from '@ionic-native/http';
 import { GlobalsProvider } from '../../providers/globals/globals';
+import { FaqfilterPage } from '../faqfilter/faqfilter';
 
 /**
  * Generated class for the Faqadd3Page page.
@@ -22,6 +23,9 @@ import { GlobalsProvider } from '../../providers/globals/globals';
 })
 export class Faqadd3Page {
 
+  load: number = 1;
+  descRows: number = 5;
+
   imgs: any = [];
   img1: any;
   user: any;
@@ -31,6 +35,7 @@ export class Faqadd3Page {
   faq_description: string = '';
 
   listFaQTheme: any = [];
+  selectedTheme: any = {};
 
   constructor(
     public navCtrl: NavController,
@@ -43,9 +48,11 @@ export class Faqadd3Page {
 
     let img1 = navParams.get('img');
     this.user = navParams.get('user');
+    this.listFaQTheme = navParams.get('theme');
     //console.log(JSON.stringify(img1));
     this.imgs.push(img1);
-    this.getListTheme();
+    //this.getListTheme();
+    this.load = 0;
   }
 
   ionViewDidLoad() {
@@ -97,11 +104,11 @@ export class Faqadd3Page {
   }
 
   public publier() {
-    if (this.faq_theme != '' && this.faq_description != '') {
+    if (this.selectedTheme.id != null && this.faq_description != '') {
       this.http.post(this.globals.variables.urls.addFaQ,
         {
           "faq_title": "",
-          "faq_theme": this.faq_theme,
+          "faq_theme": this.selectedTheme.id,
           "faq_description": this.faq_description,
           "user_id": this.user.id_User
         },
@@ -147,38 +154,27 @@ export class Faqadd3Page {
           }
         );
     }
-    /*  */
-
-    //console.log(this.imgs[0].url);
-    // faq_id,  num_image,  file
-    //http://localhost/php/uploadIonic/uploadImg.php, this.globals.variables.urls.uploadFaQImg
-    /* let home = HomePage;
-    this.navCtrl.setRoot(home, {}); */
   }
 
   public changeTheme() {
 
     console.log(this.faq_theme);
-    //this.getListTheme();
 
   }
 
-  public getListTheme() {
-    //document.getElementById('load').style.display = 'inline';
-    this.http.post(this.globals.variables.urls.listFaQTheme, {}, {})
-      .then(
-        data => {
-          this.listFaQTheme = JSON.parse(data.data);
-          console.log(this.listFaQTheme);
-          //document.getElementById('load').style.display = 'none';
-          //this.showRPC();
-        },
-        error => {
-          console.log(JSON.stringify(error));
-          //document.getElementById('load').style.display = 'none';
-          //this.showRPC();
-        }
-      );
+  public ChooseTheme() {
+    let filter = this.modalCtrl.create(FaqfilterPage,
+      {
+        user: this.user,
+        theme: this.listFaQTheme,
+        title: "Thèmes"
+      });
+    filter.onDidDismiss(data => {
+      this.selectedTheme = data;
+      console.log("Selected theme :");
+      console.log(this.selectedTheme);
+    });
+    filter.present();
   }
 
 }

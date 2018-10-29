@@ -180,7 +180,7 @@ page-faqdetail {
   }
 
   .tab-faq {
-    position: fixed;
+    position: sticky;
     bottom: 0px;
     left: 0px;
     text-align: center;
@@ -190,7 +190,7 @@ page-faqdetail {
   }
 
   .btm-marg {
-    height: 50px;
+    height: 0px;
   }
 
   .img-slide {

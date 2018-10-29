@@ -17,7 +17,8 @@ export class MyApp {
 
   pages: Array<{ title: string, component: any }>;
 
-  user: any;
+  user: any = {};
+  avatar: any;
 
   constructor(
     public platform: Platform,
@@ -38,9 +39,11 @@ export class MyApp {
 
     events.subscribe("user:logedIn", (userIn) => {
       this.user = userIn;
+      this.avatar = this.user.avatar;
     });
     events.subscribe("user:logedOut", (userOut) => {
-      this.user = null;
+      this.user = {};
+      this.nav.setRoot(DentartPage);
     });
   }
 
@@ -53,7 +56,7 @@ export class MyApp {
     });
   }
 
-  openPage(page) {
+  /* openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component, {
@@ -65,7 +68,7 @@ export class MyApp {
     this.user = null;
     let da = DentartPage;
     this.nav.setRoot(da);
-  }
+  } */
 
 }
 

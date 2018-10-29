@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, Platform } from 'ionic-angular';
 
 /**
  * Generated class for the AnnonceCatPage page.
@@ -15,18 +15,28 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class AnnonceCatPage {
 
-  cat: any;
+  cat: any = {id: "", slug: "", name: ""};
   listCat: any = [];
+  user: any = {};
+  title: any = "";
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private viewCtrl: ViewController
+    private viewCtrl: ViewController,
+    private platform: Platform
   ) {
 
     this.listCat = navParams.get('listCat');
+    this.user = navParams.get('user');
+    this.title = navParams.get('title');
+
     console.log("List des categories");
     console.log(JSON.stringify(this.listCat));
+
+    platform.registerBackButtonAction(() => {
+      this.viewCtrl.dismiss(null);
+    });
 
   }
 
@@ -46,6 +56,10 @@ export class AnnonceCatPage {
 
   public dismiss(){
     this.viewCtrl.dismiss(this.cat);
+  }
+
+  public noFilter(){
+    this.viewCtrl.dismiss({id: "", slug: "", name: ""});
   }
 
 }

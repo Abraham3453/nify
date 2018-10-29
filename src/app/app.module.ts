@@ -35,6 +35,8 @@ import { AnnonceAdd1Page } from '../pages/annonce-add1/annonce-add1';
 import { AnnonceAdd2Page } from '../pages/annonce-add2/annonce-add2';
 import { AnnonceCatPage } from '../pages/annonce-cat/annonce-cat';
 import { AnnonceAddAnnulerPage } from '../pages/annonce-add-annuler/annonce-add-annuler';
+import { AnnonceDetailsPage } from '../pages/annonce-details/annonce-details';
+import { MenuPage } from '../pages/menu/menu';
 
 @NgModule({
   declarations: [
@@ -57,12 +59,14 @@ import { AnnonceAddAnnulerPage } from '../pages/annonce-add-annuler/annonce-add-
     Faqadd3Page,
     Faqadd4annulerPage,
     AnnoncesPage,
-    AnnoncesFilterPage,
+    //AnnoncesFilterPage,
     CertphotoPage,
     AnnonceAdd1Page,
     AnnonceAdd2Page,
     AnnonceCatPage,
-    AnnonceAddAnnulerPage
+    AnnonceAddAnnulerPage,
+    AnnonceDetailsPage,
+    MenuPage
   ],
   imports: [
     BrowserModule,
@@ -95,12 +99,14 @@ import { AnnonceAddAnnulerPage } from '../pages/annonce-add-annuler/annonce-add-
     Faqadd3Page,
     Faqadd4annulerPage,
     AnnoncesPage,
-    AnnoncesFilterPage,
+    //AnnoncesFilterPage,
     CertphotoPage,
     AnnonceAdd1Page,
     AnnonceAdd2Page,
     AnnonceCatPage,
-    AnnonceAddAnnulerPage
+    AnnonceAddAnnulerPage,
+    AnnonceDetailsPage,
+    MenuPage
   ],
   providers: [
     StatusBar,

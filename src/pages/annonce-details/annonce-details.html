@@ -1,18 +1,92 @@
-<!--
-  Generated template for the AnnonceDetailsPage page.
+<ion-content class="pr">
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+  <div class="container">
 
-  <ion-navbar>
-    <ion-title>annonceDetails</ion-title>
-  </ion-navbar>
+    <ion-grid>
 
-</ion-header>
+      <ion-row class="top-gc">
+        <ion-icon class="ion-ios-arrow-back back-gc" color="white" (click)="precedent();"></ion-icon>
+        <ion-label class="gc" (click)="precedent();">
+          Retour
+        </ion-label>
+      </ion-row>
 
+      <ion-row class="signal">
 
-<ion-content padding>
+        <ion-label class="signal-lab">
+          <span class="alert-faq">Signaler </span>
+          <ion-icon class="ion-ios-alert-outline signal-icon" color="white"></ion-icon>
+        </ion-label>
+      </ion-row>
+
+      <ion-row class="faq-det-grid">
+
+        <ion-col>
+
+          <ion-row class="img-bg">
+            <img class="like-bg" src="{{ad.ad.ad_image_1 != null ? ad.ad.ad_image_1 : '../../assets/imgs/da_image/Rectangle-05.jpg'}}">
+            <div class="img-slide">
+              <ion-label class="margin-a">
+                <div class="vertdc"></div>
+                <div class="greydc"></div>
+                <div class="greydc"></div>
+                <div class="greydc"></div>
+              </ion-label>
+            </div>
+
+          </ion-row>
+
+          <ion-row class="gc-ctn">
+            <ion-col>
+              <ion-row>
+                <ion-label class="gc-label">
+
+                  <span class="titre-faq">{{ad.ad.title}}<br></span>
+                  <div class="sep-title"></div>
+                  <span class="cat">{{ad.cat.name}}<br></span>
+                  <span class="address">{{ad.ad.address}}<br></span>
+                  <span class="price">{{ad.ad.price}} €<br></span>
+                  <div class="sep"></div>
+                  {{ad.ad.description}}
+                </ion-label>
+              </ion-row>
+              <ion-row class="gc-ctn">
+                <ion-avatar>
+                  <img class="img-profil" src="{{ad.author.avatar != '' ? ad.author.avatar : 'assets/imgs/avatar/avatar_h.png'}}">
+                </ion-avatar>
+
+                <ion-label class="text-align-left">
+                  <span class="bold-name">
+                    {{ad.author.pseudo}}<br>
+                  </span>
+                  <span class="fine-lieu">
+                    {{ad.author.job}} - {{ad.author.address}}
+                  </span>
+                </ion-label>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="btn-ctn">
+        <ion-col>
+          <button ion-button round class="btn-blue-gradient">
+            <ion-icon class="ad-icon" name="ios-mail"></ion-icon>
+            <span> Contacter</span>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button round class="btn-blue-gradient">
+            <ion-icon class="ad-icon" name="ios-call"></ion-icon>
+            <span> Appeler</span>
+          </button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </div>
 
 </ion-content>

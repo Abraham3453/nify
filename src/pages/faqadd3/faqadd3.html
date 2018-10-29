@@ -1,6 +1,6 @@
-<ion-content >
+<ion-content>
 
-  <div class="load-ctn" id="load" *ngIf="imgs.length > 0">
+  <div class="load-ctn" id="load" *ngIf="imgs.length == 1">
     <img class="load-img" src="../../assets/imgs/load/load2.gif" />
   </div>
 
@@ -56,33 +56,20 @@
 
     <ion-row class="ctn-faq-det">
       <ion-col>
-        <ion-row class="img-ctn">
-          <ion-col>
 
-            <ion-item no-lines class="theme">
-              <ion-label class="theme-txt">Th&#232;mes</ion-label>
-              <ion-select [(ngModel)]="faq_theme" name="faq_theme" placeholder="Choisir le theme" 
-              okText="Ok" cancelText="Annuler" interface="popover" (ionChange)="changeTheme();">
-                <ion-option *ngFor="let t of listFaQTheme" value="{{t.id}}">{{t.name}}</ion-option>
-                <!-- <ion-option value="2">Endodontie</ion-option>
-                <ion-option value="3">Chirurgie et implants</ion-option>
-                <ion-option value="4">Prothèses</ion-option>
-                <ion-option value="5">Pédodontie</ion-option>
-                <ion-option value="6">Orthodontie</ion-option>
-                <ion-option value="7">Vie du cabinet et contrats</ion-option>
-                <ion-option value="8">News</ion-option> -->
-              </ion-select>
-            </ion-item>
-
-          </ion-col>
+        <ion-row *ngIf="selectedTheme.id == null" class="img-ctn" (click)="ChooseTheme()">
+          <ion-label class="theme-txt">Th&#232;mes</ion-label>
         </ion-row>
 
-        
+        <ion-row *ngIf="selectedTheme.id != null" class="img-ctn" (click)="ChooseTheme()">
+          <ion-label class="theme-txt">{{selectedTheme.name}}</ion-label>
+          <img class="check-icon" src="../../assets/imgs/da_image/Group.png" />
+        </ion-row>
 
         <ion-row class="ctn-faq-desc">
           <ion-col>
             <ion-textarea class="desc-faq" placeholder="Description" 
-            [(ngModel)]="faq_description" name="faq_description"></ion-textarea>
+            [(ngModel)]="faq_description" name="faq_description" [attr.rows]="descRows"></ion-textarea>
           </ion-col>
         </ion-row>
       </ion-col>

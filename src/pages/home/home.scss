@@ -4,15 +4,12 @@ page-home {
     background-size: 100%;
     background-image: url('../../assets/imgs/background/fond-3.png');
     color: color($colors, white);
-    margin-bottom: 85px;
-    padding-bottom: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     background-repeat: no-repeat;
   }
 
   .header {
-    position: fixed;
-    top: 0px;
-    left: 0;
     width: 100%;
     padding: 0px;
     margin: 0;
@@ -213,17 +210,19 @@ page-home {
   }
 
   .tab-faq {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
+    right: 0;
     text-align: center;
     width: 100%;
     color: color($colors, bleu);
     font-size: 120%;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.9);
-    height: 80px;
     z-index: 1000;
+    margin: 0;
+    padding: 0;
   }
 
   .fltr-icon {

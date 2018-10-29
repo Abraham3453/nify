@@ -7,8 +7,8 @@ page-faqadd1 {
     background-repeat: no-repeat;
     padding: 0px;
     margin: 0px;
-    margin-bottom: 50px;
-    padding-bottom: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
   }
 
   .header {
@@ -70,9 +70,10 @@ page-faqadd1 {
   }
 
   .tab-faq {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
+    right: 0;
     text-align: center;
     width: 100%;
     color: color($colors, bleu);

@@ -54,7 +54,7 @@
                     {{faq.author.pseudo}}<br>
                   </span>
                   <span class="fine-lieu">
-                    {{faq.theme.name}} - {{faq.author.address}}
+                    {{faq.author.job}} - {{faq.author.address}}
                   </span>
                 </ion-label>
               </ion-row>
@@ -70,68 +70,32 @@
     <div class="bg-gradient">
       <ion-row>
         <ion-col>
-          <ion-row class="comment other">
+
+          <ion-row *ngFor="let com of faq.faq.coms" 
+          class="{{com.author_infos.id == user.id_User ? 'me' : 'other_auth'}}">
             <ion-avatar>
-              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_h.png">
+              <img class="img-profil-small" src="{{com.author_infos.avatar != '' ? com.author_infos.avatar : '../../assets/imgs/avatar/avatar_h.png'}}">
             </ion-avatar>
 
             <ion-label class="text-align-left">
               <span class="normal-name">
-                Dr Louise Depuis<br>
+                {{com.author_infos.pseudo}}<br>
               </span>
               <span class="normal-lieu">
-                Dentiste - Lyon<br>
+                {{com.author_infos.job}} - {{com.author_infos.address}}<br>
               </span>
               <span class="comment-txt">
                 <br>
-                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                velit
-                convallis, at blandit dolor dapibus.
+                {{com.data.comment_content}}
               </span>
-            </ion-label>
-
-          </ion-row>
-          <ion-row class="comment me">
-            <ion-avatar>
-              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
-            </ion-avatar>
-
-            <ion-label class="text-align-left">
-              <span class="normal-name">
-                Dr Louise Depuis<br>
-              </span>
-              <span class="normal-lieu">
-                Dentiste - Lyon<br>
-              </span>
-              <span class="comment-txt">
-                <br>
-                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                velit
-                convallis, at blandit dolor dapibus.
+              <span><br>
+                <img class="com-img" *ngIf="com.image != ''" src="{{com.image}}" />
               </span>
             </ion-label>
           </ion-row>
-          <ion-row class="comment other">
-            <ion-avatar>
-              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_h.png">
-            </ion-avatar>
 
-            <ion-label class="text-align-left">
-              <span class="normal-name">
-                Dr Louise Depuis<br>
-              </span>
-              <span class="normal-lieu">
-                Dentiste - Lyon<br>
-              </span>
-              <span class="comment-txt">
-                <br>
-                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                velit
-                convallis, at blandit dolor dapibus.
-              </span>
-            </ion-label>
-          </ion-row>
-          <ion-row class="comment other">
+
+          <!-- <ion-row class="comment me">
             <ion-avatar>
               <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
             </ion-avatar>
@@ -151,8 +115,48 @@
               </span>
             </ion-label>
           </ion-row>
-
           <ion-row class="comment other">
+            <ion-avatar>
+              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_h.png">
+            </ion-avatar>
+
+            <ion-label class="text-align-left">
+              <span class="normal-name">
+                Dr Louise Depuis<br>
+              </span>
+              <span class="normal-lieu">
+                Dentiste - Lyon<br>
+              </span>
+              <span class="comment-txt">
+                <br>
+                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
+                velit
+                convallis, at blandit dolor dapibus.
+              </span>
+            </ion-label>
+          </ion-row>
+          <ion-row class="comment other">
+            <ion-avatar>
+              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
+            </ion-avatar>
+
+            <ion-label class="text-align-left">
+              <span class="normal-name">
+                Dr Louise Depuis<br>
+              </span>
+              <span class="normal-lieu">
+                Dentiste - Lyon<br>
+              </span>
+              <span class="comment-txt">
+                <br>
+                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
+                velit
+                convallis, at blandit dolor dapibus.
+              </span>
+            </ion-label>
+          </ion-row> -->
+
+          <ion-row class="other">
             <ion-col class="large-col" col-10>
               <ion-row>
                 <ion-textarea class="comment-input" [(ngModel)]="faq_comment" placeholder="Hello ..."></ion-textarea>
@@ -160,7 +164,7 @@
             </ion-col>
 
             <ion-col class="col-50-px">
-              <ion-row>
+              <ion-row (click)="takePicture()">
                 <img class="icon-camera" src="../../assets/imgs/da_image/photo-camera-blue.png" alt="Photo">
               </ion-row>
               <ion-row (click)="addComment();">

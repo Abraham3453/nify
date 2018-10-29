@@ -46,17 +46,17 @@
 
             <ion-row no-lines class="input-pub">
 
-                <ion-input type="text" class="bb-input" [(ngModel)]="autocomplete.input" (input)="updateSearchResults()"></ion-input>
-      
-                <img class="map-marker" src="assets/imgs/avatar/createacc3/map_marker.png">
-      
-              </ion-row>
-      
-              <ion-list [hidden]="autocompleteItems.length == 0" class="places">
-                <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
-                  {{ item.description }}
-                </ion-item>
-              </ion-list>
+              <ion-input type="text" class="bb-input" [(ngModel)]="autocomplete.input" (input)="updateSearchResults()"></ion-input>
+
+              <img class="map-marker" src="assets/imgs/avatar/createacc3/map_marker.png">
+
+            </ion-row>
+
+            <ion-list [hidden]="autocompleteItems.length == 0" class="places">
+              <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+                {{ item.description }}
+              </ion-item>
+            </ion-list>
 
             <ion-row no-lines class="input-pub">
               <ion-input [(ngModel)]="phone" name="phone" placeholder="Num&#233;ro (facultatif)"></ion-input>

@@ -1,0 +1,31 @@
+<ion-content class="container">
+
+  <div class="ext">
+    <div class="ctn-menu">
+
+      <div *ngIf="user != null" class="head-ctn">
+        <div class="col-profil">
+          <img class="img-profil" [src]="user.photo != '' ? user.photo : '../assets/imgs/avatar/avatar_h.png'" alt="Image" />
+        </div>
+        <div class="user-info">
+          <ion-label>
+            <span>{{user.pseudo}}<br></span>
+            <span>{{user.job}}<br></span>
+            <span>{{user.address}}<br></span>
+          </ion-label>
+        </div>
+      </div>
+
+      <ion-list>
+        <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          {{p.title}}
+        </button>
+
+        <button ion-item (click)="logOut();">
+          D&#233;connexion
+        </button>
+      </ion-list>
+    </div>
+    <div class="menu-close" (click)="closeMenu();"></div>
+  </div>
+</ion-content>

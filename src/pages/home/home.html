@@ -1,7 +1,7 @@
 <ion-content>
 
   <div class="load-ctn" id="load" *ngIf="load == 1">
-    <img class="load-img" src="../../assets/imgs/load/load2.gif" />
+    <img class="load-img" src="../../assets/imgs/load/load.gif" />
   </div>
 
   <div class="container">
@@ -14,13 +14,13 @@
             <span class="bold">Dent</span><span class="fine">Art</span>
           </ion-label>
         </ion-col>
-        <ion-col menuToggle>
+        <ion-col (click)="openMenu();">
           <img class="btn-menu" src="assets/imgs/da_image/menu-icon.png">
         </ion-col>
       </ion-row>
     </ion-grid>
 
-    <ion-row class="card-ctn" *ngFor="let faq of listFaQ" id="{{faq.faq.id}}" 
+    <ion-row class="card-ctn" *ngFor="let faq of listFaQSorted" id="{{faq.faq.id}}" 
       [style.background-image]="'url('+(faq.faq.faq_image_1 != null ? faq.faq.faq_image_1 : '../../assets/imgs/da_image/Rectangle-05.jpg')+')'" >
 
       <ion-col>

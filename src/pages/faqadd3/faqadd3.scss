@@ -93,25 +93,25 @@ page-faqadd3 {
 
   .desc-faq {
     border: 1px solid color($colors, bleu);
-    height: 150px;
     border-radius: 10px;
+    .text-input {
+      height: 150px;
+      white-space: normal;
+    }
   }
 
   .img-ctn {
-    width: 100%;
+    width: 98%;
     text-align: left;
-
-    ion-col {
-      width: 100%;
-      padding: 0px;
-      margin: 0px;
-    }
-
-    ion-select {
-      width: 100%;
-      color: white;
-      font-weight: bold;
-    }
+    margin: auto;
+    background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
+    background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
+    background: linear-gradient(to right, #329FF9, #50E3C2);
+    border-radius: 6px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
   }
 
   .img {
@@ -127,19 +127,6 @@ page-faqadd3 {
     transform: translate(-50%, -50%);
     width: 50%;
     height: 50%;
-  }
-
-  .theme {
-    width: 98%;
-    margin: auto;
-    background: -moz-linear-gradient(to right, #329FF9, #50E3C2);
-    background: -webkit-linear-gradient(to right, #329FF9, #50E3C2);
-    background: linear-gradient(to right, #329FF9, #50E3C2);
-    border-radius: 6px;
-    margin-top: 10px;
-    .theme-txt {
-      color: white;
-    }
   }
 
   .icon-group {
@@ -158,6 +145,12 @@ page-faqadd3 {
 
   .theme-txt {
     color: white;
+  }
+
+  .check-icon {
+    width: 40px;
+    height: 40px;
+    float: right;
   }
 
   .load-ctn {

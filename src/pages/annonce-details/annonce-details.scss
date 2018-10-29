@@ -1,3 +1,287 @@
 page-annonce-details {
 
+  .container {
+    padding-top: 15px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background: radial-gradient(circle at 40% 0%, #327AD6 50%, rgba(0, 0, 0, 0.0) 50%),
+      radial-gradient(circle at 40% 0%, #53E0E9 60%, rgba(0, 0, 0, 0.0) 60%),
+      radial-gradient(circle at 40% 0%, #90EFEA 70%, rgba(0, 0, 0, 0.0) 70%);
+    min-height: 100%;
+    padding-bottom: 20px;
+  }
+
+  .gc {
+    font-size: 130%;
+    color: white;
+    margin-top: 5px;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  .gc-label {
+    text-align: justify;
+    white-space: normal;
+  }
+
+  .back-gc {
+    zoom: 2;
+    margin-left: 5%;
+  }
+
+
+  .color-white {
+    color: white;
+  }
+
+
+  .gc-ctn {
+    padding: 10px;
+    background-color: color($colors, white);
+    margin: 10px;
+    border-radius: 10px;
+    color: color($colors, gris);
+  }
+
+  .img-profil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .img-profil-small {
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 8px;
+  }
+
+  .text-align-left {
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .bold-name {
+    font-size: 130%;
+    font-weight: bold;
+    color: black;
+  }
+
+  .fine-lieu {
+    font-size: 100%;
+    font-weight: 100;
+  }
+
+
+
+  .bg-gradient {
+    border-radius: 0px;
+    background: -moz-linear-gradient(top right, #50E3C2, #329FF9);
+    background: -webkit-linear-gradient(top right, #50E3C2, #329FF9);
+    background: linear-gradient(top right, #50E3C2, #329FF9);
+    width: 100%;
+    margin: 0px;
+  }
+
+  .comment-txt {
+    white-space: normal;
+    color: color($colors, gris);
+    margin-left: -20px;
+  }
+
+  .comment {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .me {
+    width: 80%;
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 5%;
+  }
+
+  .img-bg {
+    border-radius: 10px;
+    height: 200px;
+    margin: 10px;
+  }
+
+  .like-bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .normal-lieu,
+  .normal-name {
+    font-size: 100%;
+    font-weight: bold;
+    color: color($colors, gris);
+  }
+
+  .faq-icon {
+    zoom: 1.2;
+    color: white;
+    font-weight: bold;
+    font-size: 100%;
+    color: #117BCf;
+  }
+
+  .faq-icon-com {
+    zoom: 1.2;
+    color: white;
+    font-weight: bold;
+    font-size: 100%;
+    margin-top: 2px;
+    color: #117BCf;
+  }
+
+  .signal {
+    text-align: right;
+    color: white;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -20px;
+  }
+
+  .signal-icon {
+    zoom: 2.0;
+  }
+
+  .alert-faq {
+    position: relative;
+    top: -7px;
+    font-size: 120%;
+  }
+
+  .faq-det-grid {
+    margin-top: -20px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+
+    ion-col {
+      padding: 0px;
+      margin: 0px;
+    }
+
+  }
+
+  .titre-faq {
+    font-size: 130%;
+    font-weight: bold;
+    color: #117BCf;
+    margin-bottom: 10px;
+  }
+
+  .sep-title {
+    height: 5px;
+  }
+
+  .cat {
+    color: #9b9b9b;
+    font-size: 110%;
+    font-weight: bold;
+  }
+
+  .address {
+    color: #a6a6a6;
+  }
+
+  .price {
+    font-weight: bold;
+    color: #117BCf;
+  }
+
+  .sep {
+    height: 15px;
+  }
+
+  .tab-faq {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+
+  }
+
+  .btm-marg {
+    height: 50px;
+  }
+
+  .img-slide {
+    position: relative;
+    bottom: 20%;
+    left: 25%;
+    transform: translate(-25%, 0);
+  }
+
+  .margin-a {
+    transform: translate(50%, 0);
+    display: flex;
+    justify-content: center;
+    margin-bottom: -150px;
+  }
+
+  .vertdc {
+    width: 17px;
+    height: 17px;
+    background-color: color($colors, vertdc);
+    border-radius: 50%;
+    margin: 5px;
+  }
+
+  .greydc {
+    width: 17px;
+    height: 17px;
+    background-color: #D3EDff;
+    border-radius: 50%;
+    opacity: 1;
+    margin: 5px;
+  }
+
+  .btn-ctn {
+    padding: 0;
+    margin: 0;
+
+    ion-col {
+      padding: 0;
+      margin: 10px;
+      ;
+      width: 50%;
+
+      ion-icon {
+        zoom: 1.6;
+      }
+    }
+  }
+
+  .btn-blue-gradient {
+
+    height: 50px;
+    text-transform: none;
+    font-size: 130%;
+    margin: auto;
+    background: -moz-linear-gradient(to right, #2195F6, #50E3C2);
+    background: -webkit-linear-gradient(to right, #2195F6, #50E3C2);
+    background: linear-gradient(to right, #2195F6, #50E3C2);
+    box-shadow: none;
+    padding: 5px;
+    width: 100%;
+
+    .ad-icon {
+      margin-right: 5px;
+      margin-top: -1px;
+    }
+
+  }
+
 }

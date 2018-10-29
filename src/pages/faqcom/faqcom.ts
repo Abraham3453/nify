@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Keyboard } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Keyboard, ModalController } from 'ionic-angular';
 import { HTTP } from '@ionic-native/http';
 import { GlobalsProvider } from '../../providers/globals/globals';
+import { Faqadd1Page } from '../faqadd1/faqadd1';
 
 /**
  * Generated class for the FaqcomPage page.
@@ -22,13 +23,15 @@ export class FaqcomPage {
   faq_id: string = "";
   user_id: string = "";
   faq_comment: string = "";
+  img: any;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private keyboard: Keyboard,
     private http: HTTP,
-    private globals: GlobalsProvider
+    private globals: GlobalsProvider,
+    private modalCtrl: ModalController
   ) {
 
     this.faq = navParams.get('faq');
@@ -44,22 +47,56 @@ export class FaqcomPage {
     this.navCtrl.pop();
   }
 
+  public takePicture(){
+    let newphoto = this.modalCtrl.create(Faqadd1Page, {
+      source: 2
+    });
+    newphoto.onDidDismiss(data => {
+      if (data != null)
+        this.img = data;
+      console.log(JSON.stringify(data));
+    });
+    newphoto.present();
+  }
+
   public addComment() {
-    this.http.post(this.globals.variables.urls.addCommentFaQ, {
-      "faq_id": "" + this.faq.faq.id,
-      "user_id": "" + this.user.id_User,
-      "faq_comment": ""+this.faq_comment
-    }, 
-    {})
-      .then(
-        data => {
-          console.log(JSON.stringify(data.data));
-          //this.listFaQTheme = JSON.parse(data.data);
+
+    if (this.img != null) {
+      this.http.uploadFile(this.globals.variables.urls.addCommentFaQ,
+        {
+          "faq_id": "" + this.faq.faq.id,
+          "user_id": "" + this.user.id_User,
+          "faq_comment": this.faq_comment
         },
-        error => {
-          console.log(JSON.stringify(error));
-        }
-      );
+        {},
+        this.img.data.nativeURL,
+        'file')
+        .then(
+          data => {
+            console.log(JSON.stringify(data));
+          },
+          error => {
+            console.log(JSON.stringify(error));
+          }
+        );
+    }
+    else {
+      this.http.post(this.globals.variables.urls.addCommentFaQ, {
+        "faq_id": "" + this.faq.faq.id,
+        "user_id": "" + this.user.id_User,
+        "faq_comment": ""+this.faq_comment
+      }, 
+      {})
+        .then(
+          data => {
+            console.log(JSON.stringify(data.data));
+          },
+          error => {
+            console.log(JSON.stringify(error));
+          }
+        );
+    }
+
   }
 
 }

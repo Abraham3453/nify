@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, Events } from 'ionic-angular';
 import { AnnoncesFilterPage } from '../annonces-filter/annonces-filter';
 import { AnnonceAdd1Page } from '../annonce-add1/annonce-add1';
 import { HTTP } from '@ionic-native/http';
 import { GlobalsProvider } from '../../providers/globals/globals';
+import { AnnonceDetailsPage } from '../annonce-details/annonce-details';
+import { HomePage } from '../home/home';
+import { MenuPage } from '../menu/menu';
+import { DentartPage } from '../dentart/dentart';
+import { AnnonceCatPage } from '../annonce-cat/annonce-cat';
 
 /**
  * Generated class for the AnnoncesPage page.
@@ -27,13 +32,17 @@ export class AnnoncesPage {
   user: any;
   listCat: any = [];
   listAds: any = [];
+  listAdsSorted: any = [];
+
+  selectedCat: any = "";
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private modalCtrl: ModalController,
     private http: HTTP,
-    private globals: GlobalsProvider
+    private globals: GlobalsProvider,
+    private events: Events
   ) {
 
     this.user = navParams.get('user');
@@ -44,12 +53,45 @@ export class AnnoncesPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AnnoncesPage');
     this.loadMap();
-    
+
   }
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     this.getListCat();
     this.getListAds();
+  }
+
+  public openMenu() {
+    let menu = this.modalCtrl.create(MenuPage, {
+      user: this.user
+    });
+    menu.onDidDismiss(page => {
+      if (page.title == "FaQ") {
+        let homePage = HomePage;
+        this.navCtrl.setRoot(homePage, {
+          user: this.user
+        },
+          {
+            animate: true
+          });
+      }
+      else if (page.title == "Annonces") {
+        //
+      }
+      else if (page.title == "Formations") {
+        //
+      }
+      else if (page.title == "À savoir") {
+        //
+      }
+      else if (page.title == "Mes alertes") {
+        //
+      }
+      else if (page.title == "Déconnexion") {
+        this.events.publish('user:logedOut', this.user);
+      }
+    });
+    menu.present();
   }
 
   public loadMap() {
@@ -100,8 +142,31 @@ export class AnnoncesPage {
   }
 
   public filter() {
-    let filter = this.modalCtrl.create(AnnoncesFilterPage);
+    let filter = this.modalCtrl.create(AnnonceCatPage, {
+      user: this.user,
+      listCat: this.listCat,
+      title: "Filtres"
+    });
+    filter.onDidDismiss(data => {
+      if (data != null) {
+        this.selectedCat = data;
+        console.log("Selected cat :");
+        console.log(JSON.stringify(this.selectedCat));
+        if (this.selectedCat.id != "") {
+          this.sortFaQByFilter();
+        } else this.listAdsSorted = this.listAds;
+      }
+
+    });
     filter.present();
+  }
+
+  public sortFaQByFilter() {
+    this.listAdsSorted = this.listAds.filter(ad => {
+      if (ad.cat.id == this.selectedCat.id) {
+        return ad;
+      }
+    });
   }
 
   public newAnnonce() {
@@ -119,6 +184,7 @@ export class AnnoncesPage {
         data => {
           this.listCat = JSON.parse(data.data);
           console.log(JSON.stringify(this.listCat));
+
         },
         error => {
           console.log(JSON.stringify(error));
@@ -131,15 +197,48 @@ export class AnnoncesPage {
     this.http.post(this.globals.variables.urls.listAnnonce, {}, {})
       .then(
         data => {
-          this.load = 0;
-          this.listAds = JSON.parse(data.data);
-          console.log(JSON.stringify(this.listAds));
+
+          let res = JSON.parse(data.data);
+          for (let i = 0; i < res.length; i++) {
+            for (let j = 0; j < this.listCat.length; j++) {
+              if (res[i].category == this.listCat[j].id) {
+                this.http.post(this.globals.variables.urls.getUserInfo,
+                  {
+                    "user_id": "" + res[i].author_id
+                  },
+                  {})
+                  .then(data => {
+                    let author = JSON.parse(data.data).info_utilisateur;
+                    let ad = {
+                      ad: res[i],
+                      cat: this.listCat[j],
+                      author: author
+                    }
+                    this.listAds.push(ad);
+                    if (i == res.length - 1) this.load = 0;
+                    this.listAdsSorted = this.listAds;
+                  },
+                    error => {
+                      console.log(JSON.stringify(error));
+                    });
+              }
+            }
+          }
+          //console.log(JSON.stringify(this.listAds));
         },
         error => {
           this.load = 0;
           console.log(JSON.stringify(error));
         }
       );
+  }
+
+  public showDetails(ad) {
+    let adPage = AnnonceDetailsPage;
+    this.navCtrl.push(adPage, {
+      user: this.user,
+      ad: ad
+    });
   }
 
 }

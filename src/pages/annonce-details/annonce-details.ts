@@ -15,11 +15,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AnnonceDetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user: any;
+  ad: any;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams
+  ) {
+
+    this.user = navParams.get('user');
+    this.ad = navParams.get('ad');
+    console.log(JSON.stringify(this.user));
+    console.log(JSON.stringify(this.ad));
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AnnonceDetailsPage');
+  }
+
+  public precedent(){
+    this.navCtrl.pop();
   }
 
 }
