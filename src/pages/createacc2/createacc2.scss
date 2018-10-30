@@ -1,14 +1,17 @@
 page-createacc2 {
 
   .container {
-    padding-top: 15px;
+    padding-top: 0px;
     text-align: center;
     background-repeat: no-repeat;
-    background: radial-gradient(circle at 20% -5%,#327AD6 40%,rgba(0,0,0,0.0) 40%),
+    /* background: radial-gradient(circle at 20% -5%,#327AD6 40%,rgba(0,0,0,0.0) 40%),
     radial-gradient(circle at 30% 10%,#53E0E9 41%,rgba(0,0,0,0.0) 41%),
     radial-gradient(circle at 40% 16%,#90EFEA 50%,rgba(0,0,0,0.0) 50%),
     radial-gradient(circle at 45% 22%,#B5F6EE 53%,rgba(0,0,0,0.0) 53%),
-    radial-gradient(circle at 50% 22%,#D7FCF2 60%,rgba(0,0,0,0.0) 60%);
+    radial-gradient(circle at 50% 22%,#D7FCF2 60%,rgba(0,0,0,0.0) 60%); */
+    background-image: url('../../assets/imgs/background/fond-2.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     min-height: 100%;
   }
 
@@ -34,7 +37,7 @@ page-createacc2 {
   }
 
   .wc-ctn {
-    margin-top: -15px;
+    margin-top: -20px;
   }
 
   .wc {
@@ -51,8 +54,8 @@ page-createacc2 {
     width: 96%;
     margin: auto;
     border-radius: 10px 10px 10px 10px;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 0px;
+    padding: 0px;
     border: 1px solid #f5f5f5;
   }
 
@@ -76,12 +79,12 @@ page-createacc2 {
   .cacc-avatar {
     border-radius: 5px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .margin-a {
-    padding-top: 20px;
-    margin-bottom: 25px;
+    padding-top: 0px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
   }
@@ -92,7 +95,7 @@ page-createacc2 {
 
   .btn-blue-gradient {
     width: 98%;
-    height: 50px;
+    height: 40px;
     text-transform: none;
     font-size: 120%;
     margin: auto;
@@ -123,7 +126,7 @@ page-createacc2 {
 
   .btn-blue-gradient-round {
     width: 90%;
-    height: 50px;
+    height: 40px;
     text-transform: none;
     font-size: 120%;
     margin: auto;
@@ -149,11 +152,11 @@ page-createacc2 {
     width: 60%;
   }
 
-  .ok-job{
+  .ok-job {
     display: none;
   }
 
-  .other-job{
+  .other-job {
     display: inline;
   }
 

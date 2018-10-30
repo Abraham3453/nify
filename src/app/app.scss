@@ -15,6 +15,7 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .top-margin {
   height: 15px;
@@ -47,6 +48,18 @@ ion-icon {
 
   &[class*="custom-camera"] {
     mask-image: url(../assets/imgs/da_image/camera.png);
+  }
+
+  &[class*="custom-map-marker"] {
+    mask-image: url(../assets/icon/placeholder.svg);
+  }
+
+  &[class*="custom-star"] {
+    mask-image: url(../assets/icon/star.svg);
+  }
+
+  &[class*="custom-sort-by"] {
+    mask-image: url(../assets/icon/sort-by-attributes.svg);
   }
 }
 

@@ -6,7 +6,7 @@
 
   <div class="container">
 
-    <ion-grid fixed>
+    <ion-grid fixed class="header">
       <ion-row>
         <ion-col>
           <ion-label class="da">
@@ -20,15 +20,17 @@
       </ion-row>
     </ion-grid>
 
-    <ion-row class="card-ctn" *ngFor="let faq of listFaQSorted" id="{{faq.faq.id}}" 
-      [style.background-image]="'url('+(faq.faq.faq_image_1 != null ? faq.faq.faq_image_1 : '../../assets/imgs/da_image/Rectangle-05.jpg')+')'" >
+    <ion-row class="card-ctn" *ngFor="let faq of listFaQSorted" id="{{faq.faq.id}}">
 
-      <ion-col>
+      <ion-col [style.background-image]="'url('+(faq.faq.faq_image_1 != null ? faq.faq.faq_image_1 : '../../assets/imgs/da_image/Rectangle-05.jpg')+')'">
+        <div class="overlay"></div>
 
         <ion-row>
           <ion-label class="photo-lab">
             <ion-icon class="photo-btn">
-              <ion-badge class="cart-badge" color="bleurightbtn">4</ion-badge>
+              <div class="cart-badge">
+                <span class="badge-photo">4</span>
+              </div>
               <ion-icon class="info-icon" name="ios-alert-outline"></ion-icon>
               <img src="assets/imgs/da_image/photo-camera.png">
             </ion-icon>
@@ -60,7 +62,9 @@
           <ion-col class="col-3" (click)="addToFavorite(faq);">
             <ion-label class="photo-lab-1">
               <ion-icon class="photo-btn-left">
-                <ion-badge class="cart-badge" color="bleurightbtn">{{faq.faq.favorite_count}}</ion-badge>
+                <div class="cart-badge">
+                  <span>{{faq.faq.favorite_count}}</span>
+                </div>
                 <img src="assets/imgs/da_image/Star.png">
               </ion-icon>
               <span class="text-inner">
@@ -73,7 +77,9 @@
           <ion-col class="col-3" (click)="comment(faq);">
             <ion-label class="photo-lab-1">
               <ion-icon class="photo-btn-left">
-                <ion-badge class="cart-badge" color="bleurightbtn">{{faq.faq.comments_count}}</ion-badge>
+                <div class="cart-badge">
+                  <span>{{faq.faq.comments_count}}</span>
+                </div>
                 <img src="assets/imgs/da_image/Combined Shape.png">
               </ion-icon>
               <span class="text-inner txt-com">
@@ -85,7 +91,9 @@
           <ion-col class="col-3">
             <ion-label class="photo-lab-1">
               <ion-icon class="photo-btn-left">
-                <ion-badge class="cart-badge" color="bleurightbtn">10</ion-badge>
+                <div class="cart-badge" color="bleurightbtn">
+                  <span>9+</span>
+                </div>
                 <img src="assets/imgs/da_image/partager.png">
               </ion-icon>
               <span class="text-inner">
@@ -105,7 +113,7 @@
       <ion-label>
         <span>
           <ion-icon>
-            <img class="fltr-icon" src="../../assets/imgs/da_image/filter-bleu.png" />
+            <img class="fltr-icon" src="../../assets/imgs/da_image/Filtre bleu.png" />
           </ion-icon>
         </span>
         <span><br>Filtrer</span>

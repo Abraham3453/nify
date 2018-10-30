@@ -21,37 +21,38 @@
 
     <ion-row class="separator"></ion-row>
 
-    <ion-row class="info-ctn">
-      <ion-label class="info">Saisissez votre e-mail et recevez votre mot de passe par e-mail</ion-label>
-    </ion-row>
+    <div class="overlay">
+      <ion-row class="info-ctn">
+        <ion-label class="info">Saisissez votre e-mail et recevez votre mot de passe par e-mail</ion-label>
+      </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <form #form class="form">
+      <ion-row>
+        <ion-col>
+          <form #form class="form">
 
-          <ion-row >
-            <ion-label class="lab-e-mail">Votre e-mail</ion-label>
-          </ion-row>
-          <ion-row class="e-mail-ctn">
-            <ion-input type="email" [(ngModel)]="email" name="email" (input)="changeMail($event);" maxlength="254"
-              class="e-mail"></ion-input>
-          </ion-row>
+            <ion-row>
+              <ion-label class="lab-e-mail">Votre e-mail</ion-label>
+            </ion-row>
+            <ion-row class="e-mail-ctn">
+              <ion-input type="email" [(ngModel)]="email" name="email" (input)="changeMail($event);" maxlength="254"
+                class="e-mail"></ion-input>
+            </ion-row>
 
 
-          <ion-row>
-            <button ion-button round class="btn-blue-gradient" (click)="recover();">
-              Continuer
-            </button>
-          </ion-row>
+            <ion-row>
+              <button ion-button round class="btn-blue-gradient" (click)="recover();">
+                Continuer
+              </button>
+            </ion-row>
 
-          <ion-row (click)="recover();" class="btn-light">
-            <ion-label>Pr&#233;c&#233;dent</ion-label>
-          </ion-row>
-        </form>
+            <ion-row (click)="recover();" class="btn-light">
+              <ion-label>Pr&#233;c&#233;dent</ion-label>
+            </ion-row>
+          </form>
 
-      </ion-col>
-    </ion-row>
-
+        </ion-col>
+      </ion-row>
+    </div>
 
   </ion-grid>
 

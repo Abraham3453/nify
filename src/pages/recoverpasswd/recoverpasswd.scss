@@ -1,10 +1,10 @@
 page-recoverpasswd {
 
   .container {
-    padding-top: 50px;
+    padding-top: 0px;
     text-align: center;
     background-image: url('../../assets/imgs/background/fond-1.png');
-    background-size: 100% 80%;
+    background-size: 100% auto;
     background-repeat: no-repeat;
   }
 
@@ -34,7 +34,7 @@ page-recoverpasswd {
   }
 
   .info-ctn {
-    margin-top: 30px;
+    margin-top: 0px;
     padding: 10px;
   }
 
@@ -57,13 +57,13 @@ page-recoverpasswd {
   }
 
   .separator {
-    height: 50px;
+    height: 0px;
     background-color: rgba(0, 0, 0, 0.0);
   }
 
   .btn-blue-gradient {
     width: 90%;
-    height: 50px;
+    height: 40px;
     margin: auto;
     margin-top: 20px;
     text-transform: none;
@@ -83,6 +83,15 @@ page-recoverpasswd {
     color: color($colors, bleu);
     width: 100%;
     text-align: center;
+  }
+
+  .overlay{
+    width: 96%;
+    margin: auto;
+    border-radius: 8px;
+    margin-top: 40px;
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid #f5f5f5;
   }
 
   .form {

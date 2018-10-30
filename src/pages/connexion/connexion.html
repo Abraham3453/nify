@@ -1,6 +1,6 @@
 <ion-content>
 
-  <ion-grid class="container">
+  <div class="container">
 
     <ion-row>
       <ion-label>
@@ -20,35 +20,37 @@
 
     <ion-row class="separator"></ion-row>
 
-    <form #form class="form-conn">
+    <div class="overlay">
+      <form #form class="form-conn">
 
-      <ion-row>
-        <ion-label class="lab">E-mail</ion-label>
-      </ion-row>
-      <ion-row class="input-ctn">
-        <ion-input type="email" [(ngModel)]="mail" name="mail" (input)="changeMail($event);" maxlength="254"></ion-input>
-      </ion-row>
+        <ion-row>
+          <ion-label class="lab">E-mail</ion-label>
+        </ion-row>
+        <ion-row class="input-ctn">
+          <ion-input type="email" [(ngModel)]="mail" name="mail" (input)="changeMail($event);" maxlength="254"></ion-input>
+        </ion-row>
 
-      <ion-row>
-        <ion-label class="lab">Mot de passe</ion-label>
-      </ion-row>
-      <ion-row class="input-ctn">
-        <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
-      </ion-row>
+        <ion-row>
+          <ion-label class="lab">Mot de passe</ion-label>
+        </ion-row>
+        <ion-row class="input-ctn">
+          <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+        </ion-row>
 
-      <ion-row>
-        <button ion-button round class="btn-blue-gradient" (click)="connect();">
-          Connexion
-        </button>
+        <ion-row>
+          <button ion-button round class="btn-blue-gradient" (click)="connect();" [disabled]="isBtnConnect">
+            Connexion
+          </button>
+        </ion-row>
+      </form>
+
+      <ion-row (click)="forgetPasswd();">
+        <ion-label class="btn-light">
+          Mot de passe oubli&#233;
+        </ion-label>
       </ion-row>
-    </form>
+    </div>
 
-    <ion-row (click)="forgetPasswd();">
-      <ion-label class="btn-light">
-        Mot de passe oubli&#233;
-      </ion-label>
-    </ion-row>
-
-  </ion-grid>
+  </div>
 
 </ion-content>

@@ -1,97 +1,97 @@
 page-annonce-cat {
 
-    .container {
-        padding-top: 15px;
-        text-align: center;
-        background-image: url('../../assets/imgs/background/fond-4.png');
-        background-size: 100% 100%;
-        min-height: 100%;
-    
-        
-      }
-    
-      .top-margin {
-        height: 30px;
-      }
-    
-      .logo {
-        width: 100px;
-        height: 85px;
-      }
-    
-      .color-white {
-        color: white;
-      }
-    
-      .btn-blue-gradient {
-        width: 90%;
-        height: 42px;
-        text-transform: none;
-        font-size: 120%;
-        margin: auto;
-        margin-top: 10px;
-        background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-        background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-        background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-        border-radius: 5px;
-        font-weight: 100;
-        box-shadow: none;
-        border: 1px solid color($colors, bleurightbtn);
-    
-        .icon-checked {
-          position: absolute;
-          right: 5px;
-          display: none;
-        }
-      }
-    
-      .btn-blue-gradient .button-inner {
-        justify-content: flex-start;
-      }
-    
-      .btn-no-bg {
-        color: color($colors, bleu);
-        font-size: 120%;
-      }
-    
-      .gc {
-        font-size: 130%;
-        color: white;
-        margin-top: 5px;
-        font-weight: bolder;
-      }
-    
-      .gc-label {
-        text-align: justify;
-        white-space: normal;
-      }
-    
-      .back-gc {
-        zoom: 2;
-        margin-left: 5%;
-      }
-    
-      .btn-blue-gradient-round {
-        width: 84%;
-        height: 50px;
-        text-transform: none;
-        font-size: 120%;
-        margin: auto;
-        margin-top: 15px;
-        background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-        background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-        background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
-        box-shadow: none;
-        border: 1px solid color($colors, white);
-      }
-    
-      .check-icon {
-        width: 30px;
-        height: 30px;
-      }
-    
-      .bottom-annuler {
-        height: 100%;
-      }
+  .container {
+    padding-top: 15px;
+    text-align: center;
+    background-image: url('../../assets/imgs/background/fond-4.png');
+    background-size: 100% 100%;
+    min-height: 100%;
+
+
+  }
+
+  .top-margin {
+    height: 30px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 85px;
+  }
+
+  .color-white {
+    color: white;
+  }
+
+  .btn-blue-gradient {
+    width: 90%;
+    height: 42px;
+    text-transform: none;
+    font-size: 120%;
+    margin: auto;
+    margin-top: 10px;
+    background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    border-radius: 5px;
+    font-weight: 100;
+    box-shadow: none;
+    border: 1px solid color($colors, bleurightbtn);
+
+    .icon-checked {
+      position: absolute;
+      right: 5px;
+      display: none;
+    }
+  }
+
+  .btn-blue-gradient .button-inner {
+    justify-content: flex-start;
+  }
+
+  .btn-no-bg {
+    color: color($colors, bleu);
+    font-size: 120%;
+  }
+
+  .gc {
+    font-size: 130%;
+    color: white;
+    margin-top: 5px;
+    font-weight: bolder;
+  }
+
+  .gc-label {
+    text-align: justify;
+    white-space: normal;
+  }
+
+  .back-gc {
+    zoom: 2;
+    margin-left: 5%;
+  }
+
+  .btn-blue-gradient-round {
+    width: 84%;
+    height: 50px;
+    text-transform: none;
+    font-size: 120%;
+    margin: auto;
+    margin-top: 15px;
+    background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
+    box-shadow: none;
+    border: 1px solid color($colors, white);
+  }
+
+  .check-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bottom-annuler {
+    height: 100%;
+  }
 
 }

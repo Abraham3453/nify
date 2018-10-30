@@ -13,18 +13,16 @@ page-home {
     width: 100%;
     padding: 0px;
     margin: 0;
-    height: 80px;
+    height: auto;
     background-color: color($colors, bgheader);
     z-index: 9999;
 
-    h4 {
-      padding: 0px;
-      margin: 0px;
-    }
   }
 
   .da {
     font-size: 130%;
+    margin: 0;
+    padding: 0;
     margin-left: 5px;
 
     .bold {
@@ -48,9 +46,9 @@ page-home {
   }
 
   .btn-menu {
-    width: 40px;
-    height: 40px;
-    margin-top: 15px;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
     margin-right: 10px;
     float: right;
   }
@@ -72,20 +70,44 @@ page-home {
   }
 
   .card-ctn {
-    padding: 10px;
+    padding: 5px;
     padding-top: 0px;
-    padding-bottom: 10px;
-    margin: 1%;
-    margin-top: 10px;
+    margin: auto;
+    margin-top: 0px;
     margin-bottom: 0px;
     border-radius: 10px;
-    /* background-image: url('../../assets/imgs/da_image/Rectangle\ 3.jpg'); */
-    background-size: 100% 100%;
-    width: 98%;
+    background-size: 100% auto;
+    width: 100%;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(-46deg, #339DF8 0%, #EC91A8 100%);
+      border-radius: 10px;
+      opacity: 0.5;
+      z-index: 0;
+    }
 
     ion-col {
       margin: 0px;
-      padding: 0px;
+      padding: 6px;
+      border-radius: 10px;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      ion-row,
+      ion-row * {
+        z-index: 1000;
+
+        ion-col {
+          padding: 0px;
+          margin: 0px;
+        }
+      }
     }
 
   }
@@ -141,20 +163,21 @@ page-home {
     background-color: rgba(68, 85, 105, 0.6);
     height: 40px;
     padding: 3px;
+    padding-top: 0px;
     margin: 0px;
   }
 
   .photo-lab {
     padding-right: 20px;
     padding-top: 15px;
-    margin-top: -5px;
+    margin-top: 0px;
     width: 100%;
   }
 
   .photo-lab-1 {
     padding-right: -5px;
     padding-top: 15px;
-    margin-top: -3px;
+    margin-top: 0px;
     font-size: 65%;
   }
 
@@ -173,8 +196,24 @@ page-home {
     position: absolute;
     top: -10px;
     right: -15px;
-    height: 20px;
+    height: 22px;
+    width: 22px;
     border-radius: 50%;
+    background-color: color($colors, bleurightbtn);
+    * {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      font-size: 120%;
+    }
+    .badge-photo{
+      font-weight: bold;
+      font-size: 90%;
+    }
   }
 
   .text-inner {
@@ -219,20 +258,29 @@ page-home {
     color: color($colors, bleu);
     font-size: 120%;
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     z-index: 1000;
     margin: 0;
     padding: 0;
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ion-col{
+      padding-top: 3px;
+    }
   }
 
   .fltr-icon {
-    width: 30px;
-    height: 28px;
+    width: 26px;
+    height: 22px;
   }
 
   .fltr-icon-cam {
-    width: 32px;
-    height: 30px;
+    width: 26px;
+    height: 22px;
   }
 
   .load-ctn {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Keyboard, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Keyboard, ModalController, Events } from 'ionic-angular';
 import { HTTP } from '@ionic-native/http';
 import { GlobalsProvider } from '../../providers/globals/globals';
 import { Faqadd1Page } from '../faqadd1/faqadd1';
@@ -31,7 +31,8 @@ export class FaqcomPage {
     private keyboard: Keyboard,
     private http: HTTP,
     private globals: GlobalsProvider,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private events: Events
   ) {
 
     this.faq = navParams.get('faq');
@@ -54,7 +55,7 @@ export class FaqcomPage {
     newphoto.onDidDismiss(data => {
       if (data != null)
         this.img = data;
-      console.log(JSON.stringify(data));
+      //console.log(JSON.stringify(data));
     });
     newphoto.present();
   }
@@ -73,7 +74,23 @@ export class FaqcomPage {
         'file')
         .then(
           data => {
-            console.log(JSON.stringify(data));
+            let res = JSON.parse(data.data);
+            //console.log(JSON.stringify(data));
+            if(res.comment){
+              console.log(JSON.stringify(res.comment));
+              let com = {
+                data: res.comment,
+                author_infos: this.user
+              }
+              //this.faq.faq.coms.push(com);
+              this.events.publish("new:com", {
+                faq_id: this.faq.faq.id,
+                com: com
+              });
+            }
+            this.faq_comment = "";
+            console.log(this.faq_comment);
+            this.img = null;
           },
           error => {
             console.log(JSON.stringify(error));
@@ -90,6 +107,21 @@ export class FaqcomPage {
         .then(
           data => {
             console.log(JSON.stringify(data.data));
+            let res = JSON.parse(data.data);
+            if(res.comment){
+              let com = {
+                data: res.comment,
+                author_infos: this.user
+              }
+              console.log(JSON.stringify(res.comment));
+              //this.faq.faq.coms.push(com);
+              this.events.publish("new:com", {
+                faq_id: this.faq.faq.id,
+                com: com
+              });
+            }
+            this.faq_comment = "";
+            console.log(this.faq_comment);
           },
           error => {
             console.log(JSON.stringify(error));

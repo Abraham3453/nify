@@ -51,41 +51,60 @@ export class HomePage {
     this.getListTheme();
 
     events.subscribe("menu", page => {
-      
+
+    });
+
+    events.subscribe("new:com", data => {
+      if (this.listFaQSorted.length > 0) {
+        console.log("FaQs is more :");
+        for (let i = 0; i < this.listFaQSorted.length; i++) {
+          if (this.listFaQSorted[i].faq.id == data.faq_id) {
+            console.log("Faq id identique");
+            this.listFaQSorted[i].faq.coms.push(data.com);
+            this.listFaQSorted[i].faq.comments_count += 1;
+          }
+        }
+      }
     });
 
   }
 
-  public openMenu(){
-    let menu = this.modalCtrl.create(MenuPage,{
+  ionViewWillEnter() {
+    //this.listFaQ = [];
+    //this.listFaQSorted = [];
+    //this.getListTheme();
+  }
+
+  public openMenu() {
+    let menu = this.modalCtrl.create(MenuPage, {
       user: this.user
     });
     menu.onDidDismiss(page => {
-      if (page.title == "FaQ"){
+      if (page.title == "FaQ") {
         //
       }
-      else if (page.title == "Annonces"){
+      else if (page.title == "Annonces") {
         let adPage = AnnoncesPage;
         this.navCtrl.setRoot(adPage, {
           user: this.user
         },
-        {
-          animate: true
-        });
+          {
+            animate: true
+          });
       }
-      else if (page.title == "Formations"){
+      else if (page.title == "Formations") {
         //
       }
-      else if (page.title == "À savoir"){
+      else if (page.title == "À savoir") {
         //
       }
-      else if (page.title == "Mes alertes"){
+      else if (page.title == "Mes alertes") {
         //
       }
-      else if (page.title == "Déconnexion"){
+      else if (page.title == "Déconnexion") {
         this.events.publish('user:logedOut', this.user);
       }
-      else if (page.title == ""){
+      else if (page.title == "") {
         //
       }
     });
@@ -133,19 +152,24 @@ export class HomePage {
       //console.log(JSON.stringify(this.selectedTheme));
       if (this.selectedTheme.id != "") {
         this.sortFaQByFilter();
-      }else this.listFaQSorted = this.listFaQ;
-      
+      } else this.listFaQSorted = this.listFaQ;
+
     });
     filter.present();
   }
 
-  public sortFaQByFilter(){
-    this.listFaQSorted = this.listFaQ.filter(faq => {
-      if(faq.theme.id == this.selectedTheme.id)
-      {
-        return faq;
-      }
-    });
+  public sortFaQByFilter() {
+    if (this.selectedTheme.id != '') {
+      this.listFaQSorted = this.listFaQ.filter(faq => {
+        if (faq.theme.id == this.selectedTheme.id) {
+          return faq;
+        }
+      });
+    }
+    else {
+      this.listFaQSorted = this.listFaQ;
+    }
+
   }
 
   public newPub() {
@@ -178,7 +202,7 @@ export class HomePage {
                   console.log("Comment : ");
                   //console.log(JSON.stringify(res[i].comments[elem]));
                 }
-                
+
                 //console.log(coms.length);
                 //console.log(JSON.stringify(coms));
                 //res[i].comments = coms;
@@ -257,8 +281,8 @@ export class HomePage {
     this.http.post(this.globals.variables.urls.addFavorite, {
       "user_id": this.user.id_User != null ? this.user.id_User : this.user.id,
       "post_id": faq.faq.id
-    }, 
-    {})
+    },
+      {})
       .then(
         data => {
           let res = JSON.parse(data.data);

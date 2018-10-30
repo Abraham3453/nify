@@ -7,6 +7,7 @@ import { HomePage } from '../home/home';
 import { HTTP } from '@ionic-native/http';
 import { GlobalsProvider } from '../../providers/globals/globals';
 import { AnnonceCatPage } from '../annonce-cat/annonce-cat';
+import { AnnoncesPage } from '../annonces/annonces';
 
 /**
  * Generated class for the AnnonceAdd2Page page.
@@ -143,8 +144,8 @@ export class AnnonceAdd2Page {
                     data => {
                       console.log(JSON.stringify(data));
                       if (i == this.imgs.length - 1) {
-                        let home = HomePage;
-                        this.navCtrl.setRoot(home, {
+                        let adPage = AnnoncesPage;
+                        this.navCtrl.setRoot(adPage, {
                           user: this.user
                         },
                           {

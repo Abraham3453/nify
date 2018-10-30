@@ -46,7 +46,8 @@
               </ion-row>
               <ion-row class="gc-ctn">
                 <ion-avatar>
-                  <img class="img-profil" src="{{faq.author.avatar != '' ? faq.author.avatar : 'assets/imgs/avatar/avatar_h.png'}}">
+                  <img class="img-profil" *ngIf="faq.author.avatar != null && faq.author.avatar != ''" src="{{faq.author.avatar}}">
+                  <img class="img-profil" *ngIf="faq.author.photo != null && faq.author.photo != ''" src="{{faq.author.photo}}">
                 </ion-avatar>
 
                 <ion-label class="text-align-left">
@@ -72,9 +73,10 @@
         <ion-col>
 
           <ion-row *ngFor="let com of faq.faq.coms" 
-          class="{{com.author_infos.id == user.id_User ? 'me' : 'other_auth'}}">
+          class="{{com.author_infos.id == user.id_User || com.author_infos.id_User == user.id_User ? 'me' : 'other_auth'}}">
             <ion-avatar>
-              <img class="img-profil-small" src="{{com.author_infos.avatar != '' ? com.author_infos.avatar : '../../assets/imgs/avatar/avatar_h.png'}}">
+              <img class="img-profil-small" *ngIf="com.author_infos.avatar != '' && com.author_infos.avatar != null" src="{{com.author_infos.avatar}}">
+              <img class="img-profil-small" *ngIf="com.author_infos.photo != '' && com.author_infos.photo != null" src="{{com.author_infos.photo}}">
             </ion-avatar>
 
             <ion-label class="text-align-left">
@@ -89,72 +91,10 @@
                 {{com.data.comment_content}}
               </span>
               <span><br>
-                <img class="com-img" *ngIf="com.image != ''" src="{{com.image}}" />
+                <img class="com-img" src="{{com.image != null ? com.image : com.comment_image}}" />
               </span>
             </ion-label>
           </ion-row>
-
-
-          <!-- <ion-row class="comment me">
-            <ion-avatar>
-              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
-            </ion-avatar>
-
-            <ion-label class="text-align-left">
-              <span class="normal-name">
-                Dr Louise Depuis<br>
-              </span>
-              <span class="normal-lieu">
-                Dentiste - Lyon<br>
-              </span>
-              <span class="comment-txt">
-                <br>
-                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                velit
-                convallis, at blandit dolor dapibus.
-              </span>
-            </ion-label>
-          </ion-row>
-          <ion-row class="comment other">
-            <ion-avatar>
-              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_h.png">
-            </ion-avatar>
-
-            <ion-label class="text-align-left">
-              <span class="normal-name">
-                Dr Louise Depuis<br>
-              </span>
-              <span class="normal-lieu">
-                Dentiste - Lyon<br>
-              </span>
-              <span class="comment-txt">
-                <br>
-                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                velit
-                convallis, at blandit dolor dapibus.
-              </span>
-            </ion-label>
-          </ion-row>
-          <ion-row class="comment other">
-            <ion-avatar>
-              <img class="img-profil-small" src="../../assets/imgs/avatar/avatar_f.png">
-            </ion-avatar>
-
-            <ion-label class="text-align-left">
-              <span class="normal-name">
-                Dr Louise Depuis<br>
-              </span>
-              <span class="normal-lieu">
-                Dentiste - Lyon<br>
-              </span>
-              <span class="comment-txt">
-                <br>
-                Morbi vulputate ullamcorper sapien, ac iaculis ex. Fusce id vulputate libero. Aenean aliquet sem eget
-                velit
-                convallis, at blandit dolor dapibus.
-              </span>
-            </ion-label>
-          </ion-row> -->
 
           <ion-row class="other">
             <ion-col class="large-col" col-10>

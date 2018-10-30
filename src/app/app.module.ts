@@ -37,6 +37,8 @@ import { AnnonceCatPage } from '../pages/annonce-cat/annonce-cat';
 import { AnnonceAddAnnulerPage } from '../pages/annonce-add-annuler/annonce-add-annuler';
 import { AnnonceDetailsPage } from '../pages/annonce-details/annonce-details';
 import { MenuPage } from '../pages/menu/menu';
+import { AnnonceBoostPage } from '../pages/annonce-boost/annonce-boost';
+import { FormationsPage } from '../pages/formations/formations';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { MenuPage } from '../pages/menu/menu';
     AnnonceCatPage,
     AnnonceAddAnnulerPage,
     AnnonceDetailsPage,
-    MenuPage
+    AnnonceBoostPage,
+    MenuPage,
+    FormationsPage
   ],
   imports: [
     BrowserModule,
@@ -106,7 +110,9 @@ import { MenuPage } from '../pages/menu/menu';
     AnnonceCatPage,
     AnnonceAddAnnulerPage,
     AnnonceDetailsPage,
-    MenuPage
+    AnnonceBoostPage,
+    MenuPage,
+    FormationsPage
   ],
   providers: [
     StatusBar,

@@ -40,13 +40,27 @@ export class FaqfilterPage {
 
   public selectFilter(idBtn, idIcon, th){
     console.log(idBtn+ " == " + idIcon);
-    for (let i = 0; i < this.theme.length; i++) {
-      document.getElementById('btn'+this.theme[i].id).style.fontWeight = '100';
-      document.getElementById('icon_btn_'+this.theme[i].id).style.display = 'none';
+    if (th == 'all'){
+      for (let i = 0; i < this.theme.length; i++) {
+        document.getElementById(idBtn).style.fontWeight = '100';
+        document.getElementById(idIcon).style.display = 'none';
+      }
+      document.getElementById(idIcon).style.display = 'inline';
+      document.getElementById(idBtn).style.fontWeight = 'bold';
+      this.selectedTheme = {
+        id: ''
+      };
     }
-    document.getElementById(idIcon).style.display = 'inline';
-    document.getElementById(idBtn).style.fontWeight = 'bold';
-    this.selectedTheme = th;
+    else {
+      for (let i = 0; i < this.theme.length; i++) {
+        document.getElementById('btn'+this.theme[i].id).style.fontWeight = '100';
+        document.getElementById('icon_btn_'+this.theme[i].id).style.display = 'none';
+      }
+      document.getElementById(idIcon).style.display = 'inline';
+      document.getElementById(idBtn).style.fontWeight = 'bold';
+      this.selectedTheme = th;
+    } 
+    
   }
 
   public dismiss() {

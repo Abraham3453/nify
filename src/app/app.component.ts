@@ -6,6 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { DentartPage } from '../pages/dentart/dentart';
 import { AnnoncesPage } from '../pages/annonces/annonces';
+import { AnnonceBoostPage } from '../pages/annonce-boost/annonce-boost';
+import { FormationsPage } from '../pages/formations/formations';
 @Component({
   templateUrl: 'app.html'
 })

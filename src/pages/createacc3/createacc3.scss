@@ -4,11 +4,14 @@ page-createacc3 {
     padding-top: 15px;
     text-align: center;
     background-repeat: no-repeat;
-    background: radial-gradient(circle at 20% -5%,#327AD6 48%,rgba(0,0,0,0.0) 48%),
+    /* background: radial-gradient(circle at 20% -5%,#327AD6 48%,rgba(0,0,0,0.0) 48%),
     radial-gradient(circle at 30% 10%,#53E0E9 50%,rgba(0,0,0,0.0) 50%),
     radial-gradient(circle at 40% 16%,#90EFEA 64%,rgba(0,0,0,0.0) 64%),
     radial-gradient(circle at 45% 22%,#B5F6EE 72%,rgba(0,0,0,0.0) 72%),
-    radial-gradient(circle at 50% 22%,#D7FCF2 80%,rgba(0,0,0,0.0) 80%);
+    radial-gradient(circle at 50% 22%,#D7FCF2 80%,rgba(0,0,0,0.0) 80%); */
+    background-image: url('../../assets/imgs/background/fond-2.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     min-height: 100%;
   }
 
@@ -20,7 +23,7 @@ page-createacc3 {
 
   .da-ctn {
     margin: auto;
-    margin-top: -15px;
+    margin-top: -10px;
   }
 
   .da {
@@ -36,7 +39,7 @@ page-createacc3 {
   }
 
   .wc-ctn {
-    margin-top: -15px;
+    margin-top: -20px;
   }
 
   .wc {
@@ -57,22 +60,28 @@ page-createacc3 {
     margin-top: 0px;
     padding: 10px;
     border: 1px solid #f5f5f5;
+    ion-col {
+      margin: 0;
+      padding: 0;
+    }
+  
   }
 
+  
   .label-ctn {
     text-align: left;
-    padding: 7px;
+    padding-left: 7px;
     color: rgba($color: #e0e0e0, $alpha: 1);
 
     .bottom-label {
-      margin-bottom: -20px;
+      margin-bottom: -10px;
       font-size: 130%;
     }
   }
 
   .bb-input {
     border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .map-marker {
@@ -86,12 +95,13 @@ page-createacc3 {
     height: 80px;
     border-radius: 5px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .margin-a {
-    padding-top: 20px;
-    margin-bottom: 25px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
   }
@@ -119,11 +129,11 @@ page-createacc3 {
 
   .btn-blue-gradient-round {
     width: 90%;
-    height: 50px;
+    height: 40px;
     text-transform: none;
     font-size: 120%;
     margin: auto;
-    margin-top: 15px;
+    margin-top: 0px;
     background: -moz-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
     background: -webkit-linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));
     background: linear-gradient(to right, color($colors, bleu), color($colors, bleurightbtn));

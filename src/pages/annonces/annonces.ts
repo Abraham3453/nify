@@ -47,6 +47,8 @@ export class AnnoncesPage {
 
     this.user = navParams.get('user');
     console.log(JSON.stringify(this.user));
+    this.getListCat();
+    //this.getListAds();
 
   }
 
@@ -57,8 +59,8 @@ export class AnnoncesPage {
   }
 
   ionViewWillEnter() {
-    this.getListCat();
-    this.getListAds();
+    //this.getListCat();
+    //this.getListAds();
   }
 
   public openMenu() {
@@ -184,7 +186,7 @@ export class AnnoncesPage {
         data => {
           this.listCat = JSON.parse(data.data);
           console.log(JSON.stringify(this.listCat));
-
+          this.getListAds();
         },
         error => {
           console.log(JSON.stringify(error));
@@ -194,11 +196,15 @@ export class AnnoncesPage {
 
   public getListAds() {
     //document.getElementById('load').style.display = 'inline';
+    console.log("Getting Ads lists.");
+    this.listAds = [];
+    this.listAdsSorted = [];
     this.http.post(this.globals.variables.urls.listAnnonce, {}, {})
       .then(
         data => {
-
+         
           let res = JSON.parse(data.data);
+          if (res.length <= 0) this.load = 0;
           for (let i = 0; i < res.length; i++) {
             for (let j = 0; j < this.listCat.length; j++) {
               if (res[i].category == this.listCat[j].id) {
@@ -219,11 +225,13 @@ export class AnnoncesPage {
                     this.listAdsSorted = this.listAds;
                   },
                     error => {
+                      this.load = 0;
                       console.log(JSON.stringify(error));
                     });
               }
             }
           }
+          
           //console.log(JSON.stringify(this.listAds));
         },
         error => {

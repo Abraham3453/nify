@@ -24,6 +24,8 @@ export class ConnexionPage {
   password: string = '';
   user: any;
 
+  isBtnConnect: boolean = false;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -40,6 +42,8 @@ export class ConnexionPage {
   }
 
   public connect() {
+
+    this.isBtnConnect = true;
 
     if (!(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.mail))) {
       console.log("Mail invalid.");
